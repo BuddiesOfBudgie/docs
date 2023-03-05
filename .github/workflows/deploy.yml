@@ -4,14 +4,6 @@ on:
   push:
     branches:
       - deploy
-    paths:
-      - "docs/**"
-      - "i18n/**"
-      - "src/**"
-      - "static/**"
-      - "deployment.yml"
-      - "docusaurus.config.js"
-      - "sidebar.js"
 
 jobs:
   build:
