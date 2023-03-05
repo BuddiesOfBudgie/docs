@@ -68,6 +68,39 @@ const config = {
             position: "left",
             label: "Organization",
           },
+          {
+            label: "Other",
+            items: [
+              {
+                href: "https://blog.buddiesofbudgie.org",
+                label: "Blog",
+              },
+              {
+                href: "https://github.com/BuddiesOfBudgie",
+                label: "GitHub",
+              },
+              {
+                label: "Mastodon",
+                href: "https://fosstodon.org/@BuddiesOfBudgie",
+              },
+              {
+                label: "Matrix",
+                href: "https://matrix.to/#/#buddies-of-budgie:matrix.org",
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/BuddiesOfBudgie",
+              },
+            ],
+            type: "dropdown",
+            position: "left",
+          },
+          {
+            className: "GetBudgieButton",
+            href: "/user/getting-budgie",
+            label: "Get Budgie",
+            position: "right",
+          },
           /*           { -- Awaiting Algolia approval
             type: "search",
             position: "right",

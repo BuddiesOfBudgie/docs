@@ -31,14 +31,31 @@
 [data-theme="dark"] {
   --ifm-card-background-color: var(--dark);
   --ifm-color-primary: var(--budgie-green);
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
   --ifm-navbar-background-color: var(--greydark);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.GetBudgieButton {
+  background-color: var(--budgie-green);
+  border-radius: 20px;
+  color: var(--ifm-button-color);
+  margin-inline-end: 1vw;
+  padding: 5px 30px;
+  text-align: center;
+  transition: all 250ms;
+}
+
+.GetBudgieButton:active,
+.GetBudgieButton:focus,
+.GetBudgieButton:hover {
+  background-color: var(--ifm-color-primary-light);
+  color: var(--ifm-button-color);
 }
 
 .card--bg {
