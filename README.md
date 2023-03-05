@@ -2,6 +2,8 @@
 
 Buddies of Budgie Documentation is our documentation center leveraging [Docusaurus](https://docusaurus.io).
 
+[![Deploy](https://github.com/BuddiesOfBudgie/docs/actions/workflows/deploy.yml/badge.svg?branch=deploy)](https://github.com/BuddiesOfBudgie/docs/actions/workflows/deploy.yml)
+
 ## Getting Started
 
 To get started developing our Docusaurus instance, or writing documentation, first [fork this project](https://github.com/BuddiesOfBudgie/docs/fork) in order to submit pull requests for your changes
