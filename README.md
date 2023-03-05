@@ -10,7 +10,7 @@ This project is written using [TypeScript](https://www.typescriptlang.org) and [
 
 ### NVM
 
-To set up nvm, the Node Version Manager, follow the instructions listed [here](https://github.com/nvm-sh/nvm). We recommend [setting up their shell interation](https://github.com/nvm-sh/nvm#deeper-shell-integration) as well, so you can automatically switch to the correct Node version when working on this project. Otherwise, ensure you run `nvm use`. This project requires the "current" supported release series of Node.
+To set up nvm, the Node Version Manager, follow the instructions listed [here](https://github.com/nvm-sh/nvm#readme). We recommend [setting up their shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration) as well, so you can automatically switch to the correct Node version when working on this project. Otherwise, ensure you run `nvm use`. This project requires the "current" supported release series of Node.
 
 You can validate you are using the latest by running `node --version`. Your version should be at least 19.x.
 

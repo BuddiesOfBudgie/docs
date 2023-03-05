@@ -35,7 +35,7 @@ Have an account? Great! Now it's time to do that forking we talked about. Just c
 
 You will need to now "clone" your fork to your computer. There is a bunch of different ways to do that, from the command-line to various graphical programs. Given that fact, we would just recommend you check out [GitHub's documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-Of course, testing out your changes will require some technical knowledge, but our [README](https://github.com/BuddiesOfBudgie/docs) should help walk you through that. You can read it in your fork too!
+Of course, testing out your changes will require some technical knowledge, but our [README](https://github.com/BuddiesOfBudgie/docs#readme) should help walk you through that. You can read it in your fork too!
 
 :::danger Need help?
 You can reach out to us on our [Matrix Space](https://matrix.to/#/#buddies-of-budgie:matrix.org) for guidance if you run into issues.
@@ -71,6 +71,6 @@ We would expect assets for this document, located at `docs/developer/documentati
 
 ![](./assets/writing-documentation/example.jpg)
 
-Transparency should be used sparingly as our documentation center supports both light and dark theme. Using images that look good against a light background may make them unreadable on a dark one, and vise-versa. You can use [Themed Images](https://docusaurus.io/docs/markdown-features/assets#themed-images) in MDX, but consider if that is necessary first!
+Transparency should be used sparingly as our documentation center supports both light and dark theme. Using images that look good against a light background may make them unreadable on a dark one, and vice-versa. You can use [Themed Images](https://docusaurus.io/docs/markdown-features/assets#themed-images) in MDX, but consider if that is necessary first!
 
 Images should be compressed without noticable artifacting, preferably in JPG.
