@@ -25,7 +25,7 @@
   },
   "link.item.label.Mastodon": {
     "message": "Mastodon",
-    "description": "The label of footer link with label=Mastodon linking to https://fosstodon.org/@BudiesOfBudgie"
+    "description": "The label of footer link with label=Mastodon linking to https://fosstodon.org/@BuddiesOfBudgie"
   },
   "link.item.label.Matrix": {
     "message": "Matrix",
@@ -41,7 +41,7 @@
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/BuddiesOfBugie"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/BuddiesOfBudgie"
   },
   "copyright": {
     "message": "Copyright © 2023 Buddies of Budgie. Built with Docusaurus.",

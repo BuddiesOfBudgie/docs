@@ -3,8 +3,15 @@ name: Deploy
 on:
   push:
     branches:
-      - main # Temporary
       - deploy
+    paths:
+      - "docs/**"
+      - "i18n/**"
+      - "src/**"
+      - "static/**"
+      - "deployment.yml"
+      - "docusaurus.config.js"
+      - "sidebar.js"
 
 jobs:
   build:

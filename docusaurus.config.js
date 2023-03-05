@@ -103,7 +103,7 @@ const config = {
             items: [
               {
                 label: "Mastodon",
-                href: "https://fosstodon.org/@BudiesOfBudgie",
+                href: "https://fosstodon.org/@BuddiesOfBudgie",
               },
               {
                 label: "Matrix",
@@ -124,7 +124,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/BuddiesOfBugie",
+                href: "https://github.com/BuddiesOfBudgie",
               },
             ],
           },
