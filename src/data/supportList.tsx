@@ -3,6 +3,7 @@ import { SupportInfo } from "../types";
 
 import Admonition from "@theme/Admonition";
 import Translate from "@docusaurus/Translate";
+import { Stack } from "@mui/material";
 
 export const SupportListData: SupportInfo[] = [
   {
@@ -78,5 +79,34 @@ export const SupportListData: SupportInfo[] = [
     ),
     showInGrid: true,
     website: "https://ubuntubudgie.org",
+  },
+  {
+    budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.6.4",
+    name: "Ultramarine Linux",
+    summary: () => (
+      <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">
+        Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use.
+      </Translate>
+    ),
+    showInGrid: true,
+    website: "https://ultramarine-linux.org",
+  },
+  {
+    budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.6.4",
+    installationInfo: () => (
+      <Stack gap={2}>
+        Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
+        Manjaro is based on Arch Linux.
+        <Admonition icon="🚧" type="caution">
+          The Budgie Desktop experience offered by this edition is incomplete, setting no default theme or enabling our
+          built-in theme. This results in a partially broken user experience.
+        </Admonition>
+      </Stack>
+    ),
+    name: "Manjaro Budgie Community Edition",
+    showInGrid: false,
+    website: "https://manjaro.org",
   },
 ];
