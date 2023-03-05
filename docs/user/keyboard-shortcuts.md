@@ -3,13 +3,13 @@ description: Common default keybinds for Budgie Desktop
 title: Keyboard Shortcuts
 ---
 
-Budgie Desktop supports a wide-variety of keyboard combinations / shortcuts (commonly referred to as keybinds) to enable quick actions without taking your hands of the keyboard.
+Budgie Desktop supports a wide-variety of keyboard combinations / shortcuts (commonly referred to as keybinds) to enable quick actions without taking your hands off the keyboard.
 
 **Note:** This is not an exhaustive list, so be sure to open up Budgie Control Center, go to Keyboard, and choose "View and Customize Shortcuts" at the bottom of the panel!
 
 These keyboards assume a "stock" user experience and may differ if you use an operating system which ships Budgie Desktop with changes to the experience. Be sure to consult their documentation for any specifics as well!
 
-Unless specific otherwise, `Super` refers to the "Windows" key. If you have multiple windows key, it will be the left one. You may also see it specific as `Win`
+Unless specified otherwise, `Super` refers to the "Windows" key. If you have multiple "Windows" keys, it will be the left one. You may also see it specified as `Win`
 
 # Common Actions
 

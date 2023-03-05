@@ -23,7 +23,7 @@ You can access Matrix Spaces with clients such as [Element](https://element.io).
 
 ## Code Contributions
 
-Buddies of Budgie software is open source and primary written in either C or [Vala](https://vala.dev). This software is hosted through [our GitHub organization](https://github.com/BuddiesOfBudgie), with issue tracking, releases, and pull requests all being done through various source repositories there.
+Buddies of Budgie software is open source and primarily written in either C or [Vala](https://vala.dev). This software is hosted through [our GitHub organization](https://github.com/BuddiesOfBudgie), with issue tracking, releases, and pull requests all being done through various source repositories there.
 
 Alongside this, we organize various tasks into organization-wide projects. These contain a mix of pull requests, issues, high-level draft items for potential future development, and more.
 
@@ -36,7 +36,7 @@ There is always room for improvement for documentation around Budgie Desktop and
 
 ## Translations
 
-Making software accessible to users around the world, in their native language, is incredibly important to the success of our project and to the success of the open source as a whole. Enabling our software to be more translatable and more accessible is an active and always ongoing process, whether that is extending existing features or building new ones.
+Making software accessible to users around the world, in their native language, is incredibly important to the success of our project and to the success of the open source ecosystem as a whole. Enabling our software to be more translatable and more accessible is an active and always ongoing process, whether that is extending existing features or building new ones.
 
 To facilitate translations, Buddies of Budgie uses the [Transifex](https://www.transifex.com/buddiesofbudgie/) platform to manage new translations.
 
