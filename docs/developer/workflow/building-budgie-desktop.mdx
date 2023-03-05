@@ -65,7 +65,8 @@ budgie-desktop requires/recommends the following to be installed:
 <Tabs groupId="operating-systems">
   <TabItem value="arch" label="Arch">
 <CodeBlock language="bash">
-sudo pacman -S budgie-screensaver gnome-bluetooth gnome-menus gnome-session gnome-settings-daemon gobject-introspection intltool meson sassc vala
+  sudo pacman -S base-devel git
+  sudo pacman -S accountsservice budgie-screensaver gnome-bluetooth gnome-menus gnome-session gnome-settings-daemon gobject-introspection ibus intltool libgee libpeas libwnck3 meson mutter sassc vala zenity
 </CodeBlock>
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
@@ -118,11 +119,18 @@ git submodule update --init
 ## Configuring
 
 <Tabs>
+  <TabItem value="arch" label="Arch">
+<CodeBlock language="bash">
+  cd budgie-desktop
+  <br />
+  meson setup build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib
+</CodeBlock>
+  </TabItem
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
 <CodeBlock language="bash">
-cd budgie-desktop
-<br />
-meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
+  cd budgie-desktop
+  <br />
+  meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
 </CodeBlock>
   </TabItem>
   <TabItem value="solus" label="Solus">
