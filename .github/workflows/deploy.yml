@@ -1,17 +1,11 @@
-on
+name: Deploy
+
+on:
   push:
     branches:
       - main # Temporary
       - deploy
-    paths:
-      - 'docs/**'
-      - 'i18n/**'
-      - 'src/**'
-      - 'static/**'
-      - 'docusaurus.config.js'
-      - 'package.json'
-      - 'sidebars.js'
-      - 'yarn.lock'
+
 jobs:
   build:
     runs-on: ubuntu-latest
