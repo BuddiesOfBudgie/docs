@@ -1,3 +1,9 @@
+# Docusaurus
+.docusaurus
+.yarn/cache
+.yarn/install-stage.gz
+build
+
 # Logs
 logs
 *.log

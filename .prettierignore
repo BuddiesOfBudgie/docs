@@ -1,0 +1,9 @@
+# Build artifacts
+.husky
+.next
+
+# Infra for now until we know prettier doesn't do anything silly to our kubectl files
+infra/
+
+# LICENSE should not be touched
+LICENSE.md

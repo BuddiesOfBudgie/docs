@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Buddies of Budgie",
+    "description": "The title in the navbar"
+  },
+  "item.label.Developer": {
+    "message": "Developer",
+    "description": "Navbar item with label Developer"
+  },
+  "item.label.User": {
+    "message": "User",
+    "description": "Navbar item with label User"
+  },
+  "item.label.Organization": {
+    "message": "Organization",
+    "description": "Navbar item with label Organization"
+  }
+}
