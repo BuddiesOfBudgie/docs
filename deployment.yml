@@ -23,7 +23,7 @@ spec:
         - name: docs
           image: <IMAGE>
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           resources:
             requests:
               cpu: 100m
