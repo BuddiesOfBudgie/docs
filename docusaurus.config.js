@@ -42,6 +42,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: "NN5QDDPH70",
+        apiKey: "5cd6cd12d7cdde2c131ce17ad6e2d342",
+        indexName: "buddiesofbudgie",
+        externalUrlRegex: "blog\\.buddiesofbudgie\\.org",
+        replaceSearchResultPathname: {
+          from: "/docs/",
+          to: "/",
+        },
+      },
       navbar: {
         title: "Buddies of Budgie",
         logo: {
@@ -101,10 +111,10 @@ const config = {
             label: "Get Budgie",
             position: "right",
           },
-          /*           { -- Awaiting Algolia approval
+          {
             type: "search",
             position: "right",
-          }, */
+          },
         ],
       },
       tableOfContents: {

@@ -1656,7 +1656,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docsearch/react@npm:^3.1.1":
+"@docsearch/react@npm:3, @docsearch/react@npm:^3.1.1":
   version: 3.3.3
   resolution: "@docsearch/react@npm:3.3.3"
   dependencies:
@@ -5361,6 +5361,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:."
   dependencies:
+    "@docsearch/react": 3
     "@docusaurus/core": 2.3.1
     "@docusaurus/eslint-plugin": ^2.3.1
     "@docusaurus/module-type-aliases": 2.3.1
