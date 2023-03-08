@@ -2,7 +2,7 @@
 
 Buddies of Budgie Documentation is our documentation center leveraging [Docusaurus](https://docusaurus.io).
 
-[![Deploy](https://github.com/BuddiesOfBudgie/docs/actions/workflows/deploy.yml/badge.svg?branch=deploy)](https://github.com/BuddiesOfBudgie/docs/actions/workflows/deploy.yml)
+Project lives at https://docs.buddiesofbudgie.org and is automatically deployed via its `deploy` branch on DigitalOcean's App platform.
 
 ## Getting Started
 
