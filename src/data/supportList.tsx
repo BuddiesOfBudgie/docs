@@ -42,7 +42,7 @@ export const SupportListData: SupportInfo[] = [
       </Translate>
     ),
     website:
-      "https://kojipkgs.fedoraproject.org/compose/branched/latest-Fedora-38/compose/Spins/x86_64/iso/Fedora-Budgie-Live-x86_64-38-ISODATE.n.0.iso",
+      "https://kojipkgs.fedoraproject.org/compose/38/latest-Fedora-38/compose/Spins/x86_64/iso/Fedora-Budgie-Live-x86_64-38_Beta-1.3.iso",
   },
   {
     budgieAvailablePostInstall: null,
