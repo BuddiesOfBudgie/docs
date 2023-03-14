@@ -41,8 +41,7 @@ export const SupportListData: SupportInfo[] = [
         Fedora Budgie Spin offers a near-stock Budgie Desktop experience on top of the Fedora open source platform.
       </Translate>
     ),
-    website:
-      "https://kojipkgs.fedoraproject.org/compose/38/latest-Fedora-38/compose/Spins/x86_64/iso/Fedora-Budgie-Live-x86_64-38_Beta-1.3.iso",
+    website: "https://spins.fedoraproject.org/prerelease",
   },
   {
     budgieAvailablePostInstall: null,
