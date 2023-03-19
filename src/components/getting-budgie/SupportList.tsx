@@ -5,10 +5,13 @@ import type { SupportLiveMediaInfo, SupportManualInstallationInfo } from "../../
 import Translate from "@docusaurus/Translate";
 
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import { Stack } from "@mui/material";
-import Link from "@docusaurus/Link";
+import { Box, IconButton, Stack } from "@mui/material";
 import { OSCard } from "./OSCard";
 import { SupportListData } from "@site/src/data/supportList";
+import { OpenInNew } from "@mui/icons-material";
+
+import { translate } from "@docusaurus/Translate";
+import { SiteTheme } from "@site/src/theme";
 
 const SupportList = () => {
   const [liveMediaItems, manualItems] = [
@@ -20,7 +23,7 @@ const SupportList = () => {
 
   return (
     <Stack gap={2} key="SupportList">
-      <h2 style={{ fontWeight: "bold", margin: 0 }}>
+      <h2 style={{ fontWeight: "bold", margin: 0 }} key="SupportList-EffortlesslyHeader">
         <Translate
           id="get.budgie.header.effortlessly"
           description="Header text for getting Budgie effortlessly through live media"
@@ -29,7 +32,7 @@ const SupportList = () => {
         </Translate>
       </h2>
 
-      <h4 style={{ fontWeight: "normal", margin: 0 }}>
+      <h4 style={{ fontWeight: "normal", margin: 0 }} key="SupportList-EffortlesslyDescription">
         <Translate
           id="get.budgie.description.effortlessly"
           description="Description text for getting Budgie effortlessly through live media"
@@ -58,22 +61,36 @@ const SupportList = () => {
           <OSCard info={info} key={`OSCard-${info.name}-Entry`} />
         ))}
       </Grid2>
-      <h2 style={{ fontWeight: "bold", margin: 0 }}>
+      <h2 style={{ fontWeight: "bold", margin: "1vh 0" }} key="SupportList-BitMoreWorkHeader">
         <Translate id="get.budgie.header.bitmorework" description="Header text for getting Budgie with a bit more work">
           Get Budgie with a bit more work
         </Translate>
       </h2>
-      {manualItems.map((info) => {
-        return (
-          <Stack gap={2}>
-            <Link target="_blank" to={info.website}>
-              <h3 style={{ margin: 0 }}>{info.name}</h3>
-            </Link>
-            <info.installationInfo key={`InstallationInfo-${info.name}`} />
-          </Stack>
-        );
-      })}
-      <hr />
+      <Stack gap={4} key="SupportList-ManualItems">
+        {manualItems.map((info) => {
+          return (
+            <Box key={`SupportList-ManualItem-${info.name}-Box`}>
+              <Stack gap={2} key={`SupportList-ManualItem-${info.name}-Stack`}>
+                <Stack alignItems="center" direction="row" columnGap={1}>
+                  <h3 style={{ margin: 0 }}>{info.name}</h3>
+                  <IconButton
+                    aria-label={translate({ message: "Open in new tab" })}
+                    component="a"
+                    href={info.website}
+                    size="small"
+                    sx={{ color: SiteTheme.palette.success.main }}
+                    target="_blank"
+                  >
+                    <OpenInNew />
+                  </IconButton>
+                </Stack>
+                <info.installationInfo key={`InstallationInfo-${info.name}`} />
+              </Stack>
+              <hr />
+            </Box>
+          );
+        })}
+      </Stack>
       <Admonition type="note">
         <Translate
           id="get.budgie.description.reference"

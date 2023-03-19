@@ -1,0 +1,108 @@
+---
+description: This document provides high-level documentation on testing Budgie Desktop.
+keywords:
+  - budgie desktop
+  - testing budgie
+title: Testing Budgie
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import Link from "@docusaurus/Link";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+This document provides high-level documentation on testing the latest changes to Budgie Desktop. Whenever possible, we recommend that when
+[reporting an issue](https://github.com/BuddiesOfBudgie/budgie-desktop/issues) with Budgie Desktop that you first test with the latest available version of Budgie Desktop, if not the latest in-development changes,
+to see if the issue is already resolved.
+
+Please look at our [GitHub releases](https://github.com/BuddiesOfBudgie/budgie-desktop/releases) to confirm the latest version. You can compare this against the version you have installed by running:
+
+<CodeBlock language="bash">budgie-desktop --version</CodeBlock>
+
+## Git Builds
+
+Some distros provide up-to-date "git" versions of each component. If possible please try these packages on a separate machine / in a virtual machine.
+
+<Tabs>
+  <TabItem label="Arch" value="Arch">
+    Arch Linux typically has the latest stable version in the Community repository. You can test with the latest git
+    master of Budgie by installing the{" "}
+    <Link target="_blank" to="https://aur.archlinux.org/packages/budgie-desktop-git">
+      budgie-desktop-git
+    </Link>{" "}
+    AUR package using an AUR helper like{" "}
+    <Link target="_blank" to="https://github.com/Jguer/yay">
+      yay
+    </Link>
+    {" or "}
+    <Link target="_blank" to="https://github.com/Morganamilo/paru">
+      paru
+    </Link>
+    . Make sure to update your system before installing budgie-desktop-git, and reinstall the official budgie-desktop package
+    once you have finished testing.
+  </TabItem>
+  <TabItem label="Ubuntu" value="ubuntu">
+    Ubuntu provides a{" "}
+    <Link target="_blank" to="https://launchpad.net/~ubuntubudgie-dev/+archive/ubuntu/budgie-desktop-test">
+      daily built PPA
+    </Link>{" "}
+    based on the latest available stable release - LTS releases are not necessarily the latest stable.
+    <CodeBlock language="bash">
+      sudo add-apt-repository ppa:ubuntubudgie-dev/budgie-desktop-test
+      <br />
+      sudo apt-get update
+      <br />
+      reboot --
+    </CodeBlock>
+    To remove the PPA and return to the distro provided package, run:
+    <CodeBlock language="bash">
+      sudo ppa-purge ppa:ubuntubudgie-dev/budgie-desktop-test
+      <br />
+      reboot --
+    </CodeBlock>
+  </TabItem>
+</Tabs>
+
+---
+
+For other distributions than those listed above, you will need to follow the steps at [Building Budgie Desktop](/developer/workflow/building-budgie-desktop).
+
+## Testing
+
+There are several components that you may encounter throughout usage or testing of Budgie Desktop.
+
+| Name                    | Description                                                                                                                                                                   | Supports `--replace` |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| budgie-daemon           | Budgie Daemon is a background process responsible for many activities such as notification handling, XDG Directory monitorying, screenshot invoking, tab switching, and more. | ✅                   |
+| budgie-desktop-settings | Budgie Desktop Settings is the graphical application for configuration of our desktop environment.                                                                            | ❌                   |
+| budgie-panel            | This component handles one of more visual panels, which includes Raven and panel applets.                                                                                     | ✅                   |
+| budgie-wm               | Budgie WM is our window manager that sits as a Meta "plugin" on top of [Mutter](https://gitlab.gnome.org/GNOME/mutter).                                                       | ✅                   |
+
+### Restarting components
+
+It is common when testing Budgie Desktop to restart various components. When doing so, the `--replace` flag is passed alongside `&!` at the end of the command. This allows you to detach from the process
+without it stopping, so you can for example close the Terminal.
+
+Full example:
+
+```
+budgie-panel --replace &!
+```
+
+Some may opt to use the `nohup` (no hangup) command to log the output as well. If you do not need to do any long-term logging, it is not necessary to run it with nohup. Below is an example of how you would use it with budgie-panel:
+
+```
+nohup budgie-panel --replace > budgie-panel.out
+```
+
+This will output to the file named `budgie-panel.out` in whichever directory you run the command. You can change the filename should you desire.
+
+:::info
+Some components may be more sensitive to replacing and may either need to be done in a specific order, or twice (common with budgie-daemon).
+
+When in doubt, you should:
+
+1. Do a double replace of budgie-daemon
+2. If you are replacing both budgie-daemon and budgie-panel, first replace then daemon, then replace panel.
+
+:::
