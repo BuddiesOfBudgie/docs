@@ -5,6 +5,10 @@ import Admonition from "@theme/Admonition";
 import Translate from "@docusaurus/Translate";
 import { Stack } from "@mui/material";
 
+import CodeBlock from "@theme/CodeBlock";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
@@ -44,12 +48,43 @@ export const SupportListData: SupportInfo[] = [
     website: "https://spins.fedoraproject.org/prerelease",
   },
   {
+    budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.6.4",
+    installationInfo: () => (
+      <Stack gap={2}>
+        Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
+        Manjaro is based on Arch Linux.
+        <Admonition icon="🚧" type="caution">
+          The Budgie Desktop experience offered by this edition is incomplete, setting no default theme or enabling our
+          built-in theme. This results in a partially broken user experience.
+        </Admonition>
+      </Stack>
+    ),
+    name: "Manjaro Budgie Community Edition",
+    showInGrid: false,
+    website: "https://manjaro.org",
+  },
+  {
     budgieAvailablePostInstall: null,
     budgieVersion: "10.7.1",
     installationInfo: () => (
-      <Admonition icon="🚧" type="note" title="Coming Soon">
-        Installation instructions coming soon!
-      </Admonition>
+      <Stack gap={2}>
+        Budgie Desktop can be installed through the following mechanisms on openSUSE.
+        <Tabs>
+          <TabItem value="graphical" label="Graphical (Leap 15.4+ and Tumbleweed)">
+            Choose the "Budgie Desktop Environment" pattern under the "Desktop Environments" section when searching for
+            patterns in YaST Software Management
+          </TabItem>
+
+          <TabItem value="installer" label="Installer (Leap 15.4+ and Tumbleweed)">
+            At the 'Installation Settings' page, click on "Software" and then choose the "Budgie Desktop Environment"
+            pattern under the "Desktop Environments" section when searching for patterns.
+          </TabItem>
+          <TabItem value="cli" label="CLI">
+            <CodeBlock language="bash">sudo zypper install budgie-desktop</CodeBlock>
+          </TabItem>
+        </Tabs>
+      </Stack>
     ),
     name: "OpenSUSE",
     showInGrid: false,
@@ -59,12 +94,25 @@ export const SupportListData: SupportInfo[] = [
     budgieAvailablePostInstall: null,
     budgieVersion: "10.6.4",
     name: "Solus",
-    summary: () => (
+    installationInfo: () => (
+      <Stack gap={2}>
+        <Translate id="get.budgie.solus.summary" description="Summary of Solus">
+          Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
+        </Translate>
+        <Admonition icon="🚧" type="caution">
+          It is currently cautioned against installation of Solus. It may not work out-of-the-box on modern hardware as
+          no new release has been made since mid-2021. Additionally, Solus infrastructure has not been operational for
+          over two months, resulting in numerous packages remaining out-of-date with security vulnerabilities going
+          unpatched.
+        </Admonition>
+      </Stack>
+    ),
+    /*     summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">
         Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
       </Translate>
-    ),
-    showInGrid: true,
+    ), */
+    showInGrid: false,
     website: "https://getsol.us",
   },
   {
@@ -90,22 +138,5 @@ export const SupportListData: SupportInfo[] = [
     ),
     showInGrid: true,
     website: "https://ultramarine-linux.org",
-  },
-  {
-    budgieAvailablePostInstall: "10.7.1",
-    budgieVersion: "10.6.4",
-    installationInfo: () => (
-      <Stack gap={2}>
-        Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
-        Manjaro is based on Arch Linux.
-        <Admonition icon="🚧" type="caution">
-          The Budgie Desktop experience offered by this edition is incomplete, setting no default theme or enabling our
-          built-in theme. This results in a partially broken user experience.
-        </Admonition>
-      </Stack>
-    ),
-    name: "Manjaro Budgie Community Edition",
-    showInGrid: false,
-    website: "https://manjaro.org",
   },
 ];
