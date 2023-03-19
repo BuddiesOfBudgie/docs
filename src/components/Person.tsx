@@ -12,11 +12,12 @@ import Grid2 from "@mui/material/Unstable_Grid2";
 type PersonProps = {
   embeddedIn: string;
   isBadge?: boolean;
+  onAvatarClick?: () => void;
   person: PersonType;
   sx?: SxProps;
 };
 
-export const Person = ({ embeddedIn, isBadge = false, person, sx = {} }: PersonProps) => {
+export const Person = ({ embeddedIn, isBadge = false, onAvatarClick, person, sx = {} }: PersonProps) => {
   const usePersonRow = useMediaQuery(SiteTheme.breakpoints.up("sm"));
   const key = `Person-${embeddedIn}-${person.names.first}${person.names.last}`;
   const avatar = useBaseUrl(`/img/avatars/${person.names.first}${person.names.last}.jpg`);
@@ -27,23 +28,26 @@ export const Person = ({ embeddedIn, isBadge = false, person, sx = {} }: PersonP
 
   return (
     <Stack
+      alignItems={!usePersonRow && !isBadge ? "center" : undefined}
       className={`avatar ${!isBadge ? "card--bg" : ""}`}
       direction={usePersonRow || (!usePersonRow && isBadge) ? "row" : "column"}
       key={key}
       spacing={!usePersonRow ? 2 : undefined}
       sx={sx}
     >
-      <Link key={`Link-HeaderAvatar-${key}`} target="_blank" to={primarySite.to}>
-        <Avatar
-          alt={`${name}'s Avatar`}
-          className="PersonLinkHeaderAvatar"
-          src={avatar}
-          sx={{
-            height: isBadge ? 40 : 64,
-            width: isBadge ? 40 : 64,
-          }}
-        />
-      </Link>
+      <Box onClick={isBadge && onAvatarClick ? onAvatarClick : undefined} sx={{ cursor: "pointer" }}>
+        <Link key={`Link-HeaderAvatar-${key}`} target="_blank" to={!isBadge ? primarySite.to : undefined}>
+          <Avatar
+            alt={`${name}'s Avatar`}
+            className="PersonLinkHeaderAvatar"
+            src={avatar}
+            sx={{
+              height: isBadge ? 40 : 64,
+              width: isBadge ? 40 : 64,
+            }}
+          />
+        </Link>
+      </Box>
       <Stack
         alignItems={!usePersonRow && !isBadge ? "center" : undefined}
         className="avatar__intro"
