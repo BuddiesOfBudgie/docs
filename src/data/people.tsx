@@ -11,11 +11,8 @@ export const People: Record<string, Person> = {
   CampbellJones: {
     description: () => (
       <Box>
-        Software engineer. Package maintainer{" "}
-        <Link target="_blank" to="https://github.com/archlinux">
-          @archlinux
-        </Link>
-        . Makes things into better things.
+        Known miscreant, suspected film and animation enthusiast, alleged software engineer, and documented
+        Arch Linux package maintainer.
       </Box>
     ),
     matrix: "@serebit:matrix.org",

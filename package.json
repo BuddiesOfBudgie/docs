@@ -13,17 +13,18 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettier": "npx prettier -w ."
   },
   "dependencies": {
     "@docsearch/react": "3.3.3",
-    "@docusaurus/core": "2.3.1",
-    "@docusaurus/preset-classic": "2.3.1",
+    "@docusaurus/core": "2.4.0",
+    "@docusaurus/preset-classic": "2.4.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.13",
+    "@mui/material": "^5.11.14",
     "clsx": "^1.2.1",
     "lodash": "^4.17.21",
     "luxon": "^3.3.0",
@@ -32,13 +33,13 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@docusaurus/eslint-plugin": "^2.3.1",
-    "@docusaurus/module-type-aliases": "2.3.1",
+    "@docusaurus/eslint-plugin": "^2.4.0",
+    "@docusaurus/module-type-aliases": "2.4.0",
     "@tsconfig/docusaurus": "^1.0.7",
     "@types/lodash": "^4.14.191",
     "@types/luxon": "^3.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
     "eslint-plugin-prettier": "^4.2.1",
     "typescript": "^4.9.5"

@@ -1,9 +1,12 @@
 # Build artifacts
-.husky
-.next
-
-# Infra for now until we know prettier doesn't do anything silly to our kubectl files
-infra/
+build/
+.docusaurus/
+.yarn/
+package.json
+yarn.lock
 
 # LICENSE should not be touched
 LICENSE.md
+
+# static assets
+static/
