@@ -14,9 +14,30 @@ export const SupportListData: SupportInfo[] = [
     budgieAvailablePostInstall: null,
     budgieVersion: "10.7.1",
     installationInfo: () => (
-      <Admonition icon="🚧" type="note" title="Coming Soon">
-        Installation instructions coming soon!
-      </Admonition>
+      <Stack gap={2}>
+        Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users
+        also have the option to install the desktop manually.
+        <Tabs>
+          <TabItem value="archinstall" label="archinstall">
+            Under the "Profile" option, select "desktop", then "budgie".
+          </TabItem>
+
+          <TabItem value="manual" label="Manual Installation">
+            After completing manual installation, run the following to install Budgie and a login manager:
+            <CodeBlock language="bash">
+              sudo pacman -S budgie lightdm-gtk-greeter
+            </CodeBlock>
+            It's also recommended to install nm-applet, the default GTK theme, and the default icon theme:
+            <CodeBlock language="bash">
+              sudo pacman -S arc-gtk-theme papirus-icon-theme network-manager-applet
+            </CodeBlock>
+            Finally, enable LightDM:
+            <CodeBlock language="bash">
+              sudo systemctl enable --now lightdm
+            </CodeBlock>
+          </TabItem>
+        </Tabs>
+      </Stack>
     ),
     name: "Arch Linux",
     showInGrid: false,
