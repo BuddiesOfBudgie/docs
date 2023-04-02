@@ -5,14 +5,13 @@ import { Box } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import Mastodon from "@site/static/img/icons/mastodon.svg";
-import Link from "@docusaurus/Link";
 
 export const People: Record<string, Person> = {
   CampbellJones: {
     description: () => (
       <Box>
-        Known miscreant, suspected film and animation enthusiast, alleged software engineer, and documented
-        Arch Linux package maintainer.
+        Known miscreant, suspected film and animation enthusiast, alleged software engineer, and documented Arch Linux
+        package maintainer.
       </Box>
     ),
     matrix: "@serebit:matrix.org",
