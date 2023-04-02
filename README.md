@@ -1,6 +1,6 @@
 # Buddies of Budgie Documentation
 
-Buddies of Budgie Documentation is our documentation center leveraging [Docusaurus](https://docusaurus.io).
+[Buddies of Budgie Documentation](https://docs.buddiesofbudgie.org) is our documentation center leveraging [Docusaurus](https://docusaurus.io).
 
 [![Deploy](https://github.com/BuddiesOfBudgie/docs/actions/workflows/deploy.yml/badge.svg?branch=deploy)](https://github.com/BuddiesOfBudgie/docs/actions/workflows/deploy.yml)
 
