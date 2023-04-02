@@ -1,8 +1,6 @@
 # Buddies of Budgie Documentation
 
-Buddies of Budgie Documentation is our documentation center leveraging [Docusaurus](https://docusaurus.io).
-
-Project lives at https://docs.buddiesofbudgie.org and is automatically deployed via its `deploy` branch on DigitalOcean's App platform.
+[Buddies of Budgie Documentation](https://docs.buddiesofbudgie.org) is our documentation center leveraging [Docusaurus](https://docusaurus.io).
 
 ## Getting Started
 
@@ -38,6 +36,32 @@ To start the live reloading Docusaurus, run: `yarn start`
 - Linting: `yarn lint`
 - Updating translation files: `yarn write-translations`
 - Validate build: `yarn build`
+
+## Containers Images
+
+We provide the following targets for our container image:
+
+- `development`: This can be used to facilitate local development should you not wish to set up a host-based local development environment.
+- `deploy`: This is used in our CI / CD pipeline and is what runs on our infrastructure.
+
+### Using development target for local development
+
+While you can run the development target without specifying a volume, which would effectively be a copy of what you have in your working directory at image build time, there is no advantage to doing so over running the deploy target. So this section will focus on use with our working directory set as mounted volume.
+
+For this section, we will be using [podman](https://podman.io/), although the commands should be identical for docker as well should you use that instead. Just swap `podman` for `docker`.
+
+- Build the image: `podman build -t docusaurus:development --target development .`
+- Run the image: `podman run -it --rm -p 3000:3000 -v .:/app docusaurus:development`
+- Interactive with `sh` as entrypoint (does not automatically start docusaurus): `podman run -it --rm -p 3000:3000 --entrypoint /bin/sh --tty -v .:/app docusaurus:development`
+
+This will mount the working directory at `/app` as a volume and whenever there is a change to this directory, Docusaurus will automatically rebuild thanks to hot module reloading.
+
+### Testing deploy
+
+If you want to test the production image, follow the steps below:
+
+- Build the image: `podman build -t docusaurus:deploy --target deploy .`
+- Run the image: `podman run -it --rm -p 3000:3000 docusaurus:deploy`
 
 ## License
 

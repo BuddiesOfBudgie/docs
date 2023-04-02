@@ -69,8 +69,8 @@ const SupportList = () => {
       <Stack gap={4} key="SupportList-ManualItems">
         {manualItems.map((info) => {
           return (
-            <Box key={`SupportList-ManualItem-${info.name}-Box`}>
-              <Stack gap={2} key={`SupportList-ManualItem-${info.name}-Stack`}>
+            <Box className={`ManualOSCard card`} key={`SupportList-ManualItem-${info.name}-Box`}>
+              <Stack className="card__body" gap={2} key={`SupportList-ManualItem-${info.name}-Stack`} pb={0}>
                 <Stack alignItems="center" direction="row" columnGap={1}>
                   <h3 style={{ margin: 0 }}>{info.name}</h3>
                   <IconButton
@@ -84,13 +84,15 @@ const SupportList = () => {
                     <OpenInNew />
                   </IconButton>
                 </Stack>
-                <info.installationInfo key={`InstallationInfo-${info.name}`} />
+                <Stack gap={2}>
+                  <info.installationInfo key={`InstallationInfo-${info.name}`} />
+                </Stack>
               </Stack>
-              <hr />
             </Box>
           );
         })}
       </Stack>
+      <hr />
       <Admonition type="note">
         <Translate
           id="get.budgie.description.reference"

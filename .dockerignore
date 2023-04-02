@@ -1,0 +1,14 @@
+.docusaurus/
+.github/
+.yarn/cache
+.yarn/install-state.gz
+build/
+node_modules/
+static/.nojekyll
+.editorconfig
+.eslintrc.json
+.prettier*
+LICENSE
+deployment.yml
+README.md
+
