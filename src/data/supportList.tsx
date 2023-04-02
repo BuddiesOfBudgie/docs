@@ -50,7 +50,7 @@ export const SupportListData: SupportInfo[] = [
     showInGrid: false,
     installationInfo: () => (
       <Admonition icon="🚧" type="note" title="Coming Soon">
-      Installation instructions coming soon!
+        Installation instructions coming soon!
       </Admonition>
     ),
     website: "https://debian.org",
