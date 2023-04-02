@@ -24,6 +24,7 @@
   --ifm-code-font-size: 95%;
   --ifm-footer-background-color: var(--budgie-green);
   --ifm-navbar-background-color: var(--lightgrey);
+  --ifm-tabs-padding-vertical: 0.5rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Search */
