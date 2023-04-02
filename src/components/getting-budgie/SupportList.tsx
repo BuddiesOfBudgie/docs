@@ -69,8 +69,8 @@ const SupportList = () => {
       <Stack gap={4} key="SupportList-ManualItems">
         {manualItems.map((info) => {
           return (
-            <Box className={`OSCard card`} key={`SupportList-ManualItem-${info.name}-Box`}>
-              <Stack className="card__footer" gap={2} key={`SupportList-ManualItem-${info.name}-Stack`}>
+            <Box className={`ManualOSCard card`} key={`SupportList-ManualItem-${info.name}-Box`}>
+              <Stack className="card__body" gap={2} key={`SupportList-ManualItem-${info.name}-Stack`}>
                 <Stack alignItems="center" direction="row" columnGap={1}>
                   <h3 style={{ margin: 0 }}>{info.name}</h3>
                   <IconButton

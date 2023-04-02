@@ -110,6 +110,10 @@
   --ifm-footer-title-color: var(--ifm-navbar-link-color);
 }
 
+.ManualOSCard .card__body {
+  padding-bottom: 0;
+}
+
 [data-theme="light"] .PersonLinkHeaderAvatar {
   box-shadow: 0 0 10px var(--greydark);
 }
