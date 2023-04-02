@@ -84,7 +84,9 @@ const SupportList = () => {
                     <OpenInNew />
                   </IconButton>
                 </Stack>
-                <info.installationInfo key={`InstallationInfo-${info.name}`} />
+                <Stack>
+                  <info.installationInfo key={`InstallationInfo-${info.name}`} />
+                </Stack>
               </Stack>
             </Box>
           );
