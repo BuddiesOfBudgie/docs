@@ -70,7 +70,7 @@ const SupportList = () => {
         {manualItems.map((info) => {
           return (
             <Box className={`ManualOSCard card`} key={`SupportList-ManualItem-${info.name}-Box`}>
-              <Stack className="card__body" gap={2} key={`SupportList-ManualItem-${info.name}-Stack`}>
+              <Stack className="card__body" gap={2} key={`SupportList-ManualItem-${info.name}-Stack`} pb={0}>
                 <Stack alignItems="center" direction="row" columnGap={1}>
                   <h3 style={{ margin: 0 }}>{info.name}</h3>
                   <IconButton
