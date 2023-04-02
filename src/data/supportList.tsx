@@ -3,7 +3,6 @@ import { SupportInfo } from "../types";
 
 import Admonition from "@theme/Admonition";
 import Translate from "@docusaurus/Translate";
-import { Stack } from "@mui/material";
 
 import CodeBlock from "@theme/CodeBlock";
 import Tabs from "@theme/Tabs";
@@ -14,9 +13,9 @@ export const SupportListData: SupportInfo[] = [
     budgieAvailablePostInstall: null,
     budgieVersion: "10.7.1",
     installationInfo: () => (
-      <Stack gap={2}>
-        Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users
-        also have the option to install the desktop manually.
+      <>
+        Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
+        have the option to install the desktop manually.
         <Tabs>
           <TabItem value="archinstall" label="archinstall">
             Under the "Profile" option, select "desktop", then "budgie".
@@ -24,24 +23,32 @@ export const SupportListData: SupportInfo[] = [
 
           <TabItem value="manual" label="Manual Installation">
             After completing manual installation, run the following to install Budgie and a login manager:
-            <CodeBlock language="bash">
-              sudo pacman -S budgie lightdm-gtk-greeter
-            </CodeBlock>
+            <CodeBlock language="bash">sudo pacman -S budgie lightdm-gtk-greeter</CodeBlock>
             It's also recommended to install nm-applet, the default GTK theme, and the default icon theme:
             <CodeBlock language="bash">
               sudo pacman -S arc-gtk-theme papirus-icon-theme network-manager-applet
             </CodeBlock>
             Finally, enable LightDM:
-            <CodeBlock language="bash">
-              sudo systemctl enable --now lightdm
-            </CodeBlock>
+            <CodeBlock language="bash">sudo systemctl enable --now lightdm</CodeBlock>
           </TabItem>
         </Tabs>
-      </Stack>
+      </>
     ),
     name: "Arch Linux",
     showInGrid: false,
     website: "https://archlinux.org",
+  },
+  {
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.5.2",
+    name: "Debian",
+    showInGrid: false,
+    installationInfo: () => (
+      <Admonition icon="🚧" type="note" title="Coming Soon">
+        Installation instructions coming soon!
+      </Admonition>
+    ),
+    website: "https://debian.org",
   },
   {
     budgieAvailablePostInstall: null,
@@ -72,14 +79,14 @@ export const SupportListData: SupportInfo[] = [
     budgieAvailablePostInstall: "10.7.1",
     budgieVersion: "10.6.4",
     installationInfo: () => (
-      <Stack gap={2}>
+      <>
         Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
         Manjaro is based on Arch Linux.
         <Admonition icon="🚧" type="caution">
           The Budgie Desktop experience offered by this edition is incomplete, setting no default theme or enabling our
           built-in theme. This results in a partially broken user experience.
         </Admonition>
-      </Stack>
+      </>
     ),
     name: "Manjaro Budgie Community Edition",
     showInGrid: false,
@@ -89,7 +96,7 @@ export const SupportListData: SupportInfo[] = [
     budgieAvailablePostInstall: null,
     budgieVersion: "10.7.1",
     installationInfo: () => (
-      <Stack gap={2}>
+      <>
         Budgie Desktop can be installed through the following mechanisms on openSUSE.
         <Tabs>
           <TabItem value="graphical" label="Graphical (Leap 15.4+ and Tumbleweed)">
@@ -105,7 +112,7 @@ export const SupportListData: SupportInfo[] = [
             <CodeBlock language="bash">sudo zypper install budgie-desktop</CodeBlock>
           </TabItem>
         </Tabs>
-      </Stack>
+      </>
     ),
     name: "OpenSUSE",
     showInGrid: false,
@@ -116,7 +123,7 @@ export const SupportListData: SupportInfo[] = [
     budgieVersion: "10.6.4",
     name: "Solus",
     installationInfo: () => (
-      <Stack gap={2}>
+      <>
         <Translate id="get.budgie.solus.summary" description="Summary of Solus">
           Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
         </Translate>
@@ -126,7 +133,7 @@ export const SupportListData: SupportInfo[] = [
           over two months, resulting in numerous packages remaining out-of-date with security vulnerabilities going
           unpatched.
         </Admonition>
-      </Stack>
+      </>
     ),
     /*     summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">

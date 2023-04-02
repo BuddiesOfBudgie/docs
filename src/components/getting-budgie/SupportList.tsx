@@ -84,13 +84,15 @@ const SupportList = () => {
                     <OpenInNew />
                   </IconButton>
                 </Stack>
-                <info.installationInfo key={`InstallationInfo-${info.name}`} />
+                <Stack gap={2}>
+                  <info.installationInfo key={`InstallationInfo-${info.name}`} />
+                </Stack>
               </Stack>
             </Box>
           );
         })}
       </Stack>
-      <hr/>
+      <hr />
       <Admonition type="note">
         <Translate
           id="get.budgie.description.reference"
