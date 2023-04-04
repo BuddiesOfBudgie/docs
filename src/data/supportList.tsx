@@ -77,6 +77,38 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.7.1",
+    installationInfo: () => (
+      <>
+        Budgie is not yet available in a quarterly release of FreeBSD; however, it can be installed if the Latest binary
+        repository or the master branch of the ports repository is used instead.
+        <Tabs>
+          <TabItem value="package" label="Package">
+            Install X11 and the Budgie package group:
+            <CodeBlock language="bash">pkg install xorg-minimal budgie</CodeBlock>
+          </TabItem>
+
+          <TabItem value="port" label="Port">
+            Configure and install X11:
+            <CodeBlock language="bash">cd /usr/ports/x11/xorg-minimal && make config-recursive install clean</CodeBlock>
+            Configure and install Budgie:
+            <CodeBlock language="bash">cd /usr/ports/x11/budgie && make config-recursive install clean</CodeBlock>
+          </TabItem>
+        </Tabs>
+        Finally, enable DBus and LightDM:
+        <CodeBlock language="bash">sysrc dbus_enable="YES" lightdm_enable="YES"</CodeBlock>
+        After a reboot, you will be able to log into Budgie.
+        <Admonition icon="🚧" type="caution">
+          Using the Latest repository or the master version of the ports repository may result in system instability.
+        </Admonition>
+      </>
+    ),
+    name: "FreeBSD",
+    showInGrid: false,
+    website: "https://freebsd.org"
+  },
+  {
+    budgieAvailablePostInstall: "10.7.1",
     budgieVersion: "10.6.4",
     installationInfo: () => (
       <>
