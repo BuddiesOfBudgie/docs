@@ -2,7 +2,11 @@ import React from "react";
 import Admonition from "@theme/Admonition";
 
 import type { SupportLiveMediaInfo, SupportManualInstallationInfo } from "../../types";
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import Translate from "@docusaurus/Translate";
+
+import { kebabCase, toLower } from "lodash";
 
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { Box, IconButton, Stack } from "@mui/material";
@@ -68,10 +72,14 @@ const SupportList = () => {
       </h2>
       <Stack gap={4} key="SupportList-ManualItems">
         {manualItems.map((info) => {
+          const kebabName = kebabCase(toLower(info.name));
+          const logo = useBaseUrl(`/img/distribution/logos/${kebabName}.png`);
+
           return (
             <Box className={`ManualOSCard card`} key={`SupportList-ManualItem-${info.name}-Box`}>
               <Stack className="card__body" gap={2} key={`SupportList-ManualItem-${info.name}-Stack`} pb={0}>
                 <Stack alignItems="center" direction="row" columnGap={1}>
+                  <img src={logo} style={{ height: 32, width: 32, objectFit: "scale-down" }} />
                   <h3 style={{ margin: 0 }}>{info.name}</h3>
                   <IconButton
                     aria-label={translate({ message: "Open in new tab" })}
