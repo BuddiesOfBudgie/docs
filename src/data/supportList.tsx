@@ -80,7 +80,7 @@ export const SupportListData: SupportInfo[] = [
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
-        Budgie is not yet available in a quarterly release of FreeBSD, however it can be installed if the Latest binary
+        Budgie is not yet available in a quarterly release of FreeBSD; however, it can be installed if the Latest binary
         repository or the master branch of the ports repository is used instead.
         <Tabs>
           <TabItem value="package" label="Package">
