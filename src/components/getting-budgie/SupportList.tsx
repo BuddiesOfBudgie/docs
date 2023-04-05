@@ -5,7 +5,6 @@ import type { SupportLiveMediaInfo, SupportManualInstallationInfo } from "../../
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Translate from "@docusaurus/Translate";
-import SVG from 'react-inlinesvg';
 
 import { kebabCase, toLower } from "lodash";
 
@@ -14,7 +13,6 @@ import { Box, IconButton, Stack } from "@mui/material";
 import { OSCard } from "./OSCard";
 import { SupportListData } from "@site/src/data/supportList";
 import { OpenInNew } from "@mui/icons-material";
-
 
 import { translate } from "@docusaurus/Translate";
 import { SiteTheme } from "@site/src/theme";

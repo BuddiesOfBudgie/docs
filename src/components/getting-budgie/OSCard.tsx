@@ -68,7 +68,7 @@ export const OSCard = ({ info }: OSCardProps) => {
                 description: "Alt text for images of various distributions",
               },
               { distribution: info.name }
-              )}
+            )}
             src={screenshot}
             style={{aspectRatio: "16 / 9"}}
           />
