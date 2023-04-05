@@ -14,21 +14,23 @@ export const SupportListData: SupportInfo[] = [
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
-        Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
-        have the option to install the desktop manually.
+        <p>
+          Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
+          have the option to install the desktop manually.
+        </p>
         <Tabs>
           <TabItem value="archinstall" label="archinstall">
-            Under the "Profile" option, select "desktop", then "budgie".
+            <p>Under the "Profile" option, select "desktop", then "budgie".</p>
           </TabItem>
 
           <TabItem value="manual" label="Manual Installation">
-            After completing manual installation, run the following to install Budgie and a login manager:
+            <p>After completing manual installation, run the following to install Budgie and a login manager:</p>
             <CodeBlock language="bash">sudo pacman -S budgie lightdm-gtk-greeter</CodeBlock>
-            It's also recommended to install nm-applet, the default GTK theme, and the default icon theme:
+            <p>It's also recommended to install nm-applet, the default GTK theme, and the default icon theme:</p>
             <CodeBlock language="bash">
               sudo pacman -S arc-gtk-theme papirus-icon-theme network-manager-applet
             </CodeBlock>
-            Finally, enable LightDM:
+            <p>Finally, enable LightDM:</p>
             <CodeBlock language="bash">sudo systemctl enable --now lightdm</CodeBlock>
           </TabItem>
         </Tabs>
@@ -93,24 +95,26 @@ export const SupportListData: SupportInfo[] = [
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
-        Budgie is not yet available in a quarterly release of FreeBSD; however, it can be installed if the Latest binary
-        repository or the master branch of the ports repository is used instead.
+        <p>
+          Budgie is not yet available in a quarterly release of FreeBSD; however, it can be installed if the Latest binary
+          repository or the master branch of the ports repository is used instead.
+        </p>
         <Tabs>
           <TabItem value="package" label="Package">
-            Install X11 and the Budgie package group:
+            <p>Install X11 and the Budgie package group:</p>
             <CodeBlock language="bash">pkg install xorg-minimal budgie</CodeBlock>
           </TabItem>
 
           <TabItem value="port" label="Port">
-            Configure and install X11:
+            <p>Configure and install X11:</p>
             <CodeBlock language="bash">cd /usr/ports/x11/xorg-minimal && make config-recursive install clean</CodeBlock>
-            Configure and install Budgie:
+            <p>Configure and install Budgie:</p>
             <CodeBlock language="bash">cd /usr/ports/x11/budgie && make config-recursive install clean</CodeBlock>
           </TabItem>
         </Tabs>
-        Finally, enable DBus and LightDM:
+        <p>Finally, enable DBus and LightDM:</p>
         <CodeBlock language="bash">sysrc dbus_enable="YES" lightdm_enable="YES"</CodeBlock>
-        After a reboot, you will be able to log into Budgie.
+        <p>After a reboot, you will be able to log into Budgie.</p>
         <Admonition icon="🚧" type="caution">
           Using the Latest repository or the master version of the ports repository may result in system instability.
         </Admonition>
@@ -125,8 +129,10 @@ export const SupportListData: SupportInfo[] = [
     budgieVersion: "10.6.4",
     installationInfo: () => (
       <>
-        Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
-        Manjaro is based on Arch Linux.
+        <p>
+          Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
+          Manjaro is based on Arch Linux.
+        </p>
         <Admonition icon="🚧" type="caution">
           The Budgie Desktop experience offered by this edition is incomplete, setting no default theme or enabling our
           built-in theme. This results in a partially broken user experience.
@@ -142,11 +148,11 @@ export const SupportListData: SupportInfo[] = [
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
-        Budgie Desktop can be installed through the following mechanisms on openSUSE.
+        <p>Budgie Desktop can be installed through the following mechanisms on openSUSE.</p>
         <Tabs>
           <TabItem value="graphical" label="Graphical (Leap 15.4+ and Tumbleweed)">
             Choose the "Budgie Desktop Environment" pattern under the "Desktop Environments" section when searching for
-            patterns in YaST Software Management
+            patterns in YaST Software Management.
           </TabItem>
 
           <TabItem value="installer" label="Installer (Leap 15.4+ and Tumbleweed)">
@@ -169,9 +175,11 @@ export const SupportListData: SupportInfo[] = [
     name: "Solus",
     installationInfo: () => (
       <>
-        <Translate id="get.budgie.solus.summary" description="Summary of Solus">
-          Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
-        </Translate>
+        <p>
+          <Translate id="get.budgie.solus.summary" description="Summary of Solus">
+            Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
+          </Translate>
+        </p>
         <Admonition icon="🚧" type="caution">
           It is currently cautioned against installation of Solus. It may not work out-of-the-box on modern hardware as
           no new release has been made since mid-2021.
@@ -210,4 +218,33 @@ export const SupportListData: SupportInfo[] = [
     showInGrid: true,
     website: "https://ultramarine-linux.org",
   },
+  {
+    budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.6.4",
+    name: "Void Linux",
+    installationInfo: () => (
+      <>
+        <p>
+          Void Linux does not offer a Budgie Desktop installer profile, but it can be installed manually on top of the base
+          image. First, install the required packages:
+        </p>
+        <CodeBlock language="bash">sudo xbps-install budgie-desktop network-manager-applet lightdm-gtk3-greeter</CodeBlock>
+        <p>Enable DBus, elogind, NetworkManager, and LightDM:</p>
+        <CodeBlock language="bash">
+          sudo ln -s /etc/sv/dbus /var/service
+          <br />
+          sudo ln -s /etc/sv/elogind /var/service
+          <br />
+          sudo ln -s /etc/sv/NetworkManager /var/service
+          <br />
+          sudo ln -s /etc/sv/lightdm /var/service
+        </CodeBlock>
+        <p>Finally, disable dhcpcd:</p>
+        <CodeBlock language="bash">sudo rm -f /var/service/dhcpcd</CodeBlock>
+        <p>After a reboot, you will be able to log into Budgie.</p>
+      </>
+    ),
+    showInGrid: false,
+    website: "https://voidlinux.org",
+  }
 ];
