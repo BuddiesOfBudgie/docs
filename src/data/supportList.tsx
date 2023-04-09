@@ -77,6 +77,19 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.6.2",
+    name: "GeckoLinux",
+    showInGrid: true,
+    summary: () => (
+      <Translate id="get.budgie.geckolinux.summary" description="Summary of GeckoLinux">
+        GeckoLinux is a distro comprised of spins of OpenSUSE Leap and Tumbleweed. GeckoLinux offers an official
+        spin of Budgie Desktop with a highly curated configuration.
+      </Translate>
+    ),
+    website: "https://geckolinux.github.io/",
+  },
+  {
+    budgieAvailablePostInstall: "10.7.1",
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
