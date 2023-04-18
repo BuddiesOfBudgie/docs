@@ -73,7 +73,7 @@ export const SupportListData: SupportInfo[] = [
         Fedora Budgie Spin offers a near-stock Budgie Desktop experience on top of the Fedora open source platform.
       </Translate>
     ),
-    website: "https://spins.fedoraproject.org/en/budgie/",
+    website: "https://fedoraproject.org/spins/budgie/",
   },
   {
     budgieAvailablePostInstall: "10.7.1",
