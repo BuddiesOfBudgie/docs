@@ -20,7 +20,7 @@ type PersonProps = {
 export const Person = ({ embeddedIn, isBadge = false, onAvatarClick, person, sx = {} }: PersonProps) => {
   const usePersonRow = useMediaQuery(SiteTheme.breakpoints.up("sm"));
   const key = `Person-${embeddedIn}-${person.names.first}${person.names.last}`;
-  const avatar = useBaseUrl(`/img/avatars/${person.names.first}${person.names.last}.jpg`);
+  const avatar = useBaseUrl(`/img/avatars/${person.names.first}${person.names.last}.webp`);
   const name = `${person.names.first} ${person.names.last}`;
 
   const github = person.websites.find((w) => w.type === WebsiteType.GITHUB);

@@ -22,8 +22,8 @@ type OSCardProps = {
 export const OSCard = ({ info }: OSCardProps) => {
   const aboveSm = useMediaQuery(SiteTheme.breakpoints.up("sm"));
   const kebabName = kebabCase(toLower(info.name));
-  const logo = useBaseUrl(`/img/distribution/logos/${kebabName}.png`);
-  const screenshot = useBaseUrl(`/img/distribution/screenshots/${kebabName}.jpg`);
+  const logo = useBaseUrl(`/img/distribution/logos/${kebabName}.svg`);
+  const screenshot = useBaseUrl(`/img/distribution/screenshots/${kebabName}.webp`);
 
   const hasLatestOOTB = info.budgieVersion === LATEST_BUDGIE_RELEASE;
 
@@ -70,9 +70,7 @@ export const OSCard = ({ info }: OSCardProps) => {
               { distribution: info.name }
             )}
             src={screenshot}
-            style={{
-              aspectRatio: "16 / 9",
-            }}
+            style={{ aspectRatio: "16 / 9" }}
           />
         </Box>
         <Stack className="card__body" gap={2}>
