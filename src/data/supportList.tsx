@@ -151,7 +151,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://opensuse.org",
   },
   {
-    budgieAvailablePostInstall: null,
+    budgieAvailablePostInstall: "10.7.1",
     budgieVersion: "10.6.4",
     name: "Solus",
     installationInfo: () => (
@@ -161,9 +161,7 @@ export const SupportListData: SupportInfo[] = [
         </Translate>
         <Admonition icon="🚧" type="caution">
           It is currently cautioned against installation of Solus. It may not work out-of-the-box on modern hardware as
-          no new release has been made since mid-2021. Additionally, Solus infrastructure has not been operational for
-          over two months, resulting in numerous packages remaining out-of-date with security vulnerabilities going
-          unpatched.
+          no new release has been made since mid-2021.
         </Admonition>
       </>
     ),
