@@ -146,7 +146,7 @@ export const SupportListData: SupportInfo[] = [
         <Tabs>
           <TabItem value="graphical" label="Graphical (Leap 15.4+ and Tumbleweed)">
             Choose the "Budgie Desktop Environment" pattern under the "Desktop Environments" section when searching for
-            patterns in YaST Software Management
+            patterns in YaST Software Management.
           </TabItem>
 
           <TabItem value="installer" label="Installer (Leap 15.4+ and Tumbleweed)">
@@ -210,4 +210,31 @@ export const SupportListData: SupportInfo[] = [
     showInGrid: true,
     website: "https://ultramarine-linux.org",
   },
+  {
+    budgieAvailablePostInstall: "10.7.1",
+    budgieVersion: "10.6.4",
+    name: "Void Linux",
+    installationInfo: () => (
+      <>
+        Void Linux does not offer a Budgie Desktop installer profile, but it can be installed manually on top of the base
+        image. First, install the required packages:
+        <CodeBlock language="bash">sudo xbps-install budgie-desktop network-manager-applet lightdm-gtk3-greeter</CodeBlock>
+        Enable DBus, elogind, NetworkManager, and LightDM:
+        <CodeBlock language="bash">
+          sudo ln -s /etc/sv/dbus /var/service
+          <br />
+          sudo ln -s /etc/sv/elogind /var/service
+          <br />
+          sudo ln -s /etc/sv/NetworkManager /var/service
+          <br />
+          sudo ln -s /etc/sv/lightdm /var/service
+        </CodeBlock>
+        Finally, disable dhcpcd:
+        <CodeBlock language="bash">sudo rm -f /var/service/dhcpcd</CodeBlock>
+        <p>After a reboot, you will be able to log into Budgie.</p>
+      </>
+    ),
+    showInGrid: false,
+    website: "https://voidlinux.org",
+  }
 ];
