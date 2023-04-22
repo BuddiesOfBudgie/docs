@@ -70,7 +70,7 @@ export const OSCard = ({ info }: OSCardProps) => {
               { distribution: info.name }
             )}
             src={screenshot}
-            style={{aspectRatio: "16 / 9"}}
+            style={{ aspectRatio: "16 / 9" }}
           />
         </Box>
         <Stack className="card__body" gap={2}>
