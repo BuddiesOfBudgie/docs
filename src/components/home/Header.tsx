@@ -22,7 +22,7 @@ export const Header = () => {
       }}
     >
       <img
-        src={useBaseUrl("/img/laptop.png")}
+        src={useBaseUrl("/img/laptop.webp")}
         style={{ maxWidth: aboveXl ? SiteTheme.breakpoints.values.md : undefined }}
       />
       <h1 style={{ fontWeight: "bold" }}>
