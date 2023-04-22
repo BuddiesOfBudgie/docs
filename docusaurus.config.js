@@ -88,10 +88,12 @@ const config = {
               {
                 href: "https://github.com/BuddiesOfBudgie",
                 label: "GitHub",
+                rel: "me",
               },
               {
                 label: "Mastodon",
                 href: "https://fosstodon.org/@BuddiesOfBudgie",
+                rel: "me",
               },
               {
                 label: "Matrix",
@@ -100,6 +102,7 @@ const config = {
               {
                 label: "Twitter",
                 href: "https://twitter.com/BuddiesOfBudgie",
+                rel: "me",
               },
             ],
             type: "dropdown",
