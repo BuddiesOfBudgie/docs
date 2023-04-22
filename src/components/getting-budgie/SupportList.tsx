@@ -92,7 +92,7 @@ const SupportList = () => {
                     <OpenInNew />
                   </IconButton>
                 </Stack>
-                <Stack>
+                <Stack gap={2}>
                   <info.installationInfo key={`InstallationInfo-${info.name}`} />
                 </Stack>
               </Stack>
