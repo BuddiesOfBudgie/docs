@@ -19,7 +19,7 @@ export const Teams: Team[] = [
       ["JoshuaStrobl", "Fedora"],
       ["CampbellJones", "Arch Linux"],
       ["DavidMohammed", "Debian / Ubuntu"],
-      ["ThomasStaudinger", "Solus"],
+      ["EvanMaddock", "Solus"],
     ],
     name: "Distribution / Packaging Team",
   },
