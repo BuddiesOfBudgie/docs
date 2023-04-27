@@ -11,7 +11,7 @@ import TabItem from "@theme/TabItem";
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.7.1",
+    budgieVersion: "10.7.2",
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -51,7 +51,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://debian.org",
   },
   {
-    budgieAvailablePostInstall: null,
+    budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.7.1",
     name: "EndeavourOS",
     showInGrid: true,
@@ -64,7 +64,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://endeavouros.com",
   },
   {
-    budgieAvailablePostInstall: null,
+    budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.7.1",
     name: "Fedora Budgie Spin",
     showInGrid: true,
@@ -82,8 +82,8 @@ export const SupportListData: SupportInfo[] = [
     showInGrid: true,
     summary: () => (
       <Translate id="get.budgie.geckolinux.summary" description="Summary of GeckoLinux">
-        GeckoLinux is a distro comprised of spins of OpenSUSE Leap and Tumbleweed. GeckoLinux offers an official
-        spin of Budgie Desktop with a highly curated configuration.
+        GeckoLinux is a distro comprised of spins of OpenSUSE Leap and Tumbleweed. GeckoLinux offers an official spin of
+        Budgie Desktop with a highly curated configuration.
       </Translate>
     ),
     website: "https://geckolinux.github.io/",
@@ -199,7 +199,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://ubuntubudgie.org",
   },
   {
-    budgieAvailablePostInstall: "10.7.1",
+    budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.6.4",
     name: "Ultramarine Linux",
     summary: () => (
@@ -216,9 +216,11 @@ export const SupportListData: SupportInfo[] = [
     name: "Void Linux",
     installationInfo: () => (
       <>
-        Void Linux does not offer a Budgie Desktop installer profile, but it can be installed manually on top of the base
-        image. First, install the required packages:
-        <CodeBlock language="bash">sudo xbps-install budgie-desktop network-manager-applet lightdm-gtk3-greeter</CodeBlock>
+        Void Linux does not offer a Budgie Desktop installer profile, but it can be installed manually on top of the
+        base image. First, install the required packages:
+        <CodeBlock language="bash">
+          sudo xbps-install budgie-desktop network-manager-applet lightdm-gtk3-greeter
+        </CodeBlock>
         Enable DBus, elogind, NetworkManager, and LightDM:
         <CodeBlock language="bash">
           sudo ln -s /etc/sv/dbus /var/service
@@ -236,5 +238,5 @@ export const SupportListData: SupportInfo[] = [
     ),
     showInGrid: false,
     website: "https://voidlinux.org",
-  }
+  },
 ];
