@@ -121,7 +121,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://freebsd.org",
   },
   {
-    budgieAvailablePostInstall: "10.7.1",
+    budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.6.4",
     installationInfo: () => (
       <>
@@ -164,7 +164,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://opensuse.org",
   },
   {
-    budgieAvailablePostInstall: "10.7.1",
+    budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.6.4",
     name: "Solus",
     installationInfo: () => (
