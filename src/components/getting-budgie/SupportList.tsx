@@ -21,7 +21,7 @@ const SupportList = () => {
   const [liveMediaItems, manualItems] = [
     SupportListData.filter<SupportLiveMediaInfo>((info): info is SupportLiveMediaInfo => info.showInGrid),
     SupportListData.filter<SupportManualInstallationInfo>(
-      (info): info is SupportManualInstallationInfo => !info.showInGrid
+      (info): info is SupportManualInstallationInfo => !!info.installationInfo
     ),
   ];
 

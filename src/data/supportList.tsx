@@ -164,6 +164,36 @@ export const SupportListData: SupportInfo[] = [
     website: "https://opensuse.org",
   },
   {
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.7.2",
+    name: "NixOS",
+    installationInfo: () => (
+      <>
+        Budgie Desktop can be installed by adding the following to your system configuration:
+        <CodeBlock language="nix">
+          # Enable the X server.
+          <br />
+          services.xserver.enable = true;
+          <br />
+          # Enable the Budgie Desktop.
+          <br />
+          services.xserver.desktopManager.budgie.enable = true;
+          <br />
+          # Enable a display manager (recommended).
+          <br />
+          services.xserver.displayManager.lightdm.enable = true;
+        </CodeBlock>
+      </>
+    ),
+    summary: () => (
+      <Translate id="get.budgie.nixos.summary" description="Summary of NixOS">
+        NixOS is a Linux distribution based on the Nix package manager and build system.
+      </Translate>
+    ),
+    showInGrid: true,
+    website: "https://nixos.org/download.html#nixos-iso",
+  },
+  {
     budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.6.4",
     name: "Solus",
