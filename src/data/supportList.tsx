@@ -167,18 +167,6 @@ export const SupportListData: SupportInfo[] = [
     budgieAvailablePostInstall: null,
     budgieVersion: "10.7.2",
     name: "NixOS",
-    summary: () => (
-      <Translate id="get.budgie.nixos.summary" description="Summary of NixOS">
-        NixOS is a Linux distribution based on the Nix package manager and build system.
-      </Translate>
-    ),
-    showInGrid: true,
-    website: "https://nixos.org/download.html#nixos-iso"
-  },
-  {
-    budgieAvailablePostInstall: null,
-    budgieVersion: "10.7.2",
-    name: "NixOS",
     installationInfo: () => (
       <>
         Budgie Desktop can be installed by adding the following to your system configuration:
@@ -197,8 +185,13 @@ export const SupportListData: SupportInfo[] = [
         </CodeBlock>
       </>
     ),
-    showInGrid: false,
-    website: "https://nixos.org/download.html#nixos-iso"
+    summary: () => (
+      <Translate id="get.budgie.nixos.summary" description="Summary of NixOS">
+        NixOS is a Linux distribution based on the Nix package manager and build system.
+      </Translate>
+    ),
+    showInGrid: true,
+    website: "https://nixos.org/download.html#nixos-iso",
   },
   {
     budgieAvailablePostInstall: "10.7.2",

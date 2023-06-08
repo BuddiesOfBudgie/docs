@@ -47,12 +47,14 @@ type SupportInfoShared = {
 };
 
 export type SupportLiveMediaInfo = {
+  installationInfo?: () => JSX.Element;
   summary: () => JSX.Element;
   showInGrid: true;
 } & SupportInfoShared;
 
 export type SupportManualInstallationInfo = {
   installationInfo: () => JSX.Element;
+  summary?: () => JSX.Element;
   showInGrid: false;
 } & SupportInfoShared;
 
