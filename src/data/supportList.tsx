@@ -230,7 +230,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: "10.7.2",
-    budgieVersion: "10.6.4",
+    budgieVersion: "10.7.2",
     name: "Ultramarine Linux",
     summary: () => (
       <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">
