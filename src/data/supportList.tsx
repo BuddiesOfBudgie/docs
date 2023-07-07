@@ -195,25 +195,14 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: "10.7.2",
-    budgieVersion: "10.6.4",
+    budgieVersion: "10.7.2",
     name: "Solus",
-    installationInfo: () => (
-      <>
-        <Translate id="get.budgie.solus.summary" description="Summary of Solus">
-          Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
-        </Translate>
-        <Admonition icon="🚧" type="caution">
-          It is currently cautioned against installation of Solus. It may not work out-of-the-box on modern hardware as
-          no new release has been made since mid-2021.
-        </Admonition>
-      </>
-    ),
-    /*     summary: () => (
+    summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">
         Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
       </Translate>
-    ), */
-    showInGrid: false,
+    ),
+    showInGrid: true,
     website: "https://getsol.us",
   },
   {

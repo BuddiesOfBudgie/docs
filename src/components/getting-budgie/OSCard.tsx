@@ -58,7 +58,7 @@ export const OSCard = ({ info }: OSCardProps) => {
 
   return (
     <Grid2 key={`OSCard-${info.name}-GridItem`} xs={6}>
-      <Box className={`OSCard card`} height="100%" key={`card-${kebabName}`}>
+      <Box className={`OSCard card`} height={1} key={`card-${kebabName}`}>
         <Box className="card__image">
           <img
             alt={translate(
