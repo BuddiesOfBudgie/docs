@@ -5,7 +5,7 @@
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Try again",
-    "description": "The label of the button to try again when the page crashed"
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.NotFound.title": {
     "message": "Page Not Found",
@@ -479,5 +479,13 @@
   "theme.SearchModal.placeholder": {
     "message": "Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "get.budgie.geckolinux.summary": {
+    "message": "GeckoLinux is a distro comprised of spins of OpenSUSE Leap and Tumbleweed. GeckoLinux offers an official spin of Budgie Desktop with a highly curated configuration.",
+    "description": "Summary of GeckoLinux"
+  },
+  "get.budgie.nixos.summary": {
+    "message": "NixOS is a Linux distribution based on the Nix package manager and build system.",
+    "description": "Summary of NixOS"
   }
 }

@@ -82,8 +82,8 @@ const config = {
             label: "Other",
             items: [
               {
-                href: "https://blog.buddiesofbudgie.org",
-                label: "Blog",
+                href: "https://buddiesofbudgie.org",
+                label: "Website",
               },
               {
                 href: "https://github.com/BuddiesOfBudgie",
@@ -165,8 +165,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "https://blog.buddiesofbudgie.org",
+                label: "Website",
+                to: "https://buddiesofbudgie.org",
               },
               {
                 label: "GitHub",

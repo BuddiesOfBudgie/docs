@@ -41,5 +41,5 @@ Making software accessible to users around the world, in their native language, 
 To facilitate translations, Buddies of Budgie uses the [Transifex](https://www.transifex.com/buddiesofbudgie/) platform to manage new translations.
 
 :::caution Work In Progress
-Translation support for our documentation (documents and user elements) is a work in progress. Keep an eye on this document, our [blog](https://blog.buddiesofbudgie.org), or our [Mastodon](https://fosstodon.org/@BuddiesOfBudgie) for news on when documentation translations support is introduced!
+Translation support for our documentation (documents and user elements) is a work in progress. Keep an eye on this document, our [blog](https://buddiesofbudgie.org/blog), or our [Mastodon](https://fosstodon.org/@BuddiesOfBudgie) for news on when documentation translations support is introduced!
 :::
