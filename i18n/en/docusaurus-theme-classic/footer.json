@@ -35,10 +35,6 @@
     "message": "Twitter",
     "description": "The label of footer link with label=Twitter linking to https://twitter.com/BuddiesOfBudgie"
   },
-  "link.item.label.Blog": {
-    "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to https://blog.buddiesofbudgie.org"
-  },
   "link.item.label.GitHub": {
     "message": "GitHub",
     "description": "The label of footer link with label=GitHub linking to https://github.com/BuddiesOfBudgie"
@@ -46,5 +42,9 @@
   "copyright": {
     "message": "Copyright © 2023 Buddies of Budgie. Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.item.label.Website": {
+    "message": "Website",
+    "description": "The label of footer link with label=Website linking to https://buddiesofbudgie.org"
   }
 }

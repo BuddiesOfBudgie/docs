@@ -10,5 +10,9 @@
   "sidebar.developer.category.Meta (Documentation)": {
     "message": "Meta (Documentation)",
     "description": "The label for category Meta (Documentation) in sidebar developer"
+  },
+  "sidebar.developer.category.Lab (Experimental / Testing)": {
+    "message": "Lab (Experimental / Testing)",
+    "description": "The label for category Lab (Experimental / Testing) in sidebar developer"
   }
 }
