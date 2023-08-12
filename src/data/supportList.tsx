@@ -40,15 +40,36 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.5.2",
+    budgieVersion: "10.7.1",
     name: "Debian",
     showInGrid: false,
     installationInfo: () => (
-      <Admonition icon="🚧" type="note" title="Coming Soon">
-        Installation instructions coming soon!
-      </Admonition>
+      <>
+        Install Budgie Desktop and a LightDM greeter:
+        <CodeBlock language="bash">
+          sudo apt install budgie-desktop slick-greeter
+        </CodeBlock>
+        <Admonition type="info">
+          You will be prompted to select a default display manager if you already have one installed. We recommend LightDM for the best experience. You can always change your choice later by running:
+            <CodeBlock language="bash">
+              sudo dpkg-reconfigure lightdm
+            </CodeBlock>
+        </Admonition>
+        It is recommended to install the default GTK and icon theme:
+        <CodeBlock language="bash">
+          sudo apt install arc-theme papirus-icon-theme
+        </CodeBlock>
+        Ubuntu Budgie applets are also available on Debian. They are optional, but can enhance your experience:
+        <CodeBlock language="bash">
+          sudo apt install budgie*applet
+        </CodeBlock>
+        Restart your display manager to log into Budgie:
+        <CodeBlock language="bash">
+          sudo systemctl restart display-manager
+        </CodeBlock>
+      </>
     ),
-    website: "https://debian.org",
+    website: "https://www.debian.org",
   },
   {
     budgieAvailablePostInstall: "10.7.2",
