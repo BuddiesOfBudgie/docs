@@ -57,10 +57,6 @@ export const SupportListData: SupportInfo[] = [
         </Admonition>
         It is recommended to install the default GTK and icon theme:
         <CodeBlock language="bash">
-        </CodeBlock>
-        Ubuntu Budgie applets are also available on Debian. They are optional, but can enhance your experience:
-        <CodeBlock language="bash">
-          sudo apt install budgie*applet
           sudo apt install materia-gtk-theme papirus-icon-theme
         </CodeBlock>
         Restart your display manager to log into Budgie:
