@@ -32,7 +32,7 @@ export const People: Record<string, Person> = {
       },
       {
         icon: LanguageIcon,
-        to: "https://serebit.com/",
+        to: "https://serebit.dev/",
         type: WebsiteType.WEBSITE,
       },
     ],
