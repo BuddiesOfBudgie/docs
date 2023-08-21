@@ -1,16 +1,16 @@
-import React from "react";
 import Layout from "@theme/Layout";
+import React from "react";
 
 import { Container, ThemeProvider } from "@mui/material";
+import { Category } from "../components/home/Category";
 import { Header } from "../components/home/Header";
 import { SiteTheme } from "../theme";
-import { Category } from "../components/home/Category";
 
-import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
+import Translate from "@docusaurus/Translate";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import Translate from "@docusaurus/Translate";
 
 const Home = (): JSX.Element => {
   return (

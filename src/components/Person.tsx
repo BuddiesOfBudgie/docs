@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Person as PersonType, WebsiteType } from "../types";
+import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Avatar, Box, Stack, SxProps, useMediaQuery } from "@mui/material";
-import Link from "@docusaurus/Link";
-import { Teams } from "../data/teams";
-import { People } from "../data/people";
-import { SiteTheme } from "../theme";
 import Grid2 from "@mui/material/Unstable_Grid2";
+import { People } from "../data/people";
+import { Teams } from "../data/teams";
+import { SiteTheme } from "../theme";
+import { Person as PersonType, WebsiteType } from "../types";
 
 type PersonProps = {
   embeddedIn: string;

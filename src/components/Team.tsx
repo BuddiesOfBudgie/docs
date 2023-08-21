@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 import { Backdrop, Box, Stack } from "@mui/material";
-import { Teams } from "../data/teams";
 import { People } from "../data/people";
-import { Person as PersonType, Team as TeamType } from "../types";
-import { Person } from "./Person";
-import { AutoColumnOnSmall } from "../utils/auto";
+import { Teams } from "../data/teams";
 import { SiteTheme } from "../theme";
+import { Person as PersonType, Team as TeamType } from "../types";
+import { AutoColumnOnSmall } from "../utils/auto";
+import { Person } from "./Person";
 
 type TeamMemberProps = {
   haveSupplementalInfo: boolean;

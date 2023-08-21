@@ -1,17 +1,17 @@
 import React from "react";
 import { SupportInfo } from "../types";
 
-import Admonition from "@theme/Admonition";
 import Translate from "@docusaurus/Translate";
+import Admonition from "@theme/Admonition";
 
 import CodeBlock from "@theme/CodeBlock";
-import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs";
 
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.7.2",
+    budgieVersion: "10.8",
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -51,7 +51,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://debian.org",
   },
   {
-    budgieAvailablePostInstall: "10.7.2",
+    budgieAvailablePostInstall: "10.8",
     budgieVersion: "10.7.1",
     name: "EndeavourOS",
     showInGrid: true,

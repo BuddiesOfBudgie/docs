@@ -1,21 +1,24 @@
-import React from "react";
 import Admonition from "@theme/Admonition";
+import React from "react";
 
 import type { SupportLiveMediaInfo, SupportManualInstallationInfo } from "../../types";
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import Translate from "@docusaurus/Translate";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import { kebabCase, toLower } from "lodash";
 
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import { Box, IconButton, Stack } from "@mui/material";
-import { OSCard } from "./OSCard";
-import { SupportListData } from "@site/src/data/supportList";
 import { OpenInNew } from "@mui/icons-material";
+import { Box, IconButton, Stack } from "@mui/material";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { SupportListData } from "@site/src/data/supportList";
+import { OSCard } from "./OSCard";
 
+import Link from "@docusaurus/Link";
 import { translate } from "@docusaurus/Translate";
+import { LATEST_BUDGIE_RELEASE } from "@site/src/constants";
 import { SiteTheme } from "@site/src/theme";
+import { DateTime } from "luxon";
 
 const SupportList = () => {
   const [liveMediaItems, manualItems] = [
@@ -25,8 +28,45 @@ const SupportList = () => {
     ),
   ];
 
+  const shouldShowNewReleaseBanner = DateTime.fromISO(LATEST_BUDGIE_RELEASE.date).diffNow("days").days <= 14;
+
   return (
     <Stack gap={2} key="SupportList">
+      {shouldShowNewReleaseBanner && (
+        <Admonition
+          icon="🎉"
+          title={translate({
+            id: "newBudgieRelease",
+            message: "New Budgie Release",
+          })}
+          type="tip"
+        >
+          <Stack gap={2}>
+            <Translate
+              id="get.budgie.newrelease"
+              description="Flavor text used to inform the user there is a new release of Budgie"
+              values={{ version: LATEST_BUDGIE_RELEASE.version }}
+            >
+              {
+                "The Buddies of Budgie team just released Budgie Desktop {version}. Please keep in mind that it may take some time for the release to be available on the operating systems shown below, as this is a manual process performed by our amazing community of package maintainers."
+              }
+            </Translate>
+            <Link
+              className="button button--primary"
+              style={{
+                maxWidth: "max-content",
+                textDecoration: "none",
+              }}
+              target="_blank"
+              to={LATEST_BUDGIE_RELEASE.post}
+            >
+              <Translate id="readMore" description="Read More on the blog post for this release">
+                Read Mode
+              </Translate>
+            </Link>
+          </Stack>
+        </Admonition>
+      )}
       <h2 style={{ fontWeight: "bold", margin: 0 }} key="SupportList-EffortlesslyHeader">
         <Translate
           id="get.budgie.header.effortlessly"
