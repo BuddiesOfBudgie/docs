@@ -1,15 +1,12 @@
 import Translate from "@docusaurus/Translate";
-import { Stack, useMediaQuery } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import React from "react";
 
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { SiteTheme } from "@site/src/theme";
 import { AutoColumnOnSmall } from "@site/src/utils/auto";
 
 export const Header = () => {
-  const aboveXl = useMediaQuery(SiteTheme.breakpoints.up("xl"));
-
   return (
     <Stack
       alignItems="center"
@@ -21,10 +18,20 @@ export const Header = () => {
         paddingBlock: "5vh",
       }}
     >
-      <img
-        src={useBaseUrl("/img/laptop.webp")}
-        style={{ maxWidth: aboveXl ? SiteTheme.breakpoints.values.md : undefined }}
-      />
+      <Container maxWidth="fullhd">
+        <Box bgcolor="primary.dark" borderRadius={4} p={2} width={1}>
+          <Box
+            borderRadius={2}
+            position="relative"
+            sx={{
+              aspectRatio: 16 / 9,
+              width: "100%",
+            }}
+          >
+            <img src={useBaseUrl("/img/Budgie.webp")} style={{ objectFit: "contain" }} />
+          </Box>
+        </Box>
+      </Container>
       <h1 style={{ fontWeight: "bold" }}>
         <Translate id="homepage.header.welcome" description="The welcome text for the Homepage header">
           The place to learn and build with Budgie Desktop.

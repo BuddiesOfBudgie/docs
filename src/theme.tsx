@@ -1,3 +1,4 @@
+import { grey } from "@mui/material/colors";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
@@ -55,8 +56,8 @@ const Theme = createTheme({
   palette: {
     primary: {
       light: "#f5f5f5",
-      main: "#000000",
-      dark: "#000000",
+      main: grey[900],
+      dark: grey[900],
     },
     misc: {
       greyish: "#666666",
