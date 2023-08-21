@@ -1,8 +1,18 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Poppins-Bold.ttf");
+}
 
 /* You can override the default Infima variables here. */
 :root {
@@ -10,6 +20,7 @@
   --marble: #f5f5f5;
   --lightgrey: #eeeeee;
   --greyish: #666666;
+  --grey-md: #424242;
   --greydark: #333333;
   --dark: #1f1f1f;
 
@@ -53,6 +64,13 @@
   --docsearch-hit-background: var(--greydark);
 }
 
+.Poppins,
+h1,
+h2,
+h3 {
+  font-family: "Poppins";
+}
+
 .DocSearch-Button {
   --docsearch-searchbox-background: white;
 }
@@ -81,21 +99,17 @@
   color: white;
 }
 
-.GetBudgieButton {
-  background-color: var(--budgie-green);
-  border-radius: 20px;
-  color: var(--ifm-button-color);
-  margin-inline-end: 1vw;
-  padding: 5px 30px;
-  text-align: center;
-  transition: all 250ms;
+[data-theme="light"] .Category svg * {
+  fill: var(--grey-md);
 }
 
-.GetBudgieButton:active,
-.GetBudgieButton:focus,
-.GetBudgieButton:hover {
-  background-color: var(--ifm-color-primary-light);
-  color: var(--ifm-button-color);
+.GetBudgieButton {
+  border-radius: 20px;
+  color: white;
+}
+
+.NormalWeight {
+  font-weight: normal;
 }
 
 .card--bg {
@@ -120,7 +134,7 @@
 
 [data-theme="light"] .HomepageHeader {
   background-color: var(--lightgrey);
-  color: var(--greyish);
+  color: var(--grey-md);
 }
 
 [data-theme="light"] .OSCard {

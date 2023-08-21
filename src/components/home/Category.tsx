@@ -13,7 +13,7 @@ type CategoryProps = {
 
 export const Category = ({ icon, text, to }: CategoryProps) => {
   return (
-    <Grid2 xs={4}>
+    <Grid2 className="Category" xs={4}>
       <Box className="card shadow--lw" sx={{ p: 6 }}>
         <Stack alignItems="center" gap={2}>
           {icon}
