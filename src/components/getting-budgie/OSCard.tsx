@@ -1,18 +1,18 @@
 import { SupportLiveMediaInfo } from "@site/src/types";
 import React, { useMemo } from "react";
 
+import Link from "@docusaurus/Link";
+import Translate, { translate } from "@docusaurus/Translate";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import { Box, Chip, Stack, useMediaQuery } from "@mui/material";
+import Grid2 from "@mui/material/Unstable_Grid2";
 import { LATEST_BUDGIE_RELEASE } from "@site/src/constants";
 import { kebabCase, toLower } from "lodash";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import Translate, { translate } from "@docusaurus/Translate";
-import Grid2 from "@mui/material/Unstable_Grid2";
-import { Box, Chip, Stack, useMediaQuery } from "@mui/material";
-import Link from "@docusaurus/Link";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import WarningIcon from "@mui/icons-material/Warning";
-import { AutoColumnOnSmall } from "@site/src/utils/auto";
 import { SiteTheme } from "@site/src/theme";
+import { AutoColumnOnSmall } from "@site/src/utils/auto";
 import { DateTime } from "luxon";
 
 type OSCardProps = {
@@ -25,10 +25,10 @@ export const OSCard = ({ info }: OSCardProps) => {
   const logo = useBaseUrl(`/img/distribution/logos/${kebabName}.svg`);
   const screenshot = useBaseUrl(`/img/distribution/screenshots/${kebabName}.webp`);
 
-  const hasLatestOOTB = info.budgieVersion === LATEST_BUDGIE_RELEASE;
+  const hasLatestOOTB = info.budgieVersion === LATEST_BUDGIE_RELEASE.version;
 
   const hasLatestBudgie = info.budgieAvailablePostInstall
-    ? info.budgieAvailablePostInstall === LATEST_BUDGIE_RELEASE
+    ? info.budgieAvailablePostInstall === LATEST_BUDGIE_RELEASE.version
     : hasLatestOOTB;
 
   const isOutdated = !hasLatestOOTB && !hasLatestBudgie;

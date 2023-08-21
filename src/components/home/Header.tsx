@@ -2,10 +2,10 @@ import Translate from "@docusaurus/Translate";
 import { Stack, useMediaQuery } from "@mui/material";
 import React from "react";
 
+import Link from "@docusaurus/Link";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import { SiteTheme } from "@site/src/theme";
 import { AutoColumnOnSmall } from "@site/src/utils/auto";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import Link from "@docusaurus/Link";
 
 export const Header = () => {
   const aboveXl = useMediaQuery(SiteTheme.breakpoints.up("xl"));

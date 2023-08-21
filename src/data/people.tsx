@@ -1,6 +1,6 @@
+import { Box } from "@mui/material";
 import React from "react";
 import { Person, WebsiteType } from "../types";
-import { Box } from "@mui/material";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
