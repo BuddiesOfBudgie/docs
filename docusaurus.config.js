@@ -15,6 +15,29 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preload",
+        href: "/fonts/Poppins-Regular.ttf",
+        as: "font",
+        type: "font/ttf",
+        crossorigin: "anonymous",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preload",
+        href: "/fonts/Poppins-Bold.ttf",
+        as: "font",
+        type: "font/ttf",
+        crossorigin: "anonymous",
+      },
+    },
+  ],
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -86,6 +109,10 @@ const config = {
                 label: "Website",
               },
               {
+                label: "Donate",
+                href: "https://opencollective.com/buddies-of-budgie",
+              },
+              {
                 href: "https://github.com/BuddiesOfBudgie",
                 label: "GitHub",
                 rel: "me",
@@ -109,7 +136,7 @@ const config = {
             position: "left",
           },
           {
-            className: "GetBudgieButton",
+            className: "GetBudgieButton button button--primary",
             href: "/user/getting-budgie",
             label: "Get Budgie",
             position: "right",
@@ -171,6 +198,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/BuddiesOfBudgie",
+              },
+              {
+                label: "Donate",
+                href: "https://opencollective.com/buddies-of-budgie",
               },
             ],
           },

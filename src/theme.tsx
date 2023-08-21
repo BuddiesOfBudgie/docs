@@ -47,9 +47,14 @@ const Theme = createTheme({
         disableElevation: true,
       },
       styleOverrides: {
-        root: {
+        root: ({ ownerState }) => ({
           borderRadius: "2em",
-        },
+          fontFamily: "Poppins",
+          ...(ownerState.variant === "contained" &&
+            ownerState.color === "success" && {
+              color: "white",
+            }),
+        }),
       },
     },
   },
@@ -71,6 +76,26 @@ const Theme = createTheme({
     },
     success: {
       main: "#6BCA81",
+    },
+  },
+  typography: {
+    button: {
+      fontFamily: "Poppins",
+    },
+    h1: {
+      fontFamily: "Poppins",
+    },
+    h2: {
+      fontFamily: "Poppins",
+    },
+    h3: {
+      fontFamily: "Poppins",
+    },
+    h4: {
+      fontFamily: "Poppins",
+    },
+    h5: {
+      fontFamily: "Poppins",
     },
   },
 });
