@@ -3,18 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
     "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve --host 0.0.0.0",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc",
+    "deploy": "docusaurus deploy",
+    "docusaurus": "docusaurus",
+    "gen-calendar": "ts-node-dev src/scripts/genCalendar.ts",
     "lint": "eslint .",
-    "prettier": "npx prettier -w ."
+    "prettier": "npx prettier -w .",
+    "serve": "docusaurus serve --host 0.0.0.0",
+    "start": "docusaurus start",
+    "swizzle": "docusaurus swizzle",
+    "typecheck": "tsc",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "write-translations": "docusaurus write-translations"
   },
   "dependencies": {
     "@docsearch/react": "3.5.2",
@@ -26,6 +27,7 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
     "clsx": "^2.0.0",
+    "ics": "^3.4.0",
     "lodash": "^4.17.21",
     "luxon": "^3.4.0",
     "prism-react-renderer": "^2.0.6",
@@ -43,6 +45,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.6"
   },
   "browserslist": {
