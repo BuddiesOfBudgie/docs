@@ -1,0 +1,43 @@
+/*!
+   *  @preserve
+   *  PER LICENSE AGREEMENT, YOU ARE NOT ALLOWED TO REMOVE OR CHANGE THIS FUNCTION!
+   */
+
+/*!
+ *  @preserve
+ *
+ *  ++++++++++++++++++++++
+ *  Add to Calendar Button
+ *  ++++++++++++++++++++++
+ *
+ *  Version: 2.3.4
+ *  Creator: Jens Kuerschner (https://jenskuerschner.de)
+ *  Project: https://github.com/add2cal/add-to-calendar-button
+ *  License: Elastic License 2.0 (ELv2) (https://github.com/add2cal/add-to-calendar-button/blob/main/LICENSE.txt)
+ *  Note:    DO NOT REMOVE THE COPYRIGHT NOTICE ABOVE!
+ *
+ */
+
+/*!
+ *  @preserve
+ *
+ * ++++++++++++++++++++++++++++++++++++++
+ * Add to Calendar TimeZones iCal Library
+ * ++++++++++++++++++++++++++++++++++++++
+ *
+ * Version: 1.7.1
+ * Creator: Jens Kuerschner (https://jenskuerschner.de)
+ * Project: https://github.com/add2cal/timezones-ical-library
+ * License: Apache-2.0
+ *
+ */
+
+/**
+ * @license React
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
