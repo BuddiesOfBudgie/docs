@@ -487,5 +487,32 @@
   "get.budgie.nixos.summary": {
     "message": "NixOS is a Linux distribution based on the Nix package manager and build system.",
     "description": "Summary of NixOS"
+  },
+  "newBudgieRelease": {
+    "message": "New Budgie Release"
+  },
+  "showPastEvents": {
+    "message": "Show past events"
+  },
+  "projects": {
+    "message": "Projects"
+  },
+  "event": {
+    "message": "Event"
+  },
+  "project": {
+    "message": "Project"
+  },
+  "start": {
+    "message": "Start"
+  },
+  "end": {
+    "message": "End"
+  },
+  "duration": {
+    "message": "Duration"
+  },
+  "evenTableCellescription": {
+    "message": "{type} for {rel}"
   }
 }

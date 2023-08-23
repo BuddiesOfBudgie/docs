@@ -23,6 +23,7 @@ declare module "@mui/material/styles" {
   interface MiscColors {
     greyish: string;
     greydark: string;
+    dark: string;
     lightgrey: string;
     purple: string;
     white: string;
@@ -67,6 +68,7 @@ const Theme = createTheme({
     misc: {
       greyish: "#666666",
       greydark: "#333333",
+      dark: grey[900], // Non-variable unlike primary
       lightgrey: "#eeeeee",
       purple: "#9f7beb",
       white: "#ffffff",
