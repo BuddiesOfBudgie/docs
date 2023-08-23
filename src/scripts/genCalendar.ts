@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { mkdirSync, writeFileSync } from "fs";
 import type { DateArray, EventAttributes } from "ics";
 import { createEvents } from "ics";
 import { join } from "path";
@@ -29,6 +29,8 @@ const scheduleToEvents = UnifiedReleaseSchedules.reduce<EventAttributes[]>(
 );
 
 const { error, value } = createEvents(scheduleToEvents);
-const fsPath = join(process.cwd(), "static", "calendars", "third-party-schedules.ics");
+const folderPath = join(process.cwd(), "static", "calendars");
+mkdirSync(folderPath, { recursive: true });
+const fsPath = join(folderPath, "third-party-schedules.ics");
 if (!error) writeFileSync(fsPath, value, { mode: 755 });
 if (error) console.error(error);
