@@ -18,6 +18,7 @@ import { UnifiedReleaseSchedules } from "@site/src/data/schedules/unified";
 import { CalendarEventCategory, CalendarEventStrictType, CalendarEventType } from "@site/src/types";
 import React, { useMemo, useState } from "react";
 
+import BrowserOnly from "@docusaurus/BrowserOnly";
 import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
 import { A, pipe } from "@mobily/ts-belt";
@@ -119,117 +120,121 @@ const ThirdPartyReleaseTable = () => {
   });
 
   return (
-    <Stack gap={4}>
-      <Stack direction="row" justifyContent="space-between">
-        <ToggleButton onChange={() => setShowFilters(!showFilters)} selected={showFilters} value={showFilters}>
-          <FilterAltIcon />
-        </ToggleButton>
-        <AddToCalendarButton
-          buttonStyle="default"
-          hideBackground
-          hideButton={false}
-          hideBranding={true}
-          name="Buddies of Budgie: Third-party Project Schedules"
-          icsFile={`${location.origin}/calendars/third-party-schedules.ics`}
-          lightMode={mode}
-          options={["Apple", "Google", "iCal", "Outlook.com", "Yahoo", "Microsoft365", "MicrosoftTeams"]}
-          subscribe
-          startDate={UnifiedReleaseSchedules[0].dates[0]}
-          trigger="click"
-        ></AddToCalendarButton>
-      </Stack>
-      {showFilters && (
-        <>
-          <FormControlLabel
-            control={<Switch color="success" defaultChecked onChange={() => setShowPastEvents(!showPastEvents)} />}
-            label={translate({ id: "showPastEvents", message: "Show past events" })}
-          />
-          <MultiSelect<CalendarEventCategory>
-            defaultValues={Object.values(CalendarEventCategory)}
-            id="release-table-filter-category"
-            label={translate({ id: "projects", message: "Projects" })}
-            onChange={(v) => setSelectedCategories(v)}
-            options={Object.values(CalendarEventCategory)}
-          />
-          <MultiSelect<CalendarEventType>
-            defaultValues={Object.values(CalendarEventType)}
-            id="release-table-filter-types"
-            label={translate({ id: "event", message: "Event" })}
-            onChange={(v) => setSelectedTypes(v)}
-            options={Object.values(CalendarEventType)}
-          />
-        </>
-      )}
-      <TableContainer>
-        <TableHead>
-          <StyledTableRow>
-            <TableCell>
-              <Translate id="event">Event</Translate>
-            </TableCell>
-            <TableCell>
-              <Translate id="project">Project</Translate>
-            </TableCell>
-            <TableCell>
-              <Translate id="start">Start</Translate>
-            </TableCell>
-            <TableCell>
-              <Translate id="end">End</Translate>
-            </TableCell>
-            <TableCell>
-              <Translate id="duration">Duration</Translate>
-            </TableCell>
-          </StyledTableRow>
-        </TableHead>
-        <tbody>
-          {filteredEvents.map((e, i) => {
-            const startDate = DateTime.fromISO(e.dates[0]);
-            const endDate = DateTime.fromISO(e.dates[1]).plus({ days: e.dates[0] === e.dates[0] ? 1 : 0 });
-            const diff = Interval.fromDateTimes(startDate, endDate);
-            const duration = diff.toDuration("days").toHuman({ unitDisplay: "narrow" });
+    <BrowserOnly>
+      {() => (
+        <Stack gap={4}>
+          <Stack direction="row" justifyContent="space-between">
+            <ToggleButton onChange={() => setShowFilters(!showFilters)} selected={showFilters} value={showFilters}>
+              <FilterAltIcon />
+            </ToggleButton>
+            <AddToCalendarButton
+              buttonStyle="default"
+              hideBackground
+              hideButton={false}
+              hideBranding={true}
+              name="Buddies of Budgie: Third-party Project Schedules"
+              icsFile={`${location.origin}/calendars/third-party-schedules.ics`}
+              lightMode={mode}
+              options={["Apple", "Google", "iCal", "Outlook.com", "Yahoo", "Microsoft365", "MicrosoftTeams"]}
+              subscribe
+              startDate={UnifiedReleaseSchedules[0].dates[0]}
+              trigger="click"
+            ></AddToCalendarButton>
+          </Stack>
+          {showFilters && (
+            <>
+              <FormControlLabel
+                control={<Switch color="success" defaultChecked onChange={() => setShowPastEvents(!showPastEvents)} />}
+                label={translate({ id: "showPastEvents", message: "Show past events" })}
+              />
+              <MultiSelect<CalendarEventCategory>
+                defaultValues={Object.values(CalendarEventCategory)}
+                id="release-table-filter-category"
+                label={translate({ id: "projects", message: "Projects" })}
+                onChange={(v) => setSelectedCategories(v)}
+                options={Object.values(CalendarEventCategory)}
+              />
+              <MultiSelect<CalendarEventType>
+                defaultValues={Object.values(CalendarEventType)}
+                id="release-table-filter-types"
+                label={translate({ id: "event", message: "Event" })}
+                onChange={(v) => setSelectedTypes(v)}
+                options={Object.values(CalendarEventType)}
+              />
+            </>
+          )}
+          <TableContainer>
+            <TableHead>
+              <StyledTableRow>
+                <TableCell>
+                  <Translate id="event">Event</Translate>
+                </TableCell>
+                <TableCell>
+                  <Translate id="project">Project</Translate>
+                </TableCell>
+                <TableCell>
+                  <Translate id="start">Start</Translate>
+                </TableCell>
+                <TableCell>
+                  <Translate id="end">End</Translate>
+                </TableCell>
+                <TableCell>
+                  <Translate id="duration">Duration</Translate>
+                </TableCell>
+              </StyledTableRow>
+            </TableHead>
+            <tbody>
+              {filteredEvents.map((e, i) => {
+                const startDate = DateTime.fromISO(e.dates[0]);
+                const endDate = DateTime.fromISO(e.dates[1]).plus({ days: e.dates[0] === e.dates[0] ? 1 : 0 });
+                const diff = Interval.fromDateTimes(startDate, endDate);
+                const duration = diff.toDuration("days").toHuman({ unitDisplay: "narrow" });
 
-            return (
-              <>
-                {showPastEvents && firstUpcomingEvent?.name === e.name && (
-                  <TableRow className="upcomingEventRow" sx={{ backgroundColor: "success" }} key="upcomingEventRow">
-                    <TableCell colSpan={5} sx={{ backgroundColor: "success" }}>
-                      <Typography fontWeight="bold" textAlign="center">
-                        Current or upcoming
-                      </Typography>
-                    </TableCell>
-                  </TableRow>
-                )}
-                <StyledTableRow key={`${e.name}-${i}`}>
-                  <TableCell>
-                    <Stack gap={2}>
-                      <Stack alignItems="center" direction="row" gap={1}>
-                        <EventTypeToIcon t={e.type} />
-                        <Link to={e.url} target="_blank">
-                          <Translate
-                            id="evenTableCellescription"
-                            values={{
-                              rel: `${e.category} ${e.release}`,
-                              type: e.type,
-                            }}
-                          >
-                            {"{type} for {rel}"}
-                          </Translate>
-                        </Link>
-                      </Stack>
-                    </Stack>
-                  </TableCell>
-                  <TableCell>
-                    <CategoryChip c={e.category} />
-                  </TableCell>
-                  <TableCell>{e.dates[0]}</TableCell>
-                  <TableCell>{e.dates[1]}</TableCell>
-                  <TableCell>{duration}</TableCell>
-                </StyledTableRow>
-              </>
-            );
-          })}
-        </tbody>
-      </TableContainer>
-    </Stack>
+                return (
+                  <>
+                    {showPastEvents && firstUpcomingEvent?.name === e.name && (
+                      <TableRow className="upcomingEventRow" sx={{ backgroundColor: "success" }} key="upcomingEventRow">
+                        <TableCell colSpan={5} sx={{ backgroundColor: "success" }}>
+                          <Typography fontWeight="bold" textAlign="center">
+                            Current or upcoming
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    )}
+                    <StyledTableRow key={`${e.name}-${i}`}>
+                      <TableCell>
+                        <Stack gap={2}>
+                          <Stack alignItems="center" direction="row" gap={1}>
+                            <EventTypeToIcon t={e.type} />
+                            <Link to={e.url} target="_blank">
+                              <Translate
+                                id="evenTableCellescription"
+                                values={{
+                                  rel: `${e.category} ${e.release}`,
+                                  type: e.type,
+                                }}
+                              >
+                                {"{type} for {rel}"}
+                              </Translate>
+                            </Link>
+                          </Stack>
+                        </Stack>
+                      </TableCell>
+                      <TableCell>
+                        <CategoryChip c={e.category} />
+                      </TableCell>
+                      <TableCell>{e.dates[0]}</TableCell>
+                      <TableCell>{e.dates[1]}</TableCell>
+                      <TableCell>{duration}</TableCell>
+                    </StyledTableRow>
+                  </>
+                );
+              })}
+            </tbody>
+          </TableContainer>
+        </Stack>
+      )}
+    </BrowserOnly>
   );
 };
 

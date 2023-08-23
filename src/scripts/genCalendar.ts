@@ -32,5 +32,5 @@ const { error, value } = createEvents(scheduleToEvents);
 const folderPath = join(process.cwd(), "static", "calendars");
 mkdirSync(folderPath, { recursive: true });
 const fsPath = join(folderPath, "third-party-schedules.ics");
-if (!error) writeFileSync(fsPath, value, { mode: 755 });
+if (!error) writeFileSync(fsPath, value);
 if (error) console.error(error);
