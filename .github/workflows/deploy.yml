@@ -18,6 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Generate Calendar ICS
+        run: yarn gen-calendar
+
       - name: Build website
         run: yarn build
 
