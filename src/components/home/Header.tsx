@@ -38,7 +38,7 @@ export const Header = () => {
         </Link>
       </Stack>
       <Container maxWidth="fullhd">
-        <Box bgcolor="primary.dark" borderRadius={4} p={2} width={1}>
+        <Box bgcolor="misc.dark" borderRadius={4} p={2} width={1}>
           <Box
             borderRadius={2}
             position="relative"

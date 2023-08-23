@@ -3,7 +3,7 @@ import { ComponentType, SVGProps } from "react";
 export enum CalendarEventCategory {
   DEBIAN = "Debian",
   FEDORA = "Fedora",
-  GNOME = "Gnome",
+  GNOME = "GNOME",
   SOLUS = "Solus",
   UBUNTU = "Ubuntu",
 }
@@ -49,6 +49,10 @@ export type CalendarEventStrictDate = {
   dates: [string, string];
   name: string; // Internal event name used in generation
 } & Omit<CalendarEvent, "dates">;
+
+export type CalendarEventStrictType = {
+  type: CalendarEventType;
+} & Omit<CalendarEventStrictDate, "types">;
 
 export type CalendarSchedule = {
   category: CalendarEventCategory;

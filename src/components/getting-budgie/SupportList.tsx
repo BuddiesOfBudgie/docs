@@ -113,7 +113,7 @@ const SupportList = () => {
       <Stack gap={4} key="SupportList-ManualItems">
         {manualItems.map((info) => {
           const kebabName = kebabCase(toLower(info.name));
-          const logo = useBaseUrl(`/img/distribution/logos/${kebabName}.svg`);
+          const logo = useBaseUrl(`/img/logos/${kebabName}.svg`);
 
           return (
             <Box className={`ManualOSCard card`} key={`SupportList-ManualItem-${info.name}-Box`}>

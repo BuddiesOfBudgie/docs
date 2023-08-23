@@ -22,7 +22,7 @@ type OSCardProps = {
 export const OSCard = ({ info }: OSCardProps) => {
   const aboveSm = useMediaQuery(SiteTheme.breakpoints.up("sm"));
   const kebabName = kebabCase(toLower(info.name));
-  const logo = useBaseUrl(`/img/distribution/logos/${kebabName}.svg`);
+  const logo = useBaseUrl(`/img/logos/${kebabName}.svg`);
   const screenshot = useBaseUrl(`/img/distribution/screenshots/${kebabName}.webp`);
 
   const hasLatestOOTB = info.budgieVersion === LATEST_BUDGIE_RELEASE.version;

@@ -153,3 +153,18 @@ h3 {
 [data-theme="dark"] .OSCard {
   box-shadow: var(--ifm-global-shadow-lw);
 }
+
+.atcb-button-wrapper,
+.atcb-text,
+.atcb-button {
+  box-shadow: none !important;
+  font-family: "Poppins" !important;
+}
+
+.upcomingEventRow {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.upcomingEventRow .MuiTableCell-root {
+  border-bottom: 0;
+}

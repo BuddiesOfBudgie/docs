@@ -2849,6 +2849,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mobily/ts-belt@npm:^3.13.1":
+  version: 3.13.1
+  resolution: "@mobily/ts-belt@npm:3.13.1"
+  checksum: 507417608ddf4ecadf6f4f5dbdc32083000727d1a7a3604dc22670861f617d8bbb53622348649eab36d4d5c81b4331da7c4a3707b610866ebfadea3af27c60de
+  languageName: node
+  linkType: hard
+
 "@mui/base@npm:5.0.0-beta.11":
   version: 5.0.0-beta.11
   resolution: "@mui/base@npm:5.0.0-beta.11"
@@ -4217,6 +4224,27 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 25dfb94952386ecfb847e61934de04a4e7c2dc21c2e700fc4e2ef27ce78cb717700c4c4f279cd630bb4774948633c3859fc16063ec8573bda4568e0a312e6744
+  languageName: node
+  linkType: hard
+
+"add-to-calendar-button-react@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "add-to-calendar-button-react@npm:2.3.3"
+  dependencies:
+    add-to-calendar-button: ^2.3.4
+  peerDependencies:
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 46991357a701148bc271057d9d5019ac00f14a8ae866d5bf48d2d6651ee899bce727419fc10484d433ba09fae9d70ad1995c10f27e0f1ffac006f7e9d86c6a15
+  languageName: node
+  linkType: hard
+
+"add-to-calendar-button@npm:^2.3.4":
+  version: 2.3.4
+  resolution: "add-to-calendar-button@npm:2.3.4"
+  dependencies:
+    timezones-ical-library: ^1.7.1
+  checksum: d8e249fee680dc78b4a9bdbfdd8297d623ccad6f4537b7118e2a3ae1f78b9a72b232ac6ee035db414ec97676f0684a71c32f71fb54f9965c0217b54a6b5bd61a
   languageName: node
   linkType: hard
 
@@ -5927,6 +5955,7 @@ __metadata:
     "@emotion/react": ^11.11.1
     "@emotion/styled": ^11.11.0
     "@mdx-js/react": ^1.6.22
+    "@mobily/ts-belt": ^3.13.1
     "@mui/icons-material": ^5.14.3
     "@mui/material": ^5.14.5
     "@tsconfig/docusaurus": ^2.0.0
@@ -5934,6 +5963,7 @@ __metadata:
     "@types/luxon": ^3.3.1
     "@typescript-eslint/eslint-plugin": ^6.1.0
     "@typescript-eslint/parser": ^6.1.0
+    add-to-calendar-button-react: ^2.3.3
     clsx: ^2.0.0
     eslint: ^8.45.0
     eslint-plugin-prettier: ^5.0.0
@@ -5944,6 +5974,7 @@ __metadata:
     prism-react-renderer: ^2.0.6
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-icons: ^4.10.1
     ts-node-dev: ^2.0.0
     typescript: ^5.1.6
   languageName: unknown
@@ -10282,6 +10313,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.10.1":
+  version: 4.10.1
+  resolution: "react-icons@npm:4.10.1"
+  peerDependencies:
+    react: "*"
+  checksum: b6c8d4fe482b112e1041515d93ef7670a0af128855c926052a076b64d0b991cdd4391394b26467100f8da3859db1ebd8f9c6b7614fa5969fde83de45c71031a3
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.6.0, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -11651,6 +11691,13 @@ __metadata:
   version: 1.1.0
   resolution: "thunky@npm:1.1.0"
   checksum: 993096c472b6b8f30e29dc777a8d17720e4cab448375041f20c0cb802a09a7fb2217f2a3e8cdc11851faa71c957e2db309357367fc9d7af3cb7a4d00f4b66034
+  languageName: node
+  linkType: hard
+
+"timezones-ical-library@npm:^1.7.1":
+  version: 1.7.1
+  resolution: "timezones-ical-library@npm:1.7.1"
+  checksum: 7b4f035c3de663121173d69ba3026b5cd77c612bb122d147dbc050fd57ac06886c154b843a88bfa29669debb90c31688083b68e119ce3eef304ba100dffc1128
   languageName: node
   linkType: hard
 
