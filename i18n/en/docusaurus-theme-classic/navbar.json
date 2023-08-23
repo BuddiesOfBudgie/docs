@@ -46,5 +46,9 @@
   "item.label.Website": {
     "message": "Website",
     "description": "Navbar item with label Website"
+  },
+  "item.label.Donate": {
+    "message": "Donate",
+    "description": "Navbar item with label Donate"
   }
 }
