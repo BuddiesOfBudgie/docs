@@ -119,7 +119,7 @@ const config = {
               },
               {
                 label: "Mastodon",
-                href: "https://fosstodon.org/@BuddiesOfBudgie",
+                href: "https://floss.social/@BuddiesOfBudgie",
                 rel: "me",
               },
               {
@@ -176,7 +176,7 @@ const config = {
             items: [
               {
                 label: "Mastodon",
-                href: "https://fosstodon.org/@BuddiesOfBudgie",
+                href: "https://floss.social/@BuddiesOfBudgie",
               },
               {
                 label: "Matrix",
