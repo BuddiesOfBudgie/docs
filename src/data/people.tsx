@@ -27,7 +27,7 @@ export const People: Record<string, Person> = {
       },
       {
         icon: Mastodon,
-        to: "https://fosstodon.org/@serebit",
+        to: "https://floss.social/@serebit",
         type: WebsiteType.MASTODON,
       },
       {
@@ -94,33 +94,13 @@ export const People: Record<string, Person> = {
       },
       {
         icon: Mastodon,
-        to: "https://fosstodon.org/@JoshStrobl",
+        to: "https://joshuastrobl.social/@me",
         type: WebsiteType.MASTODON,
       },
       {
         icon: LanguageIcon,
         to: "https://joshuastrobl.com/",
         type: WebsiteType.WEBSITE,
-      },
-    ],
-  },
-  ThomasStaudinger: {
-    description: () => <Box>Solus team member</Box>,
-    matrix: "@staudey@fosstodon.org",
-    names: {
-      first: "Thomas",
-      last: "Staudinger",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/Staudey",
-        type: WebsiteType.GITHUB,
-      },
-      {
-        icon: Mastodon,
-        to: "https://fosstodon.org/@staudey",
-        type: WebsiteType.MASTODON,
       },
     ],
   },
