@@ -61,7 +61,7 @@ const SupportList = () => {
               to={LATEST_BUDGIE_RELEASE.post}
             >
               <Translate id="readMore" description="Read More on the blog post for this release">
-                Read Mode
+                Read more
               </Translate>
             </Link>
           </Stack>
