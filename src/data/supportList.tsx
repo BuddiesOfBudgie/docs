@@ -11,7 +11,7 @@ import Tabs from "@theme/Tabs";
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.8",
+    budgieVersion: "10.8.1",
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -51,7 +51,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://debian.org",
   },
   {
-    budgieAvailablePostInstall: "10.8",
+    budgieAvailablePostInstall: "10.8.1",
     budgieVersion: "10.7.1",
     name: "EndeavourOS",
     showInGrid: true,
@@ -64,7 +64,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://endeavouros.com",
   },
   {
-    budgieAvailablePostInstall: "10.8",
+    budgieAvailablePostInstall: "10.8.1",
     budgieVersion: "10.7.1",
     name: "Fedora Budgie Spin",
     showInGrid: true,
@@ -76,7 +76,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://fedoraproject.org/spins/budgie/",
   },
   {
-    budgieAvailablePostInstall: "10.7.1",
+    budgieAvailablePostInstall: "10.8.1",
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
@@ -108,7 +108,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://freebsd.org",
   },
   {
-    budgieAvailablePostInstall: "10.7.2",
+    budgieAvailablePostInstall: "10.8.1",
     budgieVersion: "10.6.4",
     installationInfo: () => (
       <>
@@ -125,7 +125,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://manjaro.org",
   },
   {
-    budgieAvailablePostInstall: null,
+    budgieAvailablePostInstall: "10.8",
     budgieVersion: "10.7.2",
     installationInfo: () => (
       <>
@@ -152,7 +152,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.7.2",
+    budgieVersion: "10.8.1",
     name: "NixOS",
     installationInfo: () => (
       <>
@@ -193,7 +193,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://getsol.us",
   },
   {
-    budgieAvailablePostInstall: "10.7.1",
+    budgieAvailablePostInstall: "10.8",
     budgieVersion: "10.6.4",
     name: "Ubuntu Budgie",
     summary: () => (
@@ -205,7 +205,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://ubuntubudgie.org",
   },
   {
-    budgieAvailablePostInstall: "10.8",
+    budgieAvailablePostInstall: "10.8.1",
     budgieVersion: "10.7.2",
     name: "Ultramarine Linux",
     summary: () => (
@@ -217,7 +217,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://ultramarine-linux.org",
   },
   {
-    budgieAvailablePostInstall: "10.7.1",
+    budgieAvailablePostInstall: "10.7.2",
     budgieVersion: "10.6.4",
     name: "Void Linux",
     installationInfo: () => (
