@@ -11,7 +11,7 @@ import Tabs from "@theme/Tabs";
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.8.1",
+    budgieVersion: "10.8.2",
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -51,8 +51,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://debian.org",
   },
   {
-    budgieAvailablePostInstall: "10.8.1",
-    budgieVersion: "10.7.1",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.8.2",
     name: "EndeavourOS",
     showInGrid: true,
     summary: () => (
