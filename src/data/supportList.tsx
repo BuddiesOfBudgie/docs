@@ -76,7 +76,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://fedoraproject.org/spins/budgie/",
   },
   {
-    budgieAvailablePostInstall: "10.8.1",
+    budgieAvailablePostInstall: "10.8.2",
     budgieVersion: "10.7.1",
     installationInfo: () => (
       <>
@@ -152,7 +152,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.8.1",
+    budgieVersion: "10.8.2",
     name: "NixOS",
     installationInfo: () => (
       <>
