@@ -181,7 +181,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://nixos.org/download.html#nixos-iso",
   },
   {
-    budgieAvailablePostInstall: "10.8.1",
+    budgieAvailablePostInstall: "10.8.2",
     budgieVersion: "10.7.2",
     name: "Solus",
     summary: () => (
