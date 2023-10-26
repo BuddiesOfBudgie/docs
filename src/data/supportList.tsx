@@ -64,7 +64,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://endeavouros.com",
   },
   {
-    budgieAvailablePostInstall: "10.8.1",
+    budgieAvailablePostInstall: "10.8.2",
     budgieVersion: "10.7.1",
     name: "Fedora Budgie Spin",
     showInGrid: true,
@@ -205,7 +205,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://ubuntubudgie.org",
   },
   {
-    budgieAvailablePostInstall: "10.8.1",
+    budgieAvailablePostInstall: "10.8.2",
     budgieVersion: "10.7.2",
     name: "Ultramarine Linux",
     summary: () => (
