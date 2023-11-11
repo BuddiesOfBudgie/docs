@@ -5,9 +5,11 @@ keywords:
   - compiling budgie
 ---
 
+import Link from "@docusaurus/Link";
 import CodeBlock from "@theme/CodeBlock";
-import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs";
+import Tabs from "@theme/Tabs";
 
 # Building Budgie Desktop
 
@@ -90,11 +92,13 @@ The manual method for dependency installation is:
   libwnck-3-dev meson ninja-build sassc uuid-dev valac
 </CodeBlock>
   </TabItem>
-  <TabItem value="fedora" label="Fedora">
+  <TabItem value="fedora" label="Fedora non-Atomic">
 <CodeBlock language="bash">
-  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver desktop-file-utils gettext git glib2-devel gnome-bluetooth3.34-libs-devel gnome-desktop3-devel gnome-menus-devel gnome-settings-daemon-devel gobject-introspection-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libX11-devel libXtst-devel libgee-devel libnotify-devel libpeas-devel libuuid-devel libwnck3-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
+  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver desktop-file-utils gettext git glib2-devel gnome-bluetooth3.34-libs-devel gnome-desktop3-devel gnome-menus-devel gnome-settings-daemon-devel gobject-introspection-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libX11-devel libXtst-devel libgee-devel libnotify-devel libpeas1-devel libuuid-devel libwnck3-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
 </CodeBlock>
-
+  </TabItem>
+  <TabItem value="fedora-onyx" label="Fedora Onyx / Atomic">
+For developing Budgie Desktop on top of Fedora Onyx / Atomic, we suggest rebasing on top of our <Link to="https://github.com/BuddiesOfBudgie/atomic-dev">Atomic Dev</Link> ostree images. These are built daily on top of Onyx with the required development libraries, making additional package layer faster and less prone to breakage.
   </TabItem>
   <TabItem value="sabayon" label="Sabayon">
 <CodeBlock language="bash">
@@ -133,6 +137,15 @@ git submodule update --init
   meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
 </CodeBlock>
   </TabItem>
+  <TabItem value="fedora-onyx" label="Fedora Onyx">
+As Fedora Onyx is an immutable variant, you will need to install Budgie Desktop into the persistent usrlocal for your changes to persist after reboot.
+  <br />
+<CodeBlock language="bash">
+  cd budgie-desktop
+  <br />
+  meson build --prefix=/var/usrlocal --sysconfdir=/etc
+</CodeBlock>
+  </TabItem>
   <TabItem value="solus" label="Solus">
 Solus has special requirements and mandates the use of stateless XDG paths, as well as using the OS default CFLAGS:
 
@@ -155,7 +168,6 @@ Solus has special requirements and mandates the use of stateless XDG paths, as w
 
 ```bash
 ninja -j$(($(getconf _NPROCESSORS_ONLN)+1)) -C build
-sudo ninja install -C build
 ```
 
 **Note**: When building a distro package, please ensure you use:
@@ -165,3 +177,7 @@ meson build --prefix=/usr --sysconfdir=/etc --buildtype plain
 ```
 
 This ensures your distro flags are respected.
+
+## Installing
+
+<CodeBlock language="bash">sudo ninja install -C build</CodeBlock>

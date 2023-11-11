@@ -65,7 +65,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: "10.8.2",
-    budgieVersion: "10.7.1",
+    budgieVersion: "10.8.1",
     name: "Fedora Budgie Spin",
     showInGrid: true,
     summary: () => (
@@ -74,6 +74,18 @@ export const SupportListData: SupportInfo[] = [
       </Translate>
     ),
     website: "https://fedoraproject.org/spins/budgie/",
+  },
+  {
+    budgieAvailablePostInstall: "10.8.2",
+    budgieVersion: "10.8.1",
+    name: "Fedora Onyx",
+    showInGrid: true,
+    summary: () => (
+      <Translate id="get.budgie.fedoraonyx.summary" description="Summary of Fedora Onyx">
+        Fedora Onyx offers an atomic / immutable Fedora experience with a near-stock Budgie Desktop experience.
+      </Translate>
+    ),
+    website: "https://fedoraproject.org/onyx",
   },
   {
     budgieAvailablePostInstall: "10.8.2",
