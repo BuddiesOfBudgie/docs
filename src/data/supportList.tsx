@@ -194,7 +194,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: "10.8.2",
-    budgieVersion: "10.7.2",
+    budgieVersion: "10.8.2",
     name: "Solus",
     summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">
