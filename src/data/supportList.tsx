@@ -11,7 +11,7 @@ import Tabs from "@theme/Tabs";
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.8.2",
+    budgieVersion: "10.9.1",
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -52,7 +52,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.8.2",
+    budgieVersion: "10.9.1",
     name: "EndeavourOS",
     showInGrid: true,
     summary: () => (
@@ -164,7 +164,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.8.2",
+    budgieVersion: "10.9",
     name: "NixOS",
     installationInfo: () => (
       <>
@@ -193,7 +193,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://nixos.org/download.html#nixos-iso",
   },
   {
-    budgieAvailablePostInstall: "10.8.2",
+    budgieAvailablePostInstall: "10.9.1",
     budgieVersion: "10.8.2",
     name: "Solus",
     summary: () => (
