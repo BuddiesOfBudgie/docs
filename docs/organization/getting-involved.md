@@ -38,7 +38,7 @@ There is always room for improvement for documentation around Budgie Desktop and
 
 Making software accessible to users around the world, in their native language, is incredibly important to the success of our project and to the success of the open source ecosystem as a whole. Enabling our software to be more translatable and more accessible is an active and always ongoing process, whether that is extending existing features or building new ones.
 
-To facilitate translations, Buddies of Budgie uses the [Transifex](https://www.transifex.com/buddiesofbudgie/) platform to manage new translations.
+To facilitate translations, Buddies of Budgie uses the [Transifex](https://explore.transifex.com/buddiesofbudgie/) platform to manage new translations.
 
 :::caution Work In Progress
 Translation support for our documentation (documents and user elements) is a work in progress. Keep an eye on this document, our [blog](https://buddiesofbudgie.org/blog), or our [Mastodon](https://floss.social/@BuddiesOfBudgie) for news on when documentation translations support is introduced!
