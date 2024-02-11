@@ -164,7 +164,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9",
+    budgieVersion: "10.9.1",
     name: "NixOS",
     installationInfo: () => (
       <>
