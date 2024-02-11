@@ -78,14 +78,14 @@ export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: "10.8.2",
     budgieVersion: "10.8.1",
-    name: "Fedora Onyx",
+    name: "Fedora Budgie Atomic",
     showInGrid: true,
     summary: () => (
-      <Translate id="get.budgie.fedoraonyx.summary" description="Summary of Fedora Onyx">
-        Fedora Onyx offers an atomic / immutable Fedora experience with a near-stock Budgie Desktop experience.
+      <Translate id="get.budgie.fedoraonyx.summary" description="Summary of Fedora Budgie Atomic">
+        Fedora Budgie Atomic offers an atomic / immutable Fedora experience with a near-stock Budgie Desktop experience.
       </Translate>
     ),
-    website: "https://fedoraproject.org/onyx",
+    website: "https://fedoraproject.org/atomic-desktops/budgie/",
   },
   {
     budgieAvailablePostInstall: "10.8.2",
@@ -164,7 +164,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9",
+    budgieVersion: "10.9.1",
     name: "NixOS",
     installationInfo: () => (
       <>
