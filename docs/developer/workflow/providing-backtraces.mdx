@@ -26,6 +26,27 @@ A debug symbol is a special kind of symbol that attaches additional information 
 In the case of Budgie Desktop, this helps us identify various parts of the Budgie Desktop codebase across its range of components that may affect any issue that requires a backtrace.
 
 <Tabs>
+  <TabItem label="Debian" value="Debian">
+    Debian 11 and above can automatically retrieve debug symbols from the Internet by exporting the following environment variable: 
+    <CodeBlock language="bash">export DEBUGINFOD_URLS="https://debuginfod.debian.net"</CodeBlock>
+    <hr />
+    To manually install debug symbols, make sure you have <code>debian-debug</code> archive in <code>/etc/apt/sources.list</code>:
+    <CodeBlock>
+      deb http://deb.debian.org/debian-debug/ $RELEASE-debug main
+      <br />
+      # for security updates
+      <br />
+      deb http://deb.debian.org/debian-debug/ $RELEASE-proposed-updates-debug main
+    </CodeBlock>
+    If you are unsure what <code>$RELEASE</code> is for you, you can find the codename here:
+    <CodeBlock language="bash">lsb_release -rcs</CodeBlock>
+    Debug symbols are ready to install now:
+    <CodeBlock language="bash">
+      sudo apt update
+      <br />
+      sudo apt install budgie-core-dbgsym
+    </CodeBlock>
+  </TabItem>
   <TabItem label="Fedora" value="Fedora">
     <CodeBlock language="bash">sudo dnf debuginfo-install budgie-desktop</CodeBlock>
   </TabItem>
