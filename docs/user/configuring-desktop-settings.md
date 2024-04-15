@@ -53,13 +53,17 @@ Your Budgie desktop environment can be personalized using the "Budgie Desktop Se
 | Setting                          | Description                                           |
 | -------------------------------- | ------------------                                    |
 | Attach modal dialogs to windows                          | Modal dialogs will become attached to the parent window and move together when dragged. |
-| Button layout                          | Set the preferred application style                   |
-| Center new windows on screen                            | Set the globally used icon theme                      |
-| Disable Night Light mode when windows are fullscreen                          | Set the globally used mouse cursor theme              |
-| Pause notifications when windows are fullscreen            | Set the location for notification popups              |
-| Automatic tiling                  | When enabled, the built-in theme will override the desktop component styling |
-| Animations                       | Control whether windows and controls use animations   |
+| Button layout                          | Change the layout of buttons in application titlebars.                  |
+| Center new windows on screen                            | Center newly launched windows on the current screen.                  |
+| Disable Night Light mode when windows are fullscreen                          | Disables Night Light mode when a window is fullscreen. Re-enables when leaving fullscreen.              |
+| Pause notifications when windows are fullscreen            | Prevents notifications from appearing when a window is fullscreen. Unpauses when leaving fullscreen.             |
+| Automatic tiling                  | Windows will automatically tile when dragged into the top of the screen or the far corners. |
+| Enable window focus change on mouse enter and leave                       | Enables window focus to apply when the mouse enters the window and unfocus when the mouse leaves the window.   |
+| Enable unredirection                  | Enable unredirection which will allow frames to bypass compositing for fullscreen applications. This option is for advanced users and recommended to keep enabled. Use this if you are having graphical or performance issues with dedicated GPUs.          |
+| Show all windows in tab switcher   | All tabs will be displayed in tab switcher regardless of the workspace in use.  |
 
 # Panels
 
 # Session
+
+Use this to add applications to launch at system start-up.
