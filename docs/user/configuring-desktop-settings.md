@@ -48,6 +48,8 @@ Your Budgie desktop environment can be personalized using the "Budgie Desktop Se
 
 # Raven
 
+Customize the Raven panel.
+
 # Windows
 
 | Setting                          | Description                                           |
@@ -63,6 +65,8 @@ Your Budgie desktop environment can be personalized using the "Budgie Desktop Se
 | Show all windows in tab switcher   | All tabs will be displayed in tab switcher regardless of the workspace in use.  |
 
 # Panels
+
+Customize your panels and docks with additional applets.
 
 # Session
 
