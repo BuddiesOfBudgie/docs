@@ -8,17 +8,17 @@ Your Budgie desktop environment can be personalized using the "Budgie Desktop Se
 
 # Style
 
-## Widgets
+| Widgets
 
-## Styling
+| Styling
 
-## Icons
+| Icons
 
-## Cursors
+| Cursors
 
-## Notification Position
+| Notification Position
 
-## Built-in theme
+| Built-in theme
 
 # Desktop
 
