@@ -6,16 +6,16 @@ title: Configuring Desktop Settings
 Your Budgie desktop environment can be personalized using the "Budgie Desktop Settings" application.
 
 
-#Style
+# Style
 
-#Desktop
+# Desktop
 
-#Fonts
+# Fonts
 
-#Raven
+# Raven
 
-#Windows
+# Windows
 
-#Panels
+# Panels
 
-#Session
+# Session
