@@ -8,17 +8,16 @@ Your Budgie desktop environment can be personalized using the "Budgie Desktop Se
 
 # Style
 
-| Widgets
+| Setting                          | Description                                           |
+| -------------------------------- | ------------------                                    |
+| Widgets                          | Set the appearance of window decorations and controls |
+| Styling                          | Set the preferred application style                   |
+| Icons                            | Set the globally used icon theme                      |
+| Cursors                          | Set the globally used mouse cursor theme              |
+| Notification Position            | Set the location for notification popups              |
+| Built-in theme                   | When enabled, the built-in theme will override the desktop component styling |
+| Animations                       | Control whether windows and controls use animations   |
 
-| Styling
-
-| Icons
-
-| Cursors
-
-| Notification Position
-
-| Built-in theme
 
 # Desktop
 
