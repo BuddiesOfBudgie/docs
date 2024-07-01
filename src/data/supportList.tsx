@@ -1,4 +1,3 @@
-import React from "react";
 import { SupportInfo } from "../types";
 
 import Translate from "@docusaurus/Translate";
@@ -11,7 +10,7 @@ import Tabs from "@theme/Tabs";
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.1",
+    budgieVersion: "10.9.2",
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -52,7 +51,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.1",
+    budgieVersion: "10.9.2",
     name: "EndeavourOS",
     showInGrid: true,
     summary: () => (
@@ -64,8 +63,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://endeavouros.com",
   },
   {
-    budgieAvailablePostInstall: "10.9.1",
-    budgieVersion: "10.8.1",
+    budgieAvailablePostInstall: "10.9.2",
+    budgieVersion: "10.9.1",
     name: "Fedora Budgie Spin",
     showInGrid: true,
     summary: () => (
@@ -76,8 +75,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://fedoraproject.org/spins/budgie/",
   },
   {
-    budgieAvailablePostInstall: "10.9.1",
-    budgieVersion: "10.8.1",
+    budgieAvailablePostInstall: "10.9.2",
+    budgieVersion: "10.9.1",
     name: "Fedora Budgie Atomic",
     showInGrid: true,
     summary: () => (
@@ -120,25 +119,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://freebsd.org",
   },
   {
-    budgieAvailablePostInstall: "10.8.1",
-    budgieVersion: "10.6.4",
-    installationInfo: () => (
-      <>
-        Manjaro Budgie Community Edition offers Budgie Desktop as an out-of-the-box experience on top of Manjaro.
-        Manjaro is based on Arch Linux.
-        <Admonition icon="🚧" type="caution">
-          The Budgie Desktop experience offered by this edition is incomplete, setting no default theme or enabling our
-          built-in theme. This results in a partially broken user experience.
-        </Admonition>
-      </>
-    ),
-    name: "Manjaro Budgie Community Edition",
-    showInGrid: false,
-    website: "https://manjaro.org",
-  },
-  {
-    budgieAvailablePostInstall: "10.8",
-    budgieVersion: "10.7.2",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.9.1",
     installationInfo: () => (
       <>
         Budgie Desktop can be installed through the following mechanisms on openSUSE.
@@ -164,7 +146,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.1",
+    budgieVersion: "10.9.2",
     name: "NixOS",
     installationInfo: () => (
       <>
@@ -193,7 +175,7 @@ export const SupportListData: SupportInfo[] = [
     website: "https://nixos.org/download.html#nixos-iso",
   },
   {
-    budgieAvailablePostInstall: "10.9.1",
+    budgieAvailablePostInstall: "10.9.2",
     budgieVersion: "10.8.2",
     name: "Solus",
     summary: () => (
@@ -217,8 +199,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://ubuntubudgie.org",
   },
   {
-    budgieAvailablePostInstall: "10.9.1",
-    budgieVersion: "10.7.2",
+    budgieAvailablePostInstall: "10.9.2",
+    budgieVersion: "10.9.1",
     name: "Ultramarine Linux",
     summary: () => (
       <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">
