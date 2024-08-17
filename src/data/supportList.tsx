@@ -39,18 +39,6 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.5.2",
-    name: "Debian",
-    showInGrid: false,
-    installationInfo: () => (
-      <Admonition icon="🚧" type="note" title="Coming Soon">
-        Installation instructions coming soon!
-      </Admonition>
-    ),
-    website: "https://debian.org",
-  },
-  {
-    budgieAvailablePostInstall: null,
     budgieVersion: "10.9.2",
     name: "EndeavourOS",
     showInGrid: true,
