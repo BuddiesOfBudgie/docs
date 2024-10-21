@@ -1,0 +1,54 @@
+{
+  "link.title.Docs": {
+    "message": "Dokumentation",
+    "description": "Der Titel der Fußzeilen-Link-Spalte mit dem Titel 'Dokumentation' in der Fußzeile"
+  },
+  "link.title.Community": {
+    "message": "Gemeinschaft",
+    "description": "Der Titel der Fußzeilen-Link-Spalte mit dem Titel 'Gemeinschaft' in der Fußzeile"
+  },
+  "link.title.More": {
+    "message": "Mehr",
+    "description": "Der Titel der Fußzeilen-Link-Spalte mit dem Titel 'Mehr' in der Fußzeile"
+  },
+  "link.item.label.Developer": {
+    "message": "Entwickler",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Entwickler', das auf /developer/intro verweist"
+  },
+  "link.item.label.Organization": {
+    "message": "Organisation",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Organisation', das auf /organization/intro verweist"
+  },
+  "link.item.label.User": {
+    "message": "Benutzer",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Benutzer', das auf /user/intro verweist"
+  },
+  "link.item.label.Mastodon": {
+    "message": "Mastodon",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Mastodon', das auf https://floss.social/@BuddiesOfBudgie verweist"
+  },
+  "link.item.label.Matrix": {
+    "message": "Matrix",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Matrix', das auf https://matrix.to/#/#buddies-of-budgie:matrix.org verweist"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Twitter', das auf https://twitter.com/BuddiesOfBudgie verweist"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'GitHub', das auf https://github.com/BuddiesOfBudgie verweist"
+  },
+  "copyright": {
+    "message": "Copyright © 2023 Buddies of Budgie. Erstellt mit Docusaurus.",
+    "description": "Der Copyright-Text in der Fußzeile"
+  },
+  "link.item.label.Website": {
+    "message": "Website",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Website', das auf https://buddiesofbudgie.org verweist"
+  },
+  "link.item.label.Donate": {
+    "message": "Spenden",
+    "description": "Das Label des Fußzeilen-Links mit dem Label 'Spenden', das auf https://opencollective.com/buddies-of-budgie verweist"
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "theme.ErrorPageContent.title": {
+    "message": "Diese Seite ist abgestürzt.",
+    "description": "Der Titel der Fallback-Seite, wenn die Seite abgestürzt ist."
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Erneut versuchen",
+    "description": "Die Beschriftung des Buttons, um es erneut zu versuchen, wenn die React-Fehlergrenze einen Fehler erfasst."
+  },
+  "theme.NotFound.title": {
+    "message": "Seite nicht gefunden",
+    "description": "Der Titel der 404-Seite."
+  },
+  "theme.NotFound.p1": {
+    "message": "Wir konnten nicht finden, wonach Sie gesucht haben.",
+    "description": "Der erste Absatz der 404-Seite."
+  },
+  "theme.NotFound.p2": {
+    "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie zu dieser URL verlinkt hat, und lassen Sie ihn wissen, dass sein Link defekt ist.",
+    "description": "Der zweite Absatz der 404-Seite."
+  },
+  "theme.admonition.note": {
+    "message": "Hinweis",
+    "description": "Die Standardbeschriftung für den Hinweis-Admonition (:::note)."
+  },
+  "theme.admonition.tip": {
+    "message": "Tipp",
+    "description": "Die Standardbeschriftung für den Tipp-Admonition (:::tip)."
+  },
+  "theme.admonition.danger": {
+    "message": "Gefahr",
+    "description": "Die Standardbeschriftung für den Gefahr-Admonition (:::danger)."
+  },
+  "theme.admonition.info": {
+    "message": "Info",
+    "description": "Die Standardbeschriftung für den Info-Admonition (:::info)."
+  },
+  "theme.admonition.caution": {
+    "message": "Vorsicht",
+    "description": "Die Standardbeschriftung für den Vorsicht-Admonition (:::caution)."
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Zurück nach oben scrollen",
+    "description": "Das ARIA-Label für den Zurück nach oben-Button."
+  },
+  "theme.blog.archive.title": {
+    "message": "Archiv",
+    "description": "Der Seiten- und Hero-Titel der Blog-Archiv-Seite."
+  },
+  "theme.blog.archive.description": {
+    "message": "Archiv",
+    "description": "Die Seiten- und Hero-Beschreibung der Blog-Archiv-Seite."
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Blog-Listen-Seitennavigation",
+    "description": "Das ARIA-Label für die Blog-Paginierung."
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Neuere Einträge",
+    "description": "Die Beschriftung zum Navigieren zur neueren Blog-Seite (vorherige Seite)."
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Ältere Einträge",
+    "description": "Die Beschriftung zum Navigieren zur älteren Blog-Seite (nächste Seite)."
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Blog-Beitrags-Seitennavigation",
+    "description": "Das ARIA-Label für die Blog-Beitrags-Paginierung."
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Neuerer Beitrag",
+    "description": "Die Beschriftung des Buttons, um zum neueren Beitrag zu navigieren."
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Älterer Beitrag",
+    "description": "Die Beschriftung des Buttons, um zum älteren Beitrag zu navigieren."
+  },
+  "theme.blog.post.plurals": {
+    "message": "Ein Beitrag|{count} Beiträge",
+    "description": "Pluralisierte Beschriftung für \"{count} Beiträge\"."
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} getaggt mit \"{tagName}\"",
+    "description": "Der Titel der Seite für einen Blog-Tag."
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Alle Tags anzeigen",
+    "description": "Die Beschriftung des Links zur Tag-Liste-Seite."
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Zwischen dunklem und hellem Modus wechseln (aktuell {mode})",
+    "description": "Das ARIA-Label für den Farbmodus-Umschalter in der Navigationsleiste."
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "Dunkler Modus",
+    "description": "Der Name für den dunklen Farbmodus."
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "Heller Modus",
+    "description": "Der Name für den hellen Farbmodus."
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Breadcrumbs",
+    "description": "Das ARIA-Label für die Breadcrumbs."
+  },
+  "theme.docs.DocCard.categoryDescription": {
+    "message": "{count} Einträge",
+    "description": "Die Standardbeschreibung für eine Kategoriekarte im generierten Index über die Anzahl der enthaltenen Einträge."
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Dokumentations-Seitennavigation",
+    "description": "Das ARIA-Label für die Paginierung der Dokumentation."
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Zurück",
+    "description": "Die Beschriftung zum Navigieren zur vorherigen Dokumentation."
+  },
+  "theme.docs.paginator.next": {
+    "message": "Weiter",
+    "description": "Die Beschriftung zum Navigieren zur nächsten Dokumentation."
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Seitenleiste erweitern",
+    "description": "Das ARIA-Label und der Titel für die Schaltfläche zum Erweitern der Dokumentseitenleiste"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Seitenleiste erweitern",
+    "description": "Das ARIA-Label und der Titel für die Schaltfläche zum Erweitern der Dokumentseitenleiste"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste umschalten",
+    "description": "Das ARIA-Label für die Hamburger-Menü-Schaltfläche der mobilen Navigation"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Hauptnavigation",
+    "description": "Das ARIA-Label für die Hauptnavigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprachen",
+    "description": "Die Bezeichnung für das Dropdown-Menü zur Sprachauswahl in der mobilen Ansicht"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
+    "description": "Pluralisiertes Label für \"{readingTime} Minuten Lesezeit\". Verwende so viele Pluralformen (getrennt durch \"|\") wie deine Sprache unterstützt."
+  },
+  "theme.blog.post.readMore": {
+    "message": "Weiterlesen",
+    "description": "Das Label für den Link, um den vollständigen Blog-Beitrag zu lesen"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Mehr über {title} lesen",
+    "description": "Das ARIA-Label für den Link zum vollständigen Blog-Beitrag aus den Auszügen"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Blogbeitrags-Navigation",
+    "description": "Das ARIA-Label für die Blogbeitrags-Paginierung"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Neuere Beiträge",
+    "description": "Die Schaltfläche, um zum neueren/vorherigen Beitrag zu navigieren"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Ältere Beiträge",
+    "description": "Die Schaltfläche, um zum älteren/nächsten Beitrag zu navigieren"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navigation für neueste Blogbeiträge",
+    "description": "Das ARIA-Label für neueste Beiträge in der Blog-Seitenleiste"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Direkter Link zu {heading}",
+    "description": "Titel für den Link zur Überschrift"
+  },
+  "theme.common.editThisPage": {
+    "message": "Diese Seite bearbeiten",
+    "description": "Der Link, um die aktuelle Seite zu bearbeiten"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Ein Dokument markiert|{count} Dokumente markiert",
+    "description": "Pluralisiertes Label für \"{count} Dokumente markiert\""
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} mit \"{tagName}\"",
+    "description": "Der Titel der Seite für einen Dokumenten-Tag"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Breadcrumbs",
+    "description": "Das ARIA-Label für die Breadcrumbs"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archiv",
+    "description": "Der Seitentitel des Blog-Archivs"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archiv",
+    "description": "Die Beschreibung der Blog-Archiv-Seite"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Neuere Einträge",
+    "description": "Das Label zum Navigieren zur Seite mit neueren Blogeinträgen (vorherige Seite)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Ältere Einträge",
+    "description": "Das Label zum Navigieren zur Seite mit älteren Blogeinträgen (nächste Seite)"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}",
+    "description": "Das Label für das Versionsabzeichen"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Dies ist die unveröffentlichte Dokumentation für {siteTitle} {versionLabel}.",
+    "description": "Das Label, das dem Benutzer mitteilt, dass er eine unveröffentlichte Dokumentationsversion durchsieht"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Dies ist die Dokumentation für {siteTitle} {versionLabel}, die nicht mehr aktiv gepflegt wird.",
+    "description": "Das Label, das dem Benutzer mitteilt, dass er eine nicht mehr gepflegte Dokumentationsversion durchsieht"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Für die aktuellste Dokumentation siehe {latestVersionLink} ({versionLabel}).",
+    "description": "Das Label, das den Benutzer auffordert, die neueste Version der Dokumentation zu prüfen"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "Neueste Version",
+    "description": "Das Label für den Link zur neuesten Version der Dokumentation"
+  },
+  "theme.common.editThisPage": {
+    "message": "Diese Seite bearbeiten",
+    "description": "Der Link, um die aktuelle Seite zu bearbeiten"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Direkter Link zu {heading}",
+    "description": "Titel für den Link zur Überschrift"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " am {date}",
+    "description": "Die Wörter, die verwendet werden, um zu beschreiben, an welchem Datum eine Seite zuletzt aktualisiert wurde"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " von {user}",
+    "description": "Die Wörter, die verwendet werden, um zu beschreiben, wer die Seite zuletzt aktualisiert hat"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Zuletzt aktualisiert{atDate}{byUser}",
+    "description": "Der Satz, der verwendet wird, um anzuzeigen, wann und von wem eine Seite zuletzt aktualisiert wurde"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versionen",
+    "description": "Die Beschriftung für das Versions-Dropdown-Menü in der mobilen Ansicht"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Tags:",
+    "description": "Die Beschriftung neben einer Tag-Liste"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Schließen",
+    "description": "Die ARIA-Beschriftung für die Schließen-Schaltfläche der Ankündigungsleiste"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog-Navigation für aktuelle Beiträge",
+    "description": "Die ARIA-Beschriftung für aktuelle Beiträge in der Blog-Seitenleiste"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Kopiert",
+    "description": "Beschriftung der Kopier-Schaltfläche bei Codeblöcken"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Code in die Zwischenablage kopieren",
+    "description": "Die ARIA-Beschriftung für die Kopier-Schaltfläche bei Codeblöcken"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Kopieren",
+    "description": "Beschriftung der Kopier-Schaltfläche bei Codeblöcken"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Zeilenumbruch umschalten",
+    "description": "Der Titel des Umschaltknopfs für Zeilenumbruch bei Codezeilen"
+  },
+  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
+    "message": "Die einklappbare Seitenleiste '{label}' umschalten",
+    "description": "Die ARIA-Beschriftung zum Umschalten der einklappbaren Seitenleisten-Kategorie"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Hauptnavigation",
+    "description": "Die ARIA-Beschriftung für die Hauptnavigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprachen",
+    "description": "Die Beschriftung für den mobilen Sprachumschalter im Dropdown-Menü"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Auf dieser Seite",
+    "description": "Die Beschriftung des Umschaltknopfes auf der einklappbaren TOC-Komponente"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Mehr lesen",
+    "description": "Die Beschriftung für den Link zu vollständigen Blogbeiträgen in den Beitragsausschnitten"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Mehr über {title} lesen",
+    "description": "Die ARIA-Beschriftung für den Link zu vollständigen Blogbeiträgen von Ausschnitten aus"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
+    "description": "Pluralisierte Beschriftung für \"{readingTime} Minuten Lesezeit\""
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Startseite",
+    "description": "Die ARIA-Beschriftung für die Startseite in den Breadcrumbs"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Seitenleiste einklappen",
+    "description": "Der Titel der Schaltfläche zum Einklappen der Seitenleiste"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Seitenleiste einklappen",
+    "description": "Die ARIA-Beschriftung für die Schaltfläche zum Einklappen der Seitenleiste"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Dokumentations-Seitenleiste",
+    "description": "Die ARIA-Beschriftung für die Seitenleisten-Navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste schließen",
+    "description": "Die ARIA-Beschriftung für die Schließen-Schaltfläche der mobilen Seitenleiste"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Zurück zum Hauptmenü",
+    "description": "Die Beschriftung der Zurück-Schaltfläche zum Hauptmenü innerhalb der mobilen Navbar-Seitenleiste"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste umschalten",
+    "description": "Die ARIA-Beschriftung für den Hamburger-Menü-Knopf der mobilen Navigation"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Seitenleiste erweitern",
+    "description": "Die ARIA-Beschriftung und der Titel der Schaltfläche zum Erweitern der Seitenleiste"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Seitenleiste erweitern",
+    "description": "Die ARIA-Beschriftung und der Titel der Schaltfläche zum Erweitern der Seitenleiste"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Zum Hauptinhalt springen",
+    "description": "Die Schaltfläche zum Überspringen zum Hauptinhalt für die Barrierefreiheit"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "Der Titel der Tag-Liste Seite"
+  },
+  "homepage.header.welcome": {
+    "message": "Der Ort, um mit Budgie Desktop zu lernen und zu entwickeln.",
+    "description": "Der Begrüßungstext für die Startseite"
+  },
+  "get.budgie": {
+    "message": "Budgie erhalten",
+    "description": "Budgie erhalten"
+  },
+  "get.budgie.endeavouros.summary": {
+    "message": "EndeavourOS ist eine terminalzentrierte Distribution, die auf Arch Linux aufbaut. EndeavourOS bietet die Möglichkeit, Budgie Desktop über ihren einheitlichen Installer zu installieren, mit Benutzerwahl über das gewünschte Erlebnis.",
+    "description": "Zusammenfassung von EndeavourOS"
+  },
+  "get.budgie.fedorabudgiespin.summary": {
+    "message": "Fedora Budgie Spin bietet ein nahezu unverändertes Budgie Desktop-Erlebnis auf der Fedora Open Source-Plattform.",
+    "description": "Zusammenfassung von Fedora Budgie Spin"
+  },
+  "get.budgie.solus.summary": {
+    "message": "Solus bietet ein kuratiertes Budgie Desktop-Erlebnis auf seinem von Grund auf neu entwickelten Betriebssystem.",
+    "description": "Zusammenfassung von Solus"
+  },
+  "get.budgie.ubuntubudgie.summary": {
+    "message": "Ubuntu Budgie bietet ein stark kuratiertes Budgie Desktop-Erlebnis mit Ubuntu als Kern.",
+    "description": "Zusammenfassung von Ubuntu Budgie"
+  },
+  "get.budgie.header.effortlessly": {
+    "message": "Budgie mühelos erhalten",
+    "description": "Überschrift für das mühelose Erhalten von Budgie über Live-Medien"
+  },
+  "get.budgie.description.effortlessly": {
+    "message": "Sie können das Budgie-Desktop sofort und ohne zusätzlichen Aufwand mit den unten aufgeführten Betriebssystemen nutzen. Diese Betriebssysteme bieten unterschiedliche Benutzererlebnisse: Einige sind stärker kuratiert mit zusätzlichen Widgets/Erweiterungen für Budgie, andere bieten ein \"Standard\"- oder \"Vanilla\"-Budgie-Desktop-Erlebnis.",
+    "description": "Beschreibung für das mühelose Erhalten von Budgie über Live-Medien"
+  },
+  "get.budgie.card.imagealttext": {
+    "message": "Screenshot von {distribution}",
+    "description": "Alt-Text für Bilder der verschiedenen Distributionen"
+  },
+  "download": {
+    "message": "Herunterladen",
+    "description": "Herunterladen"
+  },
+  "get.budgie.header.bitmorework": {
+    "message": "Budgie mit etwas mehr Aufwand erhalten",
+    "description": "Überschrift für das Erhalten von Budgie mit etwas mehr Aufwand"
+  },
+  "get.budgie.description.reference": {
+    "message": "Keines dieser Betriebssysteme wird als \"Referenz\"-Plattform für Budgie Desktop angesehen. Wir möchten, dass Sie das Betriebssystem auswählen können, das am besten zu Ihren Bedürfnissen passt, und Budgie Desktop ist dabei!",
+    "description": "Text, der beschreibt, dass es keine Referenzplattform für Budgie Desktop gibt"
+  },
+  "latest": {
+    "message": "Neueste",
+    "description": "Neueste"
+  },
+  "latest_postinstall": {
+    "message": "Neueste mit Post-Installations-Upgrade",
+    "description": "Neueste mit Post-Installations-Upgrade"
+  },
+  "outdated": {
+    "message": "Veraltet",
+    "description": "Veraltet"
+  },
+  "homepage.category.development": {
+    "message": "Entwickler",
+    "description": "Entwickler"
+  },
+  "homepage.category.user": {
+    "message": "Benutzer",
+    "description": "Benutzer"
+  },
+  "homepage.category.organization": {
+    "message": "Organisation",
+    "description": "Organisation"
+  },
+  "get.budgie.ultramarinelinux.summary": {
+    "message": "Ultramarine Linux ist eine Fedora-basierte Linux-Distribution, die darauf ausgelegt ist, unauffällig und einfach zu bedienen zu sein.",
+    "description": "Zusammenfassung von Ultramarine Linux"
+  },
+  "Open in new tab": {
+    "message": "In neuem Tab öffnen"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Alle {count} Ergebnisse anzeigen"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Ein Dokument gefunden|{count} Dokumente gefunden",
+    "description": "Pluralisierte Bezeichnung für \"{count} Dokumente gefunden\". Verwenden Sie so viele Pluralformen (getrennt durch \"|\") wie Ihre Sprache unterstützt (siehe https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Suchergebnisse für \"{query}\"",
+    "description": "Der Titel der Suchseite für eine nicht leere Abfrage"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Durchsuchen Sie die Dokumentation",
+    "description": "Der Titel der Suchseite für eine leere Abfrage"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Geben Sie hier Ihre Suche ein",
+    "description": "Der Platzhalter für das Suchseiten-Eingabefeld"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Suche",
+    "description": "Das ARIA-Label für das Suchseiten-Eingabefeld"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Suche über Algolia",
+    "description": "Das ARIA-Label für den Verweis auf Algolia"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Keine Ergebnisse gefunden",
+    "description": "Der Absatz für leere Suchergebnisse"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Lade neue Ergebnisse...",
+    "description": "Der Absatz für das Abrufen neuer Suchergebnisse"
+  },
+  "theme.SearchBar.label": {
+    "message": "Suche",
+    "description": "Das ARIA-Label und der Platzhalter für die Suchschaltfläche"
+  },
+  "theme.SearchModal.searchBox.resetButtonTitle": {
+    "message": "Abfrage löschen",
+    "description": "Das Label und das ARIA-Label für die Schaltfläche zum Zurücksetzen des Suchfelds"
+  },
+  "theme.SearchModal.searchBox.cancelButtonText": {
+    "message": "Abbrechen",
+    "description": "Das Label und das ARIA-Label für die Schaltfläche zum Abbrechen des Suchfelds"
+  },
+  "theme.SearchModal.startScreen.recentSearchesTitle": {
+    "message": "Kürzlich",
+    "description": "Der Titel für kürzliche Suchanfragen"
+  },
+  "theme.SearchModal.startScreen.noRecentSearchesText": {
+    "message": "Keine kürzlichen Suchanfragen",
+    "description": "Der Text, wenn es keine kürzlichen Suchanfragen gibt"
+  },
+  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+    "message": "Diese Suche speichern",
+    "description": "Das Label für die Schaltfläche zum Speichern der kürzlichen Suche"
+  },
+  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+    "message": "Diese Suche aus dem Verlauf entfernen",
+    "description": "Das Label für die Schaltfläche zum Entfernen der kürzlichen Suche aus dem Verlauf"
+  },
+  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+    "message": "Favoriten",
+    "description": "Der Titel für die Favoritensuchen"
+  },
+  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+    "message": "Diese Suche aus den Favoriten entfernen",
+    "description": "Das Label für die Schaltfläche zum Entfernen der Favoritensuche"
+  },
+  "theme.SearchModal.errorScreen.titleText": {
+    "message": "Ergebnisse konnten nicht abgerufen werden",
+    "description": "Der Titel für den Fehlerbildschirm des Suchmodals"
+  },
+  "theme.SearchModal.errorScreen.helpText": {
+    "message": "Überprüfen Sie Ihre Netzwerkverbindung.",
+    "description": "Der Hilfetext für den Fehlerbildschirm des Suchmodals"
+  },
+  "theme.SearchModal.footer.selectText": {
+    "message": "zum Auswählen",
+    "description": "Der erklärende Text der Aktion für die Eingabetaste"
+  },
+  "theme.SearchModal.footer.selectKeyAriaLabel": {
+    "message": "Eingabetaste",
+    "description": "Das ARIA-Label für die Eingabetaste, die die Auswahl trifft"
+  },
+  "theme.SearchModal.footer.navigateText": {
+    "message": "zum Navigieren",
+    "description": "Der erklärende Text der Aktion für die Pfeiltasten nach oben und unten"
+  },
+  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+    "message": "Pfeil nach oben",
+    "description": "Das ARIA-Label für die Pfeiltaste nach oben, die die Navigation ermöglicht"
+  },
+  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+    "message": "Pfeil nach unten",
+    "description": "Das ARIA-Label für die Pfeiltaste nach unten, die die Navigation ermöglicht"
+  },
+  "theme.SearchModal.footer.closeText": {
+    "message": "zum Schließen",
+    "description": "Der erklärende Text der Aktion für die Escape-Taste"
+  },
+  "theme.SearchModal.footer.closeKeyAriaLabel": {
+    "message": "Escape-Taste",
+    "description": "Das ARIA-Label für die Escape-Taste, die das Modal schließt"
+  },
+  "theme.SearchModal.footer.searchByText": {
+    "message": "Suche über",
+    "description": "Der Text, der erklärt, dass die Suche über Algolia erfolgt"
+  },
+  "theme.SearchModal.noResultsScreen.noResultsText": {
+    "message": "Keine Ergebnisse für",
+    "description": "Der Text, der erklärt, dass es keine Ergebnisse für die folgende Suche gibt"
+  },
+  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+    "message": "Versuchen Sie, nach Folgendem zu suchen",
+    "description": "Der Text für die vorgeschlagene Suchanfrage, wenn keine Ergebnisse gefunden werden"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+    "message": "Glauben Sie, dass diese Abfrage Ergebnisse liefern sollte?",
+    "description": "Der Text für die Frage, ob der Benutzer glaubt, dass Ergebnisse fehlen"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+    "message": "Lass es uns wissen.",
+    "description": "Der Text für den Link, um fehlende Ergebnisse zu melden"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "Dokumentation durchsuchen",
+    "description": "Der Platzhalter des Eingabefeldes im DocSearch-Pop-up"
+  },
+  "get.budgie.geckolinux.summary": {
+    "message": "GeckoLinux ist eine Distribution, die aus Spin-Offs von OpenSUSE Leap und Tumbleweed besteht. GeckoLinux bietet einen offiziellen Spin von Budgie Desktop mit einer sorgfältig abgestimmten Konfiguration.",
+    "description": "Zusammenfassung von GeckoLinux"
+  },
+  "get.budgie.nixos.summary": {
+    "message": "NixOS ist eine Linux-Distribution, die auf dem Nix-Paketmanager und Build-System basiert.",
+    "description": "Zusammenfassung von NixOS"
+  },
+  "newBudgieRelease": {
+    "message": "Neue Budgie-Version"
+  },
+  "showPastEvents": {
+    "message": "Vergangene Ereignisse anzeigen"
+  },
+  "projects": {
+    "message": "Projekte"
+  },
+  "event": {
+    "message": "Ereignis"
+  },
+  "project": {
+    "message": "Projekt"
+  },
+  "start": {
+    "message": "Start"
+  },
+  "end": {
+    "message": "Ende"
+  },
+  "duration": {
+    "message": "Dauer"
+  },
+  "evenTableCellescription": {
+    "message": "{type} für {rel}"
+  }
+}
