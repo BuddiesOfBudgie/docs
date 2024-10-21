@@ -1,1 +1,54 @@
-
+{
+  "title": {
+    "message": "Buddies of Budgie",
+    "description": "Der Titel in der Navigationsleiste"
+  },
+  "item.label.Developer": {
+    "message": "Entwickler",
+    "description": "Navigationsleiste-Element mit dem Label 'Entwickler'"
+  },
+  "item.label.User": {
+    "message": "Benutzer",
+    "description": "Navigationsleiste-Element mit dem Label 'Benutzer'"
+  },
+  "item.label.Organization": {
+    "message": "Organisation",
+    "description": "Navigationsleiste-Element mit dem Label 'Organisation'"
+  },
+  "item.label.Other": {
+    "message": "Sonstiges",
+    "description": "Navigationsleiste-Element mit dem Label 'Sonstiges'"
+  },
+  "item.label.Get Budgie": {
+    "message": "Hol dir Budgie",
+    "description": "Navigationsleiste-Element mit dem Label 'Hol dir Budgie'"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navigationsleiste-Element mit dem Label 'GitHub'"
+  },
+  "item.label.Mastodon": {
+    "message": "Mastodon",
+    "description": "Navigationsleiste-Element mit dem Label 'Mastodon'"
+  },
+  "item.label.Matrix": {
+    "message": "Matrix",
+    "description": "Navigationsleiste-Element mit dem Label 'Matrix'"
+  },
+  "item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Navigationsleiste-Element mit dem Label 'Twitter'"
+  },
+  "logo.alt": {
+    "message": "Budgie Logo",
+    "description": "Der Alt-Text des Logos in der Navigationsleiste"
+  },
+  "item.label.Website": {
+    "message": "Website",
+    "description": "Navigationsleiste-Element mit dem Label 'Website'"
+  },
+  "item.label.Donate": {
+    "message": "Spenden",
+    "description": "Navigationsleiste-Element mit dem Label 'Spenden'"
+  }
+}
