@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Nächste",
+    "description": "Das Label für die aktuelle Version"
+  },
+  "sidebar.developer.category.Developer Workflow": {
+    "message": "Entwickler-Workflow",
+    "description": "Das Label für die Kategorie Entwickler-Workflow in der Seitenleiste Entwickler"
+  },
+  "sidebar.developer.category.Meta (Documentation)": {
+    "message": "Meta (Dokumentation)",
+    "description": "Das Label für die Kategorie Meta (Dokumentation) in der Seitenleiste Entwickler"
+  },
+  "sidebar.developer.category.Lab (Experimental / Testing)": {
+    "message": "Labor (Experimentell / Testen)",
+    "description": "Das Label für die Kategorie Labor (Experimentell / Testen) in der Seitenleiste Entwickler"
+  }
+}
