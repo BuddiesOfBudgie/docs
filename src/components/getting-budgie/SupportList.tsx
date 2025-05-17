@@ -28,7 +28,7 @@ const SupportList = () => {
     ),
   ];
 
-  const shouldShowNewReleaseBanner = DateTime.fromISO(LATEST_BUDGIE_RELEASE.date).diffNow("days").days <= 14;
+  const shouldShowNewReleaseBanner = DateTime.now().diff(DateTime.fromISO(LATEST_BUDGIE_RELEASE.date), "days").days <= 14;
 
   return (
     <Stack gap={2} key="SupportList">
