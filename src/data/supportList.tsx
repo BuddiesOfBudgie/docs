@@ -108,32 +108,6 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.1",
-    installationInfo: () => (
-      <>
-        Budgie Desktop can be installed through the following mechanisms on openSUSE.
-        <Tabs>
-          <TabItem value="graphical" label="Graphical (Leap 15.4+ and Tumbleweed)">
-            Choose the "Budgie Desktop Environment" pattern under the "Desktop Environments" section when searching for
-            patterns in YaST Software Management.
-          </TabItem>
-
-          <TabItem value="installer" label="Installer (Leap 15.4+ and Tumbleweed)">
-            At the 'Installation Settings' page, click on "Software" and then choose the "Budgie Desktop Environment"
-            pattern under the "Desktop Environments" section when searching for patterns.
-          </TabItem>
-          <TabItem value="cli" label="CLI">
-            <CodeBlock language="bash">sudo zypper install budgie-desktop</CodeBlock>
-          </TabItem>
-        </Tabs>
-      </>
-    ),
-    name: "OpenSUSE",
-    showInGrid: false,
-    website: "https://opensuse.org",
-  },
-  {
-    budgieAvailablePostInstall: null,
     budgieVersion: "10.9.2",
     name: "NixOS",
     installationInfo: () => (
