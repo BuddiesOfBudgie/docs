@@ -51,8 +51,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://endeavouros.com",
   },
   {
-    budgieAvailablePostInstall: "10.9.2",
-    budgieVersion: "10.9.1",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.9.2",
     name: "Fedora Budgie Spin",
     showInGrid: true,
     summary: () => (
@@ -63,8 +63,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://fedoraproject.org/spins/budgie/",
   },
   {
-    budgieAvailablePostInstall: "10.9.2",
-    budgieVersion: "10.9.1",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.9.2",
     name: "Fedora Budgie Atomic",
     showInGrid: true,
     summary: () => (
@@ -137,8 +137,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://nixos.org/download.html#nixos-iso",
   },
   {
-    budgieAvailablePostInstall: "10.9.2",
-    budgieVersion: "10.8.2",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.9.2",
     name: "Solus",
     summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">
@@ -149,8 +149,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://getsol.us",
   },
   {
-    budgieAvailablePostInstall: "10.8",
-    budgieVersion: "10.6.4",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.9.2",
     name: "Ubuntu Budgie",
     summary: () => (
       <Translate id="get.budgie.ubuntubudgie.summary" description="Summary of Ubuntu Budgie">
@@ -161,8 +161,8 @@ export const SupportListData: SupportInfo[] = [
     website: "https://ubuntubudgie.org",
   },
   {
-    budgieAvailablePostInstall: "10.9.2",
-    budgieVersion: "10.9.1",
+    budgieAvailablePostInstall: null,
+    budgieVersion: "10.9.2",
     name: "Ultramarine Linux",
     summary: () => (
       <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">
