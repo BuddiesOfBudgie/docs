@@ -7,7 +7,6 @@
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus",
-    "gen-calendar": "bun run src/scripts/genCalendar.ts",
     "lint": "biome format --write",
     "serve": "docusaurus serve --host 0.0.0.0",
     "start": "docusaurus start",

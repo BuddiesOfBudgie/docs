@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies for build validation
         run: yarn
 
-      - name: Test calendar ICS generation
-        run: yarn gen-calendar
-
       - name: Perform build validation
         run: yarn build
 
