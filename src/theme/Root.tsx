@@ -1,9 +1,5 @@
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  extendTheme,
-  InitColorSchemeScript,
-} from '@mui/material';
-import { SiteTheme } from '../theme';
+import { Experimental_CssVarsProvider as CssVarsProvider, extendTheme, InitColorSchemeScript } from '@mui/material'
+import { SiteTheme } from '../theme'
 
 const Root = ({ children }) => {
   return (
@@ -11,6 +7,6 @@ const Root = ({ children }) => {
       <InitColorSchemeScript />
       <CssVarsProvider theme={extendTheme(SiteTheme)}>{children}</CssVarsProvider>
     </>
-  );
-};
-export default Root;
+  )
+}
+export default Root
