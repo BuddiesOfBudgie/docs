@@ -1,4 +1,3 @@
-
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import { Avatar, Box, Grid, Stack, SxProps, useMediaQuery } from '@mui/material'

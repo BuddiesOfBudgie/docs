@@ -1,11 +1,9 @@
-import { SupportInfo } from '../types'
-
 import Translate from '@docusaurus/Translate'
 import Admonition from '@theme/Admonition'
-
 import CodeBlock from '@theme/CodeBlock'
 import TabItem from '@theme/TabItem'
 import Tabs from '@theme/Tabs'
+import { SupportInfo } from '../types'
 
 export const SupportListData: SupportInfo[] = [
   {
@@ -52,7 +50,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.3',
     name: 'Fedora Budgie Spin',
     showInGrid: true,
     summary: () => (
@@ -64,7 +62,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.3',
     name: 'Fedora Budgie Atomic',
     showInGrid: true,
     summary: () => (
@@ -160,7 +158,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.3',
     name: 'Ultramarine Linux',
     summary: () => (
       <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">

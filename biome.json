@@ -23,7 +23,7 @@
       "!**/yarn.lock",
       "!**/LICENSE.md",
       "!**/static/",
-	    "!**/*.mdx"
+      "!**/*.mdx"
     ]
   },
   "linter": {
