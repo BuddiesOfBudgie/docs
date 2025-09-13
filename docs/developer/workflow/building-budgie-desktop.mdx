@@ -5,8 +5,6 @@ keywords:
   - compiling budgie
 ---
 
-import Link from "@docusaurus/Link";
-import CodeBlock from "@theme/CodeBlock";
 import TabItem from "@theme/TabItem";
 import Tabs from "@theme/Tabs";
 
@@ -66,49 +64,49 @@ budgie-desktop requires/recommends the following to be installed:
 
 <Tabs groupId="operating-systems">
   <TabItem value="arch" label="Arch">
-<CodeBlock language="bash">
+```bash
   sudo pacman -S --needed base-devel git
-  <br />
   sudo pacman -S --needed accountsservice budgie-session budgie-screensaver gnome-settings-daemon gobject-introspection gtk-layer-shell ibus intltool libgee libpeas libwnck3 libxfce4windowing meson magpie-wm sassc vala zenity
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
-<CodeBlock language="bash">
+```bash
   sudo apt install build-essential git
-</CodeBlock>
+```
 
 Enable software sources in your apt sources list then install the dependencies
 
-<CodeBlock language="bash">sudo apt build-dep budgie-desktop</CodeBlock>
+```bash
+sudo apt build-dep budgie-desktop
+```
 
 The manual method for dependency installation is:
 
-<CodeBlock language="bash">
+```bash
   sudo apt install build-essential git
-  <br />
   sudo apt install gnome-settings-daemon-dev gtk-doc-tools intltool libaccountsservice-dev libasound2-dev
   libgnome-desktop-3-dev libcanberra-dev libgee-0.8-dev libgstreamer1.0-dev
   libgtk-3-dev libibus-1.0-dev libmagpie-0-dev libpeas-dev libpolkit-agent-1-dev libpulse-dev libupower-glib-dev
   libwnck-3-dev libxfce4windowing-dev meson ninja-build sassc uuid-dev valac
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="fedora" label="Fedora non-Atomic">
-<CodeBlock language="bash">
-  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver budgie-session desktop-file-utils gettext git glib2-devel gnome-desktop3-devel gnome-settings-daemon-devel gobject-introspection-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libX11-devel libXtst-devel libgee-devel libnotify-devel libpeas1-devel libuuid-devel libwnck3-devel libxfce4windowing-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
-</CodeBlock>
+```bash
+  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver budgie-session desktop-file-utils gettext git glib2-devel gnome-desktop3-devel gnome-settings-daemon-devel gobject-introspection-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libX11-devel libXtst-devel libgee-devel libgudev-devel libnotify-devel libpeas1-devel libuuid-devel libwacom-devel libwnck3-devel libxfce4windowing-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
+```
   </TabItem>
   <TabItem value="fedora-onyx" label="Fedora Onyx / Atomic">
-For developing Budgie Desktop on top of Fedora Onyx / Atomic, we suggest rebasing on top of our <Link to="https://github.com/BuddiesOfBudgie/atomic-dev">Atomic Dev</Link> ostree images. These are built daily on top of Onyx with the required development libraries, making additional package layer faster and less prone to breakage.
+For developing Budgie Desktop on top of Fedora Onyx / Atomic, we suggest rebasing on top of our [Atomic Dev](https://github.com/BuddiesOfBudgie/atomic-dev) ostree images. These are built daily on top of Onyx with the required development libraries, making additional package layer faster and less prone to breakage.
   </TabItem>
   <TabItem value="sabayon" label="Sabayon">
-<CodeBlock language="bash">
+```bash
 sudo equo i dev-util/re2c dev-libs/libsass dev-lang/sassc dev-util/intltool dev-util/ninja dev-util/itstool app-text/docbook-sgml-dtd app-text/docbook-dsssl-stylesheets dev-util/meson dev-util/gtk-doc-am app-text/yelp-tools dev-util/gtk-doc x11-libs/wxGTK app-eselect/eselect-wxwidgets
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="solus" label="Solus">
-<CodeBlock language="bash">
+```bash
 sudo eopkg it accountsservice-devel alsa-lib-devel gtk-doc gnome-settings-daemon-devel gstreamer-1.0-devel ibus-devel libcanberra-devel libgee-devel libgnome-desktop-devel libnotify-devel libpeas-devel libwnck-devel libxfce4windowing-devel magpie-devel pulseaudio-devel sassc upower-devel vala ccache -c system.devel
-</CodeBlock>
+```
   </TabItem>
 </Tabs>
 
@@ -124,43 +122,38 @@ git submodule update --init
 
 <Tabs>
   <TabItem value="arch" label="Arch">
-<CodeBlock language="bash">
+```bash
   cd budgie-desktop
-  <br />
   meson setup build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
-<CodeBlock language="bash">
+```bash
   cd budgie-desktop
-  <br />
   meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="fedora-onyx" label="Fedora Onyx">
 As Fedora Onyx is an immutable variant, you will need to install Budgie Desktop into the persistent usrlocal for your changes to persist after reboot.
-  <br />
-<CodeBlock language="bash">
+
+```bash
   cd budgie-desktop
-  <br />
   meson build --prefix=/var/usrlocal --sysconfdir=/etc
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="solus" label="Solus">
 Solus has special requirements and mandates the use of stateless XDG paths, as well as using the OS default CFLAGS:
 
-<CodeBlock language="bash">
+```bash
   cd budgie-desktop
-  <br />
   meson --prefix /usr --libdir /usr/lib64 --sysconfdir /etc -Dwith-stateless=true build --buildtype plain
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="all-other-distributions" label="All Other Distributions">
-<CodeBlock language="bash">
+```bash
   cd budgie-desktop
-  <br />
   meson build --prefix=/usr --sysconfdir=/etc
-</CodeBlock>
+```
   </TabItem>
 </Tabs>
 
@@ -180,4 +173,6 @@ This ensures your distro flags are respected.
 
 ## Installing
 
-<CodeBlock language="bash">sudo ninja install -C build</CodeBlock>
+```bash
+sudo ninja install -C build
+```

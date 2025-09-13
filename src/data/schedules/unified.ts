@@ -1,12 +1,12 @@
 // This file contains a schedule of various important dates for distributors of Budgie Desktop
 
-import { CalendarEventStrictDate } from "../../types";
-import { FedoraReleaseSchedule } from "./fedora";
-import { GnomeReleaseSchedule } from "./gnome";
-import { UbuntuReleaseSchedule } from "./ubuntu";
+import { CalendarEventStrictDate } from '../../types'
+import { FedoraReleaseSchedule } from './fedora'
+import { GnomeReleaseSchedule } from './gnome'
+import { UbuntuReleaseSchedule } from './ubuntu'
 
 export const UnifiedReleaseSchedules = (() => {
-  const schedules = [FedoraReleaseSchedule, GnomeReleaseSchedule, UbuntuReleaseSchedule];
+  const schedules = [FedoraReleaseSchedule, GnomeReleaseSchedule, UbuntuReleaseSchedule]
   return schedules
     .reduce<CalendarEventStrictDate[]>((acc, s) => {
       const eventsWithInternalName = s.events.reduce<CalendarEventStrictDate[]>(
@@ -16,13 +16,13 @@ export const UnifiedReleaseSchedules = (() => {
             ...e,
             category: s.category,
             dates: Array.isArray(e.dates) ? e.dates : [e.dates, e.dates],
-            name: `${s.category} ${e.release} (${e.types.join(", ")})`,
+            name: `${s.category} ${e.release} (${e.types.join(', ')})`,
           },
         ],
         []
-      );
+      )
 
-      return [...acc, ...eventsWithInternalName];
+      return [...acc, ...eventsWithInternalName]
     }, [])
-    .sort((a, b) => a.dates[0].localeCompare(b.dates[0]));
-})();
+    .sort((a, b) => a.dates[0].localeCompare(b.dates[0]))
+})()

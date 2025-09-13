@@ -1,9 +1,9 @@
-import { AcUnit, Construction, EventBusy, QuestionMark, RocketLaunch } from "@mui/icons-material";
-import BiotechIcon from "@mui/icons-material/Biotech";
-import { Box } from "@mui/material";
-import { CalendarEventType } from "@site/src/types";
-import React from "react";
-import { TbAlpha, TbBarrierBlock, TbBeta, TbGitBranch, TbGrave } from "react-icons/tb";
+import { AcUnit, Construction, EventBusy, QuestionMark, RocketLaunch } from '@mui/icons-material'
+import BiotechIcon from '@mui/icons-material/Biotech'
+import { Box } from '@mui/material'
+import { CalendarEventType } from '@site/src/types'
+import React from 'react'
+import { TbAlpha, TbBarrierBlock, TbBeta, TbGitBranch, TbGrave } from 'react-icons/tb'
 
 export const EventTypeToIcon = ({ t }: { t: CalendarEventType }) => {
   const UseIcon = (() => {
@@ -14,31 +14,31 @@ export const EventTypeToIcon = ({ t }: { t: CalendarEventType }) => {
       case CalendarEventType.FEATURE_FREEZE:
       case CalendarEventType.FINAL_FREEZE:
       case CalendarEventType.IMPORT_FREEZE:
-        return <AcUnit />;
+        return <AcUnit />
       case CalendarEventType.ALPHA:
-        return <TbAlpha style={{ fontSize: "1.5em" }} />;
+        return <TbAlpha style={{ fontSize: '1.5em' }} />
       case CalendarEventType.BETA_RELEASE:
-        return <TbBeta style={{ fontSize: "1.5em" }} />;
+        return <TbBeta style={{ fontSize: '1.5em' }} />
       case CalendarEventType.BRANCHING:
-        return <TbGitBranch style={{ fontSize: "1.5em" }} />;
+        return <TbGitBranch style={{ fontSize: '1.5em' }} />
       case CalendarEventType.CHANGE_CHECKPOINT_SELF_CONTAINED:
       case CalendarEventType.CHANGE_CHECKPOINT_TESTABLE:
-        return <TbBarrierBlock style={{ fontSize: "1.5em" }} />;
+        return <TbBarrierBlock style={{ fontSize: '1.5em' }} />
       case CalendarEventType.CODE_COMPLETE_DEADLINE:
-        return <EventBusy />;
+        return <EventBusy />
       case CalendarEventType.EOL:
-        return <TbGrave style={{ fontSize: "1.5em" }} />;
+        return <TbGrave style={{ fontSize: '1.5em' }} />
       case CalendarEventType.RELEASE:
       case CalendarEventType.START:
-        return <RocketLaunch />;
+        return <RocketLaunch />
       case CalendarEventType.RELEASE_CANDIDATE:
-        return <Construction />;
+        return <Construction />
       case CalendarEventType.TESTING_WEEK:
-        return <BiotechIcon />;
+        return <BiotechIcon />
       default:
-        return <QuestionMark />;
+        return <QuestionMark />
     }
-  })();
+  })()
 
-  return <Box sx={{ height: "1.5em", minWidth: "2em" }}>{UseIcon}</Box>;
-};
+  return <Box sx={{ height: '1.5em', minWidth: '2em' }}>{UseIcon}</Box>
+}

@@ -7,7 +7,6 @@ keywords:
 title: Providing Backtraces
 ---
 
-import CodeBlock from "@theme/CodeBlock";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -27,10 +26,14 @@ In the case of Budgie Desktop, this helps us identify various parts of the Budgi
 
 <Tabs>
   <TabItem label="Fedora" value="Fedora">
-    <CodeBlock language="bash">sudo dnf debuginfo-install budgie-desktop</CodeBlock>
+```bash
+sudo dnf debuginfo-install budgie-desktop
+```
   </TabItem>
   <TabItem label="Solus" value="Solus">
-    <CodeBlock language="bash">sudo eopkg install budgie-desktop-dbginfo</CodeBlock>
+```bash
+sudo eopkg install budgie-desktop-dbginfo
+```
   </TabItem>
 </Tabs>
 
@@ -40,16 +43,24 @@ The GNU Project Debugger (GDB) is widely available across various Linux-based op
 
 <Tabs>
   <TabItem label="Arch" value="arch">
-    <CodeBlock language="bash">sudo pacman -S gdb</CodeBlock>
+```bash
+sudo pacman -S gdb
+```
   </TabItem>
   <TabItem label="Debian / Ubuntu" value="debian-ubuntu">
-    <CodeBlock language="bash">sudo apt install gdb</CodeBlock>
+```bash
+sudo apt install gdb
+```
   </TabItem>
   <TabItem label="Fedora" value="Fedora">
-    <CodeBlock language="bash">sudo dnf install gdb</CodeBlock>
+```bash
+sudo dnf install gdb
+```
   </TabItem>
   <TabItem label="Solus" value="Solus">
-    <CodeBlock language="bash">sudo eopkg install gdb</CodeBlock>
+```bash
+sudo eopkg install gdb
+```
   </TabItem>
 </Tabs>
 
@@ -57,20 +68,28 @@ The GNU Project Debugger (GDB) is widely available across various Linux-based op
 
 First, replace your existing `budgie-panel` with one managed by `gdb` and pipe the output into the referenced file:
 
-<CodeBlock language="bash">gdb budgie-panel 2&>1 | tee ~/budgie-panel-gdb.txt</CodeBlock>
+```bash
+gdb budgie-panel 2&>1 | tee ~/budgie-panel-gdb.txt
+```
 
 Once you're in `gdb`, you will be presented with a prompt showing:
 
-<CodeBlock language="bash">(gdb)</CodeBlock>
+```bash
+(gdb)
+```
 
 Type the following, then press the ENTER / Return key. This should replace your Budgie panel(s).
 
-<CodeBlock language="bash">r --replace</CodeBlock>
+```bash
+r --replace
+```
 
 Next, perform the actions required to cause the segfault. You should see something like `Thread 1 "budgie-panel" received signal SIGSEGV, Segmentation fault`. Press Enter / Return and you should now see a `(gdb)` prompt again.
 
 Type the following, then press the ENTER / Return key. This may provide a considerable backtrace of content.
 
-<CodeBlock language="bash">bt full</CodeBlock>
+```bash
+bt full
+```
 
 Once it is done and you see the `(gdb)` prompt, type quit and upload the txt file generated in the bug report. You bring back your budgie panel by opening a Terminal and typing `budgie-panel --replace &!` then pressing `Ctrl+D` to detach from that process.

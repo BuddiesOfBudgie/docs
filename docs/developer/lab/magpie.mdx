@@ -3,7 +3,6 @@ description: This document provides guidance on compiling and validating Magpie,
 title: Magpie Validation
 ---
 
-import CodeBlock from "@theme/CodeBlock";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -60,40 +59,38 @@ In addition to the ones listed in that document, you may need the following (the
 
 After installation of the above mentioned dependencies, clone the [magpie](https://github.com/BuddiesOfBudgie/magpie) source repository using `git`:
 
-<CodeBlock language="bash">git clone https://github.com/BuddiesOfBudgie/magpie.git</CodeBlock>
+```bash
+git clone https://github.com/BuddiesOfBudgie/magpie.git
+```
 
 At this point, we will attempt to configure our build system for compilation. If any development dependencies are missing at this point, you will need to install them using your respective package manager
 
 <Tabs>
   <TabItem value="arch" label="Arch">
-<CodeBlock language="bash">
+```bash
   cd magpie
-  <br />
   meson setup build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
-<CodeBlock language="bash">
+```bash
   cd magpie
-  <br />
   meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="solus" label="Solus">
 Solus has special requirements and mandates the use of stateless XDG paths, as well as using the OS default CFLAGS:
 
-<CodeBlock language="bash">
+```bash
   cd magpie
-  <br />
   meson --prefix /usr --libdir /usr/lib64 --sysconfdir /etc -Dwith-stateless=true build --buildtype plain
-</CodeBlock>
+```
   </TabItem>
   <TabItem value="all-other-distributions" label="All Other Distributions">
-<CodeBlock language="bash">
+```bash
   cd magpie
-  <br />
   meson build --prefix=/usr --sysconfdir=/etc
-</CodeBlock>
+```
   </TabItem>
 </Tabs>
 

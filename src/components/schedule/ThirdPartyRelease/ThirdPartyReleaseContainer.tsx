@@ -1,9 +1,9 @@
-import BrowserOnly from "@docusaurus/BrowserOnly";
-import { Stack } from "@mui/material";
-import { ThirdPartyReleaseContextProvider } from "@site/src/hooks/useThirdPartyReleaseContext";
-import React from "react";
-import ThirdPartyReleaseFilters from "./ThirdPartyReleaseFilters";
-import ThirdPartyReleaseTable from "./ThirdPartyReleaseTable";
+import BrowserOnly from '@docusaurus/BrowserOnly'
+import { Stack } from '@mui/material'
+import { ThirdPartyReleaseContextProvider } from '@site/src/hooks/useThirdPartyReleaseContext'
+import React from 'react'
+import ThirdPartyReleaseFilters from './ThirdPartyReleaseFilters'
+import ThirdPartyReleaseTable from './ThirdPartyReleaseTable'
 
 const ThirdPartyReleaseContainer = () => {
   return (
@@ -17,7 +17,7 @@ const ThirdPartyReleaseContainer = () => {
         </ThirdPartyReleaseContextProvider>
       )}
     />
-  );
-};
+  )
+}
 
-export default ThirdPartyReleaseContainer;
+export default ThirdPartyReleaseContainer

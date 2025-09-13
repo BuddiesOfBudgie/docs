@@ -1,42 +1,42 @@
-import { Team } from "../types";
+import { Team } from '../types'
 
 export const Teams: Team[] = [
   {
     description:
-      "This team is responsible for general day-to-day maintenance of our software, whether that be issue triaging and code reviews or releasing a new version of various parts of our macrocosm of applications.",
+      'This team is responsible for general day-to-day maintenance of our software, whether that be issue triaging and code reviews or releasing a new version of various parts of our macrocosm of applications.',
     members: [
-      ["JoshuaStrobl", null],
-      ["CampbellJones", null],
-      ["DavidMohammed", null],
-      ["EvanMaddock", null],
+      ['JoshuaStrobl', null],
+      ['CampbellJones', null],
+      ['DavidMohammed', null],
+      ['EvanMaddock', null],
     ],
-    name: "Best Buds",
+    name: 'Best Buds',
   },
   {
     description:
-      "This team is responsible for the distribution / packaging of Budgie and its microcosm of supplemental software on various operating systems.",
+      'This team is responsible for the distribution / packaging of Budgie and its microcosm of supplemental software on various operating systems.',
     members: [
-      ["JoshuaStrobl", "Fedora"],
-      ["CampbellJones", "Arch Linux"],
-      ["DavidMohammed", "Debian / Ubuntu"],
-      ["EvanMaddock", "Solus"],
+      ['JoshuaStrobl', 'Fedora'],
+      ['CampbellJones', 'Arch Linux'],
+      ['DavidMohammed', 'Debian / Ubuntu'],
+      ['EvanMaddock', 'Solus'],
     ],
-    name: "Distribution / Packaging Team",
+    name: 'Distribution / Packaging Team',
   },
   {
-    description: "This team is responsible for improving documentation of the organization and our software.",
+    description: 'This team is responsible for improving documentation of the organization and our software.',
     members: [
-      ["JoshuaStrobl", null],
-      ["CampbellJones", null],
-      ["DavidMohammed", null],
-      ["EvanMaddock", null],
+      ['JoshuaStrobl', null],
+      ['CampbellJones', null],
+      ['DavidMohammed', null],
+      ['EvanMaddock', null],
     ],
-    name: "Documentation Team",
+    name: 'Documentation Team',
   },
   {
     description:
-      "This team is responsible for the development and management of our web properties and infrastructure.",
-    members: [["JoshuaStrobl", null]],
-    name: "Infrastructure and Web Ops Team",
+      'This team is responsible for the development and management of our web properties and infrastructure.',
+    members: [['JoshuaStrobl', null]],
+    name: 'Infrastructure and Web Ops Team',
   },
-];
+]

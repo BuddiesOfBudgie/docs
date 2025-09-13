@@ -6,8 +6,6 @@ keywords:
 title: Testing Budgie
 ---
 
-import CodeBlock from "@theme/CodeBlock";
-import Link from "@docusaurus/Link";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -17,7 +15,9 @@ to see if the issue is already resolved.
 
 Please look at our [GitHub releases](https://github.com/BuddiesOfBudgie/budgie-desktop/releases) to confirm the latest version. You can compare this against the version you have installed by running:
 
-<CodeBlock language="bash">budgie-desktop --version</CodeBlock>
+```bash
+budgie-desktop --version
+```
 
 ## Git Builds
 
@@ -26,40 +26,26 @@ Some distros provide up-to-date "git" versions of each component. If possible pl
 <Tabs>
   <TabItem label="Arch" value="Arch">
     Arch Linux typically has the latest stable version in the Community repository. You can test with the latest git
-    master of Budgie by installing the{" "}
-    <Link target="_blank" to="https://aur.archlinux.org/packages/budgie-desktop-git">
-      budgie-desktop-git
-    </Link>{" "}
-    AUR package using an AUR helper like{" "}
-    <Link target="_blank" to="https://github.com/Jguer/yay">
-      yay
-    </Link>
-    {" or "}
-    <Link target="_blank" to="https://github.com/Morganamilo/paru">
-      paru
-    </Link>
-    . Make sure to update your system before installing budgie-desktop-git, and reinstall the official budgie-desktop package
+    master of Budgie by installing the [budgie-desktop-git](https://aur.archlinux.org/packages/budgie-desktop-git) 
+    AUR package using an AUR helper like [yay](https://github.com/Jguer/yay) or [paru](https://github.com/Morganamilo/paru). Make sure to update your system before installing budgie-desktop-git, and reinstall the official budgie-desktop package
     once you have finished testing.
   </TabItem>
   <TabItem label="Ubuntu" value="ubuntu">
-    Ubuntu provides a{" "}
-    <Link target="_blank" to="https://launchpad.net/~ubuntubudgie-dev/+archive/ubuntu/budgie-desktop-test">
-      daily built PPA
-    </Link>{" "}
+    Ubuntu provides a [daily built PPA](https://launchpad.net/~ubuntubudgie-dev/+archive/ubuntu/budgie-desktop-test)
     based on the latest available stable release - LTS releases are not necessarily the latest stable.
-    <CodeBlock language="bash">
-      sudo add-apt-repository ppa:ubuntubudgie-dev/budgie-desktop-test
-      <br />
-      sudo apt-get update
-      <br />
-      reboot --
-    </CodeBlock>
+
+```bash
+sudo add-apt-repository ppa:ubuntubudgie-dev/budgie-desktop-test
+sudo apt-get update
+reboot --
+```
+
     To remove the PPA and return to the distro provided package, run:
-    <CodeBlock language="bash">
-      sudo ppa-purge ppa:ubuntubudgie-dev/budgie-desktop-test
-      <br />
-      reboot --
-    </CodeBlock>
+
+```bash
+sudo ppa-purge ppa:ubuntubudgie-dev/budgie-desktop-test
+reboot --
+```
   </TabItem>
 </Tabs>
 

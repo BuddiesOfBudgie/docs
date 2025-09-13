@@ -1,16 +1,16 @@
-import { SupportInfo } from "../types";
+import { SupportInfo } from '../types'
 
-import Translate from "@docusaurus/Translate";
-import Admonition from "@theme/Admonition";
+import Translate from '@docusaurus/Translate'
+import Admonition from '@theme/Admonition'
 
-import CodeBlock from "@theme/CodeBlock";
-import TabItem from "@theme/TabItem";
-import Tabs from "@theme/Tabs";
+import CodeBlock from '@theme/CodeBlock'
+import TabItem from '@theme/TabItem'
+import Tabs from '@theme/Tabs'
 
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
+    budgieVersion: '10.9.2',
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -33,14 +33,14 @@ export const SupportListData: SupportInfo[] = [
         </Tabs>
       </>
     ),
-    name: "Arch Linux",
+    name: 'Arch Linux',
     showInGrid: false,
-    website: "https://archlinux.org",
+    website: 'https://archlinux.org',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "EndeavourOS",
+    budgieVersion: '10.9.2',
+    name: 'EndeavourOS',
     showInGrid: true,
     summary: () => (
       <Translate id="get.budgie.endeavouros.summary" description="Summary of EndeavourOS">
@@ -48,35 +48,35 @@ export const SupportListData: SupportInfo[] = [
         installer the ability to install Budgie Desktop, with user choice on their desired experience.
       </Translate>
     ),
-    website: "https://endeavouros.com",
+    website: 'https://endeavouros.com',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "Fedora Budgie Spin",
+    budgieVersion: '10.9.2',
+    name: 'Fedora Budgie Spin',
     showInGrid: true,
     summary: () => (
       <Translate id="get.budgie.fedorabudgiespin.summary" description="Summary of Fedora Budgie Spin">
         Fedora Budgie Spin offers a near-stock Budgie Desktop experience on top of the Fedora open source platform.
       </Translate>
     ),
-    website: "https://fedoraproject.org/spins/budgie/",
+    website: 'https://fedoraproject.org/spins/budgie/',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "Fedora Budgie Atomic",
+    budgieVersion: '10.9.2',
+    name: 'Fedora Budgie Atomic',
     showInGrid: true,
     summary: () => (
       <Translate id="get.budgie.fedoraonyx.summary" description="Summary of Fedora Budgie Atomic">
         Fedora Budgie Atomic offers an atomic / immutable Fedora experience with a near-stock Budgie Desktop experience.
       </Translate>
     ),
-    website: "https://fedoraproject.org/atomic-desktops/budgie/",
+    website: 'https://fedoraproject.org/atomic-desktops/budgie/',
   },
   {
-    budgieAvailablePostInstall: "10.8.2",
-    budgieVersion: "10.7.1",
+    budgieAvailablePostInstall: '10.8.2',
+    budgieVersion: '10.7.1',
     installationInfo: () => (
       <>
         Budgie is not yet available in a quarterly release of FreeBSD; however, it can be installed if the Latest binary
@@ -102,14 +102,14 @@ export const SupportListData: SupportInfo[] = [
         </Admonition>
       </>
     ),
-    name: "FreeBSD",
+    name: 'FreeBSD',
     showInGrid: false,
-    website: "https://freebsd.org",
+    website: 'https://freebsd.org',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "NixOS",
+    budgieVersion: '10.9.2',
+    name: 'NixOS',
     installationInfo: () => (
       <>
         Budgie Desktop can be installed by adding the following to your system configuration:
@@ -117,12 +117,10 @@ export const SupportListData: SupportInfo[] = [
           # Enable the X server.
           <br />
           services.xserver.enable = true;
-          <br />
-          # Enable the Budgie Desktop.
+          <br /># Enable the Budgie Desktop.
           <br />
           services.xserver.desktopManager.budgie.enable = true;
-          <br />
-          # Enable a display manager (recommended).
+          <br /># Enable a display manager (recommended).
           <br />
           services.xserver.displayManager.lightdm.enable = true;
         </CodeBlock>
@@ -134,42 +132,42 @@ export const SupportListData: SupportInfo[] = [
       </Translate>
     ),
     showInGrid: true,
-    website: "https://nixos.org/download.html#nixos-iso",
+    website: 'https://nixos.org/download.html#nixos-iso',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "Solus",
+    budgieVersion: '10.9.2',
+    name: 'Solus',
     summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">
         Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.
       </Translate>
     ),
     showInGrid: true,
-    website: "https://getsol.us",
+    website: 'https://getsol.us',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "Ubuntu Budgie",
+    budgieVersion: '10.9.2',
+    name: 'Ubuntu Budgie',
     summary: () => (
       <Translate id="get.budgie.ubuntubudgie.summary" description="Summary of Ubuntu Budgie">
         Ubuntu Budgie offers a highly curated Budgie Desktop experience with Ubuntu at its core.
       </Translate>
     ),
     showInGrid: true,
-    website: "https://ubuntubudgie.org",
+    website: 'https://ubuntubudgie.org',
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: "10.9.2",
-    name: "Ultramarine Linux",
+    budgieVersion: '10.9.2',
+    name: 'Ultramarine Linux',
     summary: () => (
       <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">
         Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use.
       </Translate>
     ),
     showInGrid: true,
-    website: "https://ultramarine-linux.org",
+    website: 'https://ultramarine-linux.org',
   },
-];
+]

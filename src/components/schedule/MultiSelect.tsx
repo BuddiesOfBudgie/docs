@@ -1,12 +1,12 @@
-import { Autocomplete, Box, Chip, TextField } from "@mui/material";
-import React from "react";
+import { Autocomplete, Box, Chip, TextField } from '@mui/material'
+import React from 'react'
 
 interface MultiSelectProps<T> {
-  defaultValues: T[];
-  id: string;
-  label: string;
-  onChange: (values: T[]) => void;
-  options: T[];
+  defaultValues: T[]
+  id: string
+  label: string
+  onChange: (values: T[]) => void
+  options: T[]
 }
 
 export const MultiSelect = <T,>({ defaultValues, id, label, onChange, options }: MultiSelectProps<T>) => {
@@ -16,7 +16,7 @@ export const MultiSelect = <T,>({ defaultValues, id, label, onChange, options }:
       id={id}
       multiple
       onChange={(_, v) => {
-        onChange(v);
+        onChange(v)
       }}
       options={options}
       renderInput={(params) => <TextField {...params} variant="standard" label={label} />}
@@ -27,8 +27,8 @@ export const MultiSelect = <T,>({ defaultValues, id, label, onChange, options }:
               <Chip key={value} label={value as string} {...getTagProps({ index })} />
             ))}
           </Box>
-        );
+        )
       }}
     />
-  );
-};
+  )
+}

@@ -2,5 +2,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit"
+  },
+  "[mdx]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
   }
 }
