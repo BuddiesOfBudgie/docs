@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import { Backdrop, Box, Stack } from "@mui/material";
-import { People } from "../data/people";
-import { Teams } from "../data/teams";
-import { SiteTheme } from "../theme";
-import { Person as PersonType, Team as TeamType } from "../types";
-import { AutoColumnOnSmall } from "../utils/auto";
-import { Person } from "./Person";
+import { Backdrop, Box, Stack } from '@mui/material'
+import { People } from '../data/people'
+import { Teams } from '../data/teams'
+import { SiteTheme } from '../theme'
+import { Person as PersonType, Team as TeamType } from '../types'
+import { AutoColumnOnSmall } from '../utils/auto'
+import { Person } from './Person'
 
 type TeamMemberProps = {
-  haveSupplementalInfo: boolean;
-  teamName: string;
-  person: PersonType;
-  supplementalInfo: string;
-};
+  haveSupplementalInfo: boolean
+  teamName: string
+  person: PersonType
+  supplementalInfo: string
+}
 
 export const TeamMember = ({ haveSupplementalInfo, teamName, person, supplementalInfo }: TeamMemberProps) => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false)
   return (
     <Stack
-      direction={AutoColumnOnSmall("row", "column", "sm")}
+      direction={AutoColumnOnSmall('row', 'column', 'sm')}
       key={`Team-${teamName}-GridItem-${person.names.first}${person.names.last}`}
     >
       <Backdrop
@@ -46,17 +46,17 @@ export const TeamMember = ({ haveSupplementalInfo, teamName, person, supplementa
           minWidth: 240,
         }}
       />
-      {haveSupplementalInfo && <Box sx={{ fontWeight: "bold", lineHeight: "40px" }}>{supplementalInfo}</Box>}
+      {haveSupplementalInfo && <Box sx={{ fontWeight: 'bold', lineHeight: '40px' }}>{supplementalInfo}</Box>}
     </Stack>
-  );
-};
+  )
+}
 
 export const Team = ({ team }: { team: TeamType }) => {
-  const haveSupplementalInfo = !!team.members.find((el) => !!el[1]);
+  const haveSupplementalInfo = !!team.members.find((el) => !!el[1])
   return (
     <Stack className="card" gap={2} p={2}>
       <h2 style={{ margin: 0 }}>{team.name} </h2>
-      <h4 style={{ fontWeight: "normal", margin: 0, marginBlockEnd: 6 }}>{team.description}</h4>
+      <h4 style={{ fontWeight: 'normal', margin: 0, marginBlockEnd: 6 }}>{team.description}</h4>
       {team.members.map(([name, supplementalInfo]) => (
         <TeamMember
           haveSupplementalInfo={haveSupplementalInfo}
@@ -66,8 +66,8 @@ export const Team = ({ team }: { team: TeamType }) => {
         />
       ))}
     </Stack>
-  );
-};
+  )
+}
 
 export const TeamsList = () => {
   return (
@@ -79,5 +79,5 @@ export const TeamsList = () => {
         <Team key={`TeamsList-Team-${team.name}`} team={team} />
       ))}
     </Stack>
-  );
-};
+  )
+}

@@ -1,62 +1,68 @@
 // @ts-check
+/** biome-ignore-all lint/style/noCommonJs: CommonJS is required for Docusaurus */
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer").themes.github;
-const darkCodeTheme = require("prism-react-renderer").themes.dracula;
+const lightCodeTheme = require('prism-react-renderer').themes.github
+const darkCodeTheme = require('prism-react-renderer').themes.dracula
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Buddies of Budgie Docs",
-  tagline: "",
-  favicon: "img/logo.svg",
-  url: "https://docs.buddiesofbudgie.org",
-  baseUrl: "/",
+  title: 'Buddies of Budgie Docs',
+  tagline: '',
+  favicon: 'img/logo.svg',
+  url: 'https://docs.buddiesofbudgie.org',
+  baseUrl: '/',
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  future: {
+    experimental_faster: true,
+    v4: true,
+  },
 
   headTags: [
     {
-      tagName: "link",
+      tagName: 'link',
       attributes: {
-        rel: "preload",
-        href: "/fonts/Poppins-Regular.ttf",
-        as: "font",
-        type: "font/ttf",
-        crossorigin: "anonymous",
+        rel: 'preload',
+        href: '/fonts/Poppins-Regular.ttf',
+        as: 'font',
+        type: 'font/ttf',
+        crossorigin: 'anonymous',
       },
     },
     {
-      tagName: "link",
+      tagName: 'link',
       attributes: {
-        rel: "preload",
-        href: "/fonts/Poppins-Bold.ttf",
-        as: "font",
-        type: "font/ttf",
-        crossorigin: "anonymous",
+        rel: 'preload',
+        href: '/fonts/Poppins-Bold.ttf',
+        as: 'font',
+        type: 'font/ttf',
+        crossorigin: 'anonymous',
       },
     },
   ],
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: "/",
-          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
           showReadingTime: true,
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -66,84 +72,84 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: "NN5QDDPH70",
-        apiKey: "5cd6cd12d7cdde2c131ce17ad6e2d342",
-        indexName: "buddiesofbudgie",
-        externalUrlRegex: "blog\\.buddiesofbudgie\\.org",
+        appId: 'NN5QDDPH70',
+        apiKey: '5cd6cd12d7cdde2c131ce17ad6e2d342',
+        indexName: 'buddiesofbudgie',
+        externalUrlRegex: 'blog\\.buddiesofbudgie\\.org',
         replaceSearchResultPathname: {
-          from: "/docs/",
-          to: "/",
+          from: '/docs/',
+          to: '/',
         },
       },
       navbar: {
-        title: "Buddies of Budgie",
+        title: 'Buddies of Budgie',
         logo: {
-          alt: "Buddgie Logo",
-          src: "img/logo.svg",
-          srcDark: "img/logo_darktheme.svg",
+          alt: 'Buddgie Logo',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo_darktheme.svg',
         },
         items: [
           {
-            type: "doc",
-            docId: "developer/intro",
-            position: "left",
-            label: "Developer",
+            type: 'doc',
+            docId: 'developer/intro',
+            position: 'left',
+            label: 'Developer',
           },
           {
-            type: "doc",
-            docId: "user/intro",
-            position: "left",
-            label: "User",
+            type: 'doc',
+            docId: 'user/intro',
+            position: 'left',
+            label: 'User',
           },
           {
-            type: "doc",
-            docId: "organization/intro",
-            position: "left",
-            label: "Organization",
+            type: 'doc',
+            docId: 'organization/intro',
+            position: 'left',
+            label: 'Organization',
           },
           {
-            label: "Other",
+            label: 'Other',
             items: [
               {
-                href: "https://buddiesofbudgie.org",
-                label: "Website",
+                href: 'https://buddiesofbudgie.org',
+                label: 'Website',
               },
               {
-                label: "Donate",
-                href: "https://opencollective.com/buddies-of-budgie",
+                label: 'Donate',
+                href: 'https://opencollective.com/buddies-of-budgie',
               },
               {
-                href: "https://github.com/BuddiesOfBudgie",
-                label: "GitHub",
-                rel: "me",
+                href: 'https://github.com/BuddiesOfBudgie',
+                label: 'GitHub',
+                rel: 'me',
               },
               {
-                label: "Mastodon",
-                href: "https://floss.social/@BuddiesOfBudgie",
-                rel: "me",
+                label: 'Mastodon',
+                href: 'https://floss.social/@BuddiesOfBudgie',
+                rel: 'me',
               },
               {
-                label: "Matrix",
-                href: "https://matrix.to/#/#buddies-of-budgie:matrix.org",
+                label: 'Matrix',
+                href: 'https://matrix.to/#/#buddies-of-budgie:matrix.org',
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/BuddiesOfBudgie",
-                rel: "me",
+                label: 'Twitter',
+                href: 'https://twitter.com/BuddiesOfBudgie',
+                rel: 'me',
               },
             ],
-            type: "dropdown",
-            position: "left",
+            type: 'dropdown',
+            position: 'left',
           },
           {
-            className: "GetBudgieButton button button--primary",
-            href: "/user/getting-budgie",
-            label: "Get Budgie",
-            position: "right",
+            className: 'GetBudgieButton button button--primary',
+            href: '/user/getting-budgie',
+            label: 'Get Budgie',
+            position: 'right',
           },
           {
-            type: "search",
-            position: "right",
+            type: 'search',
+            position: 'right',
           },
         ],
       },
@@ -152,56 +158,56 @@ const config = {
         maxHeadingLevel: 5,
       },
       footer: {
-        style: "dark",
+        style: 'dark',
         links: [
           {
-            title: "Docs",
+            title: 'Docs',
             items: [
               {
-                label: "Developer",
-                to: "/developer/intro",
+                label: 'Developer',
+                to: '/developer/intro',
               },
               {
-                label: "Organization",
-                to: "/organization/intro",
+                label: 'Organization',
+                to: '/organization/intro',
               },
               {
-                label: "User",
-                to: "/user/intro",
+                label: 'User',
+                to: '/user/intro',
               },
             ],
           },
           {
-            title: "Community",
+            title: 'Community',
             items: [
               {
-                label: "Mastodon",
-                href: "https://floss.social/@BuddiesOfBudgie",
+                label: 'Mastodon',
+                href: 'https://floss.social/@BuddiesOfBudgie',
               },
               {
-                label: "Matrix",
-                href: "https://matrix.to/#/#buddies-of-budgie:matrix.org",
+                label: 'Matrix',
+                href: 'https://matrix.to/#/#buddies-of-budgie:matrix.org',
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/BuddiesOfBudgie",
+                label: 'Twitter',
+                href: 'https://twitter.com/BuddiesOfBudgie',
               },
             ],
           },
           {
-            title: "More",
+            title: 'More',
             items: [
               {
-                label: "Website",
-                to: "https://buddiesofbudgie.org",
+                label: 'Website',
+                to: 'https://buddiesofbudgie.org',
               },
               {
-                label: "GitHub",
-                href: "https://github.com/BuddiesOfBudgie",
+                label: 'GitHub',
+                href: 'https://github.com/BuddiesOfBudgie',
               },
               {
-                label: "Donate",
-                href: "https://opencollective.com/buddies-of-budgie",
+                label: 'Donate',
+                href: 'https://opencollective.com/buddies-of-budgie',
               },
             ],
           },
@@ -213,6 +219,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config

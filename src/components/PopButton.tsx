@@ -1,6 +1,6 @@
-import { Button, type ButtonProps } from "@mui/material";
-import React from "react";
+import { Button, type ButtonProps } from '@mui/material'
+import React from 'react'
 
 export const PopButton = ({ sx, ...rest }: ButtonProps) => {
-  return <Button sx={{ ...sx, fontFamily: "Poppins" }} {...rest}></Button>;
-};
+  return <Button sx={{ ...sx, fontFamily: 'Poppins' }} {...rest}></Button>
+}

@@ -1,27 +1,24 @@
-import React from "react";
+import { Box, Grid, Stack } from '@mui/material'
 
-import { Box, Stack } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-
-import Link from "@docusaurus/Link";
+import Link from '@docusaurus/Link'
 
 type CategoryProps = {
-  icon: JSX.Element;
-  text: JSX.Element;
-  to: string;
-};
+  icon: JSX.Element
+  text: JSX.Element
+  to: string
+}
 
 export const Category = ({ icon, text, to }: CategoryProps) => {
   return (
-    <Grid2 className="Category" xs={4}>
+    <Grid className="Category" size={4}>
       <Box className="card shadow--lw" sx={{ p: 6 }}>
         <Stack alignItems="center" gap={2}>
           {icon}
           <Link to={to}>
-            <h3 style={{ fontWeight: "bold" }}>{text}</h3>
+            <h3 style={{ fontWeight: 'bold' }}>{text}</h3>
           </Link>
         </Stack>
       </Box>
-    </Grid2>
-  );
-};
+    </Grid>
+  )
+}
