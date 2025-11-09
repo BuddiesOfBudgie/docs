@@ -14,26 +14,23 @@ import Tabs from "@theme/Tabs";
 
 budgie-desktop has a number of build dependencies that must be present before attempting configuration. The names are different depending on distribution. The following is a list of `pkg-config` dependencies currently required to build Budgie from source.
 
-- accountsservice >= 0.6.40
-- alsa-lib >= 1.1.0
+- accountsservice >= 23.13.9
+- alsa-lib >= 1.2.14
 - budgie-screensaver (or gnome-screensaver on Debian / Ubuntu)
 - budgie-session
 - gee-0.8 >= 0.20.0
-- gio-2.0 >= 2.64.0
-- gio-unix-2.0 >= 2.64.0
-- gnome-desktop-3.0 >= 41.0
-- gnome-settings-daemon >= 41.0
-- gobject-2.0 >= 2.64.0
-- gobject-introspection-1.0 >= 1.64.0
+- gio-2.0 >= 2.86.0
+- gio-unix-2.0 >= 2.86.0
+- gnome-desktop-3.0 >= 44.0
+- gnome-settings-daemon >= 44.0
+- gobject-2.0 >= 2.86.0
 - gstreamer-1.0
 - gtk+-3.0 >= 3.24.0
 - ibus-1.0 >= 1.5.10
 - libcanberra-devel
-- libgnome-menu-3.0 >= 3.10.3
-- libnotify >= 0.7
-- libpeas-gtk-1.0 >= 1.26.0
+- libnotify >= 0.8
+- libpeas2 >= 2.2.0
 - libpulse >= 2
-- libwnck >= 3.36.0
 - libxfce4windowing
 - meson
 - magpie 0.9.x
@@ -46,7 +43,7 @@ And:
 
 - gtk-doc (For documentation building from git only)
 - sassc (to build theming)
-- vala >= 0.52.0
+- vala >= 0.56.0
 
 :::info Important Information
 Please ensure you install budgie-screensaver **before** configuration. If you are on a Debian-based system, ensure you are install gnome-screensaver.
@@ -66,7 +63,7 @@ budgie-desktop requires/recommends the following to be installed:
   <TabItem value="arch" label="Arch">
 ```bash
   sudo pacman -S --needed base-devel git
-  sudo pacman -S --needed accountsservice budgie-session budgie-screensaver gnome-settings-daemon gobject-introspection gtk-layer-shell ibus intltool libgee libpeas libwnck3 libxfce4windowing meson magpie-wm sassc vala zenity
+  sudo pacman -S --needed accountsservice budgie-session budgie-screensaver gnome-settings-daemon gtk-layer-shell ibus intltool libgee libpeas-2 libxfce4windowing meson magpie-wm sassc vala zenity
 ```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
@@ -87,25 +84,17 @@ The manual method for dependency installation is:
   sudo apt install gnome-settings-daemon-dev gtk-doc-tools intltool libaccountsservice-dev libasound2-dev
   libgnome-desktop-3-dev libcanberra-dev libgee-0.8-dev libgstreamer1.0-dev
   libgtk-3-dev libibus-1.0-dev libmagpie-0-dev libpeas-dev libpolkit-agent-1-dev libpulse-dev libupower-glib-dev
-  libwnck-3-dev libxfce4windowing-dev meson ninja-build sassc uuid-dev valac
+  libxfce4windowing-dev meson ninja-build sassc uuid-dev valac
 ```
   </TabItem>
   <TabItem value="fedora" label="Fedora non-Atomic">
 ```bash
-  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver budgie-session desktop-file-utils gettext git glib2-devel gnome-desktop3-devel gnome-settings-daemon-devel gobject-introspection-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libX11-devel libXtst-devel libgee-devel libgudev-devel libnotify-devel libpeas1-devel libuuid-devel libwacom-devel libwnck3-devel libxfce4windowing-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
-```
-  </TabItem>
-  <TabItem value="fedora-onyx" label="Fedora Onyx / Atomic">
-For developing Budgie Desktop on top of Fedora Onyx / Atomic, we suggest rebasing on top of our [Atomic Dev](https://github.com/BuddiesOfBudgie/atomic-dev) ostree images. These are built daily on top of Onyx with the required development libraries, making additional package layer faster and less prone to breakage.
-  </TabItem>
-  <TabItem value="sabayon" label="Sabayon">
-```bash
-sudo equo i dev-util/re2c dev-libs/libsass dev-lang/sassc dev-util/intltool dev-util/ninja dev-util/itstool app-text/docbook-sgml-dtd app-text/docbook-dsssl-stylesheets dev-util/meson dev-util/gtk-doc-am app-text/yelp-tools dev-util/gtk-doc x11-libs/wxGTK app-eselect/eselect-wxwidgets
+  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver budgie-session desktop-file-utils gettext git glib2-devel gnome-desktop3-devel gnome-settings-daemon-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libpeas2-devel libX11-devel libXtst-devel libgee-devel libgudev-devel libnotify-devel libpeas1-devel libuuid-devel libwacom-devel libxfce4windowing-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
 ```
   </TabItem>
   <TabItem value="solus" label="Solus">
 ```bash
-sudo eopkg it accountsservice-devel alsa-lib-devel gtk-doc gnome-settings-daemon-devel gstreamer-1.0-devel ibus-devel libcanberra-devel libgee-devel libgnome-desktop-devel libnotify-devel libpeas-devel libwnck-devel libxfce4windowing-devel magpie-devel pulseaudio-devel sassc upower-devel vala ccache -c system.devel
+sudo eopkg it accountsservice-devel alsa-lib-devel gtk-doc gnome-settings-daemon-devel gstreamer-1.0-devel ibus-devel libcanberra-devel libgee-devel libgnome-desktop-devel libnotify-devel libpeas-2-devel libwnck-devel libxfce4windowing-devel magpie-devel pulseaudio-devel sassc upower-devel vala ccache -c system.devel
 ```
   </TabItem>
 </Tabs>
@@ -131,14 +120,6 @@ git submodule update --init
 ```bash
   cd budgie-desktop
   meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
-```
-  </TabItem>
-  <TabItem value="fedora-onyx" label="Fedora Onyx">
-As Fedora Onyx is an immutable variant, you will need to install Budgie Desktop into the persistent usrlocal for your changes to persist after reboot.
-
-```bash
-  cd budgie-desktop
-  meson build --prefix=/var/usrlocal --sysconfdir=/etc
 ```
   </TabItem>
   <TabItem value="solus" label="Solus">
