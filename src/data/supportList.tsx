@@ -8,7 +8,7 @@ import { SupportInfo } from '../types'
 export const SupportListData: SupportInfo[] = [
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.3',
     installationInfo: () => (
       <>
         Arch Linux offers a Budgie Desktop profile within its 'archinstall' installer, though more intrepid users also
@@ -37,7 +37,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.3',
     name: 'EndeavourOS',
     showInGrid: true,
     summary: () => (
@@ -50,7 +50,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.3',
+    budgieVersion: '10.9.4',
     name: 'Fedora Budgie Spin',
     showInGrid: true,
     summary: () => (
@@ -62,7 +62,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.3',
+    budgieVersion: '10.9.4',
     name: 'Fedora Budgie Atomic',
     showInGrid: true,
     summary: () => (
@@ -106,7 +106,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.3',
     name: 'NixOS',
     installationInfo: () => (
       <>
@@ -134,7 +134,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.4',
     name: 'Solus',
     summary: () => (
       <Translate id="get.budgie.solus.summary" description="Summary of Solus">
@@ -146,7 +146,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.2',
+    budgieVersion: '10.9.4',
     name: 'Ubuntu Budgie',
     summary: () => (
       <Translate id="get.budgie.ubuntubudgie.summary" description="Summary of Ubuntu Budgie">
@@ -158,7 +158,7 @@ export const SupportListData: SupportInfo[] = [
   },
   {
     budgieAvailablePostInstall: null,
-    budgieVersion: '10.9.3',
+    budgieVersion: '10.9.4',
     name: 'Ultramarine Linux',
     summary: () => (
       <Translate id="get.budgie.ultramarinelinux.summary" description="Summary of Ultramarine Linux">
