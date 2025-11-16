@@ -32,7 +32,7 @@ Alongside this, we organize various tasks into organization-wide projects. These
 
 ## Documentation
 
-There is always room for improvement for documentation around Budgie Desktop and our organization. To learn how to contribute to documentation, click [here](/developer/meta/writing-documentation).
+There is always room for improvement for documentation around Budgie Desktop and our organization. To learn how to contribute to documentation, click [here](/10.10/developer/meta/writing-documentation).
 
 ## Translations
 

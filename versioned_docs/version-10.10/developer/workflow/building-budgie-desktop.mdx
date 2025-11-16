@@ -10,14 +10,76 @@ import Tabs from "@theme/Tabs";
 
 # Building Budgie Desktop
 
+:::danger Important Information
+Budgie 10.10 is Wayland-only and does not support X11. Budgie 10.10 is the last "10 series" release of Budgie Desktop, with Budgie 10 entering maintenance mode as of this release. Support for Budgie 10.10 will be minimal as we work on Budgie 11.
+:::
+
+## Wayland-related dependencies
+
+Budgie 10.10 relies on a range of Wayland protocols, such as:
+
+- [ext-workspace-v1](https://wayland.app/protocols/ext-workspace-v1)
+- [wlr-foreign-toplevel-management-unstable-v1](https://wayland.app/protocols/wlr-foreign-toplevel-management-unstable-v1)
+- [wlr-layer-shell-unstable-v1](https://wayland.app/protocols/wlr-layer-shell-unstable-v1)
+- [wlr-output-management-unstable-v1](https://wayland.app/protocols/wlr-output-management-unstable-v1)
+- [xdg-output-unstable-v1](https://wayland.app/protocols/xdg-output-unstable-v1)
+
+This is not an exhaustive list, but notable protocols used by Budgie Desktop via:
+
+- [budgie-desktop-services](https://forge.moderndesktop.dev/BuddiesOfBudgie/budgie-desktop-services)
+- [gtk-layer-shell](https://github.com/wmww/gtk-layer-shell)
+- [libxfce4windowing](https://gitlab.xfce.org/xfce/libxfce4windowing)
+
+### Compositor Recommendations
+
+In practice, this will mean you will likely end up using a wlroots-based compositor, such as [labwc](https://github.com/labwc/labwc). It is an explicit goal for Budgie 11 to support more compositors (such as Mir-based compositors and possibly Kwin).
+
+However, for now the **recommendation** is to use labwc  (>= 0.9.2) and this is what Budgie Desktop 10.10 defaults to.
+
+:::info labwc bridge
+Budgie Desktop offers a "labwc bridge" out-of-the-box (and is ran automatically at login), which copies over our own labwc configuration into `~/.config/budgie-desktop/labwc` (technically supporting `XDG_CONFIG_HOME` as well). This means it won't conflict with any existing configurations. This configuration enables a range of features, such as:
+
+- Default keyboard shortcuts for common actions (opening Budgie Menu, Raven, Budgie Run Dialog, workspace switching, screenshotting, etc)
+- Input acceleration (touchpad and non-touchpad)
+- Setting some default theming (fonts, dropshadows, titlebar layout)
+- Window rules for certain windows (e.g. desktop, power dialog, budgie-daemon)
+- Window snapping
+- Window switcher w/ thumbnails
+:::
+
+### Layer Shell
+
+Budgie 10.10 relies on the wlr-layer-shell-unstable-v1 protocol for specifying the anchoring, exclusion zones, layer type, and interactivity for: Budgie panels, Raven, and our popover windows.
+
+:::warning
+Without support for this protocol, you should not expect correct positioning.
+:::
+
+### Supplemental Tooling
+
+Budgie Desktop 10.10 requires a few supplemental tools to be installed to maximize functionality. These are:
+
+- A session locker supporting [ext-session-lock-v1](https://wayland.app/protocols/ext-session-lock-v1), for example:
+  - [gtklock](https://github.com/jovanlanik/gtklock) - This may be most favorable for distributors of Budgie Desktop as it offers a familiar screen locking experience to previously used screen lockers (budgie-screensaver / gnome-screensaver) and those on other desktop environments.
+  - [swaylock](https://github.com/swaywm/swaylock)
+- [budgie-desktop-services](https://forge.moderndesktop.dev/BuddiesOfBudgie/budgie-desktop-services): This is used to provide supplemental services for Budgie Desktop functionality. For Budgie 10.10, this currently means output management (e.g. enabling/disabling outputs, setting display modes, etc).
+- [gammastep](https://gitlab.com/chinstrap/gammastep): This is used for adjusting the display's color temperature.
+- [grim](https://gitlab.freedesktop.org/emersion/grim): This is used for grabbing images from the compositor for screenshot functionality.
+- [slurp](https://github.com/emersion/slurp): This is used for selecting areas for region-based screenshot functionality.
+- [swaybg](https://github.com/swaywm/swaybg): This is used for setting the background image.
+- [swayidle](https://github.com/swaywm/swayidle): This is used for idle management.
+- [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk): This is used as a portal backend for most functionality.
+- [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr): This is used as a portal backend for Screenshot and ScreenCase functionality.
+- [wlopm](https://sr.ht/~leon_plickat/wlopm/): This is used for aiding in output power management during system idling.
+
+
 ## Build Dependencies
 
 budgie-desktop has a number of build dependencies that must be present before attempting configuration. The names are different depending on distribution. The following is a list of `pkg-config` dependencies currently required to build Budgie from source.
 
 - accountsservice >= 23.13.9
 - alsa-lib >= 1.2.14
-- budgie-screensaver (or gnome-screensaver on Debian / Ubuntu)
-- budgie-session
+- budgie-session >= 10.10-preview.1
 - gee-0.8 >= 0.20.0
 - gio-2.0 >= 2.86.0
 - gio-unix-2.0 >= 2.86.0
@@ -25,6 +87,8 @@ budgie-desktop has a number of build dependencies that must be present before at
 - gnome-settings-daemon >= 44.0
 - gobject-2.0 >= 2.86.0
 - gstreamer-1.0
+- gtk-doc (For documentation building from git only)
+- gtk-layer-shell >= 0.8.0
 - gtk+-3.0 >= 3.24.0
 - ibus-1.0 >= 1.5.10
 - libcanberra-devel
@@ -33,29 +97,29 @@ budgie-desktop has a number of build dependencies that must be present before at
 - libpulse >= 2
 - libxfce4windowing
 - meson
-- magpie 0.9.x
 - polkit-agent-1 >= 0.110
 - polkit-gobject-1 >= 0.110
+- sassc (to build theming)
 - upower-glib >= 0.99.0
 - uuid
-
-And:
-
-- gtk-doc (For documentation building from git only)
-- sassc (to build theming)
 - vala >= 0.56.0
 
-:::info Important Information
-Please ensure you install budgie-screensaver **before** configuration. If you are on a Debian-based system, ensure you are install gnome-screensaver.
-:::
+### Desktop Icons
+
+If you are shipping Budgie Desktop with Budgie Desktop View for desktop icon support, ensure you are on release `10.1-preview.1` or later.
+
+Nemo Desktop is supported as well.
 
 ## Run-time dependencies
 
 budgie-desktop requires/recommends the following to be installed:
 
-- zenity (to display mutter based dialogs)
-- dconf-cli (to handle resetting of dconf)
-- xdotool (lock keys applet)
+- dconf-cli
+- python3-psutil (required for labwc bridge)
+
+:::info Extras
+See also above "Supplemental Tooling" section for Wayland-related dependencies.
+:::
 
 ## Installing Build Dependencies
 
@@ -63,7 +127,27 @@ budgie-desktop requires/recommends the following to be installed:
   <TabItem value="arch" label="Arch">
 ```bash
   sudo pacman -S --needed base-devel git
-  sudo pacman -S --needed accountsservice budgie-session budgie-screensaver gnome-settings-daemon gtk-layer-shell ibus intltool libgee libpeas-2 libxfce4windowing meson magpie-wm sassc vala zenity
+  sudo pacman -S --needed \
+    accountsservice \
+    budgie-session \
+    gammastep \
+    gnome-settings-daemon \
+    grim \
+    gtk-layer-shell \
+    ibus \
+    intltool \
+    libgee \
+    libpeas-2 \
+    libxfce4windowing \
+    meson \
+    sassc \
+    slurp \
+    swaybg \
+    swayidle \
+    vala \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-wlr \
+    xorg-xwayland
 ```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
@@ -83,18 +167,82 @@ The manual method for dependency installation is:
   sudo apt install build-essential git
   sudo apt install gnome-settings-daemon-dev gtk-doc-tools intltool libaccountsservice-dev libasound2-dev
   libgnome-desktop-3-dev libcanberra-dev libgee-0.8-dev libgstreamer1.0-dev
-  libgtk-3-dev libibus-1.0-dev libmagpie-0-dev libpeas-dev libpolkit-agent-1-dev libpulse-dev libupower-glib-dev
+  libgtk-3-dev libibus-1.0-dev libpeas-dev libpolkit-agent-1-dev libpulse-dev libupower-glib-dev
   libxfce4windowing-dev meson ninja-build sassc uuid-dev valac
 ```
   </TabItem>
   <TabItem value="fedora" label="Fedora non-Atomic">
 ```bash
-  sudo dnf install accountsservice-devel alsa-lib-devel budgie-screensaver budgie-session desktop-file-utils gettext git glib2-devel gnome-desktop3-devel gnome-settings-daemon-devel gsettings-desktop-schemas-devel gstreamer1-devel gtk-doc gtk3-devel ibus-devel intltool json-glib-devel libcanberra-devel libpeas2-devel libX11-devel libXtst-devel libgee-devel libgudev-devel libnotify-devel libpeas1-devel libuuid-devel libwacom-devel libxfce4windowing-devel meson magpie-devel polkit-devel pulseaudio-libs-devel sassc upower-devel vala
+  sudo dnf install \
+    accountsservice-devel \
+    alsa-lib-devel \
+    budgie-session \
+    desktop-file-utils \
+    gammastep \
+    grim \
+    gettext \
+    git \
+    glib2-devel \
+    gnome-desktop3-devel \
+    gnome-settings-daemon-devel \
+    gsettings-desktop-schemas-devel \
+    gstreamer1-devel \
+    gtk-doc \
+    gtk3-devel \
+    ibus-devel \
+    intltool \
+    json-glib-devel \
+    libcanberra-devel \
+    libpeas2-devel \
+    libgee-devel \
+    libgudev-devel \
+    libnotify-devel \
+    libuuid-devel \
+    libwacom-devel \
+    libxfce4windowing-devel \
+    meson \
+    polkit-devel \
+    pulseaudio-libs-devel \
+    sassc \
+    slurp \
+    swaybg \
+    swayidle \
+    upower-devel \
+    vala \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-wlr \
+    xorg-x11-server-Xwayland \
+    wlopm
 ```
   </TabItem>
   <TabItem value="solus" label="Solus">
 ```bash
-sudo eopkg it accountsservice-devel alsa-lib-devel gtk-doc gnome-settings-daemon-devel gstreamer-1.0-devel ibus-devel libcanberra-devel libgee-devel libgnome-desktop-devel libnotify-devel libpeas-2-devel libwnck-devel libxfce4windowing-devel magpie-devel pulseaudio-devel sassc upower-devel vala ccache -c system.devel
+sudo eopkg it \
+  accountsservice-devel \
+  alsa-lib-devel \
+  gammastep \
+  gnome-settings-daemon-devel \
+  grim \
+  gstreamer-1.0-devel \
+  gtk-doc \
+  ibus-devel \
+  libcanberra-devel \
+  libgee-devel \
+  libgnome-desktop-devel \
+  libnotify-devel \
+  libpeas-2-devel \
+  libxfce4windowing-devel \
+  pulseaudio-devel \
+  sassc \
+  slurp \
+  swaybg \
+  swayidle \
+  upower-devel \
+  vala \
+  xdg-desktop-portal-gtk \
+  xdg-desktop-portal-wlr \
+  wlopm \
+  ccache -c system.devel
 ```
   </TabItem>
 </Tabs>
@@ -120,6 +268,12 @@ git submodule update --init
 ```bash
   cd budgie-desktop
   meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
+```
+  </TabItem>
+  <TabItem value="fedora" label="Fedora non-Atomic">
+```bash
+  cd budgie-desktop
+  meson build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/libexec
 ```
   </TabItem>
   <TabItem value="solus" label="Solus">

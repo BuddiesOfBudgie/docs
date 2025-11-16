@@ -1,14 +1,12 @@
-import Layout from '@theme/Layout'
-
-import { Container, Grid, ThemeProvider } from '@mui/material'
-import { Category } from '../components/home/Category'
-import { Header } from '../components/home/Header'
-import { SiteTheme } from '../theme'
-
 import Translate from '@docusaurus/Translate'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard'
 import Diversity1Icon from '@mui/icons-material/Diversity1'
+import { Container, Grid, ThemeProvider } from '@mui/material'
+import Layout from '@theme/Layout'
+import { Category } from '../components/home/Category'
+import { Header } from '../components/home/Header'
+import { SiteTheme } from '../theme'
 
 const Home = (): JSX.Element => {
   return (
@@ -38,7 +36,7 @@ const Home = (): JSX.Element => {
             />
             <Category
               icon={<AccountCircleIcon sx={{ fontSize: '128px' }} />}
-              to="/user/intro"
+              to="/10.10/user/intro"
               text={
                 <Translate id="homepage.category.user" description="User">
                   User
@@ -47,7 +45,7 @@ const Home = (): JSX.Element => {
             />
             <Category
               icon={<Diversity1Icon sx={{ fontSize: '128px' }} />}
-              to="/organization/intro"
+              to="/10.10/organization/intro"
               text={
                 <Translate id="homepage.category.organization" description="Organization">
                   Organization
