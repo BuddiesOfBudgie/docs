@@ -55,8 +55,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: 'current',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          versions: {
+            current: {label: 'Next (Budgie 11)', path: '/', banner: 'unreleased' },
+            '10.10': {label: 'Current (Wayland): Budgie 10.10', banner: 'none', path: '10.10' },
+            '10.9.x': {label: 'Legacy (X11): 10.9.x', banner: 'unmaintained', path: '10.9.x' },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -90,20 +96,22 @@ const config = {
         },
         items: [
           {
+            type: 'docsVersionDropdown',
+            versions: ['10.10', 'current', '10.9.x']
+          },
+          {
             type: 'doc',
             docId: 'developer/intro',
             position: 'left',
             label: 'Developer',
           },
           {
-            type: 'doc',
-            docId: 'user/intro',
+            to: '/10.10/user/intro',
             position: 'left',
             label: 'User',
           },
           {
-            type: 'doc',
-            docId: 'organization/intro',
+            href: '/10.10/organization/intro',
             position: 'left',
             label: 'Organization',
           },
@@ -143,7 +151,7 @@ const config = {
           },
           {
             className: 'GetBudgieButton button button--primary',
-            href: '/user/getting-budgie',
+            href: '/10.10/user/getting-budgie',
             label: 'Get Budgie',
             position: 'right',
           },
@@ -169,11 +177,11 @@ const config = {
               },
               {
                 label: 'Organization',
-                to: '/organization/intro',
+                to: '/10.10/organization/intro',
               },
               {
                 label: 'User',
-                to: '/user/intro',
+                to: '/10.10/user/intro',
               },
             ],
           },

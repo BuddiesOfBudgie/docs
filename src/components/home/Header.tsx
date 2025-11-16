@@ -1,9 +1,7 @@
-import Translate from '@docusaurus/Translate'
-import { Box, Container, Stack, Typography } from '@mui/material'
-import React from 'react'
-
 import Link from '@docusaurus/Link'
+import Translate from '@docusaurus/Translate'
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Box, Container, Stack, Typography } from '@mui/material'
 import { AutoColumnOnSmall } from '@site/src/utils/auto'
 import { PopButton } from '../PopButton'
 
@@ -29,7 +27,7 @@ export const Header = () => {
         </Translate>
       </Typography>
       <Stack alignItems="center" direction={AutoColumnOnSmall()} justifyContent="center">
-        <Link to="/user/getting-budgie">
+        <Link to="/10.10/user/getting-budgie">
           <PopButton color="success" sx={{ fontWeight: 500 }} size="large" variant="contained">
             <Translate id="get.budgie" description="Get Budgie">
               Get Budgie
