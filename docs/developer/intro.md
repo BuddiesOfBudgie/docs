@@ -7,4 +7,4 @@ sidebar_position: -1
 title: Developer Documentation
 ---
 
-This section contains documentation intended for developers and those interested in either contributing to Budgie Desktop or developing "widgets" for it!
+This section contains documentation intended for developers and those interested in either contributing to Budgie 11 / Budgie "Next". For documentation on latest stable release, please see our [Budgie 10.10](/10.10/developer/intro) documentation.
