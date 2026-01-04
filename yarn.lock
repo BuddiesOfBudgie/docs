@@ -3221,18 +3221,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/biome@npm:2.3.4"
+"@biomejs/biome@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/biome@npm:2.3.11"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.3.4"
-    "@biomejs/cli-darwin-x64": "npm:2.3.4"
-    "@biomejs/cli-linux-arm64": "npm:2.3.4"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.3.4"
-    "@biomejs/cli-linux-x64": "npm:2.3.4"
-    "@biomejs/cli-linux-x64-musl": "npm:2.3.4"
-    "@biomejs/cli-win32-arm64": "npm:2.3.4"
-    "@biomejs/cli-win32-x64": "npm:2.3.4"
+    "@biomejs/cli-darwin-arm64": "npm:2.3.11"
+    "@biomejs/cli-darwin-x64": "npm:2.3.11"
+    "@biomejs/cli-linux-arm64": "npm:2.3.11"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.3.11"
+    "@biomejs/cli-linux-x64": "npm:2.3.11"
+    "@biomejs/cli-linux-x64-musl": "npm:2.3.11"
+    "@biomejs/cli-win32-arm64": "npm:2.3.11"
+    "@biomejs/cli-win32-x64": "npm:2.3.11"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -3252,62 +3252,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10/b0b8f670236ce264b3d24111008b984e2ed4d68d8ec131412e801e744c935444c07281efa73ad27a244445142acca8b65ba86e73feb04418897d21735701b8ba
+  checksum: 10/37b6ec783ddf8ce994e6f9df3e170b8233a99d49c4fbd75c1f65a41715edd42c7d15d981928a8765e1b7109271806ccdd96c6b098f036c61112dde2003e80509
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.4"
+"@biomejs/cli-darwin-arm64@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.11"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-darwin-x64@npm:2.3.4"
+"@biomejs/cli-darwin-x64@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-darwin-x64@npm:2.3.11"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.4"
+"@biomejs/cli-linux-arm64-musl@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.11"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-arm64@npm:2.3.4"
+"@biomejs/cli-linux-arm64@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-linux-arm64@npm:2.3.11"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.4"
+"@biomejs/cli-linux-x64-musl@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.11"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-linux-x64@npm:2.3.4"
+"@biomejs/cli-linux-x64@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-linux-x64@npm:2.3.11"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-win32-arm64@npm:2.3.4"
+"@biomejs/cli-win32-arm64@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-win32-arm64@npm:2.3.11"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@biomejs/cli-win32-x64@npm:2.3.4"
+"@biomejs/cli-win32-x64@npm:2.3.11":
+  version: 2.3.11
+  resolution: "@biomejs/cli-win32-x64@npm:2.3.11"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5102,38 +5102,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/core-downloads-tracker@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/core-downloads-tracker@npm:7.3.5"
-  checksum: 10/e8f381c0724ad2c959f7ad1d40fdbd1c653a73f684ffe08c511c1663a417786aa64ec71a0224afac59fe604bf0c8ba7eec883cf146b60485c787b2e29fd15376
+"@mui/core-downloads-tracker@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/core-downloads-tracker@npm:7.3.6"
+  checksum: 10/9d854294fd443acc7f3b6dbd011692eaea9139f21d0ac9d30ae79496dc4644a876b212836f0f5019dc68f5bb3047c06470d64747e3e1ea3bb973101116f802f5
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/icons-material@npm:7.3.5"
+"@mui/icons-material@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/icons-material@npm:7.3.6"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
   peerDependencies:
-    "@mui/material": ^7.3.5
+    "@mui/material": ^7.3.6
     "@types/react": ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/18386f9b9fd3b25a4614dd0fc92841dee9e427a3c75aee0d1e984a35aafabc8f04a4c95ae15719190ae2446e88530c033a3f98ec6f47191d882b4ea0aa4fa371
+  checksum: 10/8c3d636ddec62379b26da6e29ad482fd391f2870edcbd169ab150b7f8835b71fcc0fb788c5a843f22a3e6cbb0c28f8711ce91f01f2a04f167d1039858d5c9584
   languageName: node
   linkType: hard
 
-"@mui/material@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/material@npm:7.3.5"
+"@mui/material@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/material@npm:7.3.6"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
-    "@mui/core-downloads-tracker": "npm:^7.3.5"
-    "@mui/system": "npm:^7.3.5"
-    "@mui/types": "npm:^7.4.8"
-    "@mui/utils": "npm:^7.3.5"
+    "@mui/core-downloads-tracker": "npm:^7.3.6"
+    "@mui/system": "npm:^7.3.6"
+    "@mui/types": "npm:^7.4.9"
+    "@mui/utils": "npm:^7.3.6"
     "@popperjs/core": "npm:^2.11.8"
     "@types/react-transition-group": "npm:^4.4.12"
     clsx: "npm:^2.1.1"
@@ -5144,7 +5144,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": ^11.5.0
     "@emotion/styled": ^11.3.0
-    "@mui/material-pigment-css": ^7.3.5
+    "@mui/material-pigment-css": ^7.3.6
     "@types/react": ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -5157,16 +5157,16 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 10/58b432647afb7458e80225645d55c5fe42aa899f5ce804a01385c9ad356340ea3532d1aed8b19e5bd5f3e73d3f5987142e513abeeec27fe1d04a0e27e59396b1
+  checksum: 10/95982ec46df1e5e8e1ecb9a3b2c9a07151d6d8a812444fdd5e19fd0700042a196c4289036da990f609880110a897f5ac13d598ecbf1cdd676415fb267faf6432
   languageName: node
   linkType: hard
 
-"@mui/private-theming@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/private-theming@npm:7.3.5"
+"@mui/private-theming@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/private-theming@npm:7.3.6"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
-    "@mui/utils": "npm:^7.3.5"
+    "@mui/utils": "npm:^7.3.6"
     prop-types: "npm:^15.8.1"
   peerDependencies:
     "@types/react": ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -5174,13 +5174,13 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/dc2dfcc61e2cf36b86f5ed5b81f0e8b511feb45ac29f77a5983a8a8f19f30cbe27564a465a247e3b4bf4428f28a48c0130409f1d764b4d0a47aa415d04ea24f3
+  checksum: 10/b66ef4e56fc473ed5cd8d8326eecd9831a1d904e87027605dc4245201da2c3b3cf626f241e6232834aef3ab768857f3d81f9777f9a2d44cb0687eb930431a50c
   languageName: node
   linkType: hard
 
-"@mui/styled-engine@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/styled-engine@npm:7.3.5"
+"@mui/styled-engine@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/styled-engine@npm:7.3.6"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
     "@emotion/cache": "npm:^11.14.0"
@@ -5197,19 +5197,19 @@ __metadata:
       optional: true
     "@emotion/styled":
       optional: true
-  checksum: 10/113cdaefcb9d14d8397b43fcc814eb1a5369620117c256f1ef89f5d108518233959ca16861e134e4a2184c50701c3d680bdc7f2f601c103eedb9e11c59c7ea6c
+  checksum: 10/11a58005df2314e9d8d60987811600a58ffa58cfd7e8852089932813e83e4fe016c5975f0780e1d85968a0dbf0c9eeb95ece76340591486e87d9e0dade63ef98
   languageName: node
   linkType: hard
 
-"@mui/system@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/system@npm:7.3.5"
+"@mui/system@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/system@npm:7.3.6"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
-    "@mui/private-theming": "npm:^7.3.5"
-    "@mui/styled-engine": "npm:^7.3.5"
-    "@mui/types": "npm:^7.4.8"
-    "@mui/utils": "npm:^7.3.5"
+    "@mui/private-theming": "npm:^7.3.6"
+    "@mui/styled-engine": "npm:^7.3.6"
+    "@mui/types": "npm:^7.4.9"
+    "@mui/utils": "npm:^7.3.6"
     clsx: "npm:^2.1.1"
     csstype: "npm:^3.1.3"
     prop-types: "npm:^15.8.1"
@@ -5225,13 +5225,13 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 10/bf6677e8b240a1a6a76d3ca5525cbf68bc746a8fb93832b70704a57d7315bb65fa5c8e7089120334e0690f8740bb1a499e5add211d447b92b2834e22a5449e59
+  checksum: 10/596a1e17a62317a90c5d5c53b0145b16ef899b209aca5d19e130a56aaa422aecf07781175693b705979d9612406a0791285840405a4a572a551f77f537473af9
   languageName: node
   linkType: hard
 
-"@mui/types@npm:^7.4.8":
-  version: 7.4.8
-  resolution: "@mui/types@npm:7.4.8"
+"@mui/types@npm:^7.4.9":
+  version: 7.4.9
+  resolution: "@mui/types@npm:7.4.9"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
   peerDependencies:
@@ -5239,16 +5239,16 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/f54d8ab787053170d43567f90cd7605e872362d95a5610382382dbf834d8890687ee4d05df604c00b77dea2b35a99ab51af073d115627aa8f401fd3340f48e84
+  checksum: 10/362e064f6244a0408586b0ae9d5416817317bdbb05e8143bb8756e398a0d4e9ef3ee1cec1d4ba042a72501b59632b0ea70dbe1e60eacc5798f738b06fd68e195
   languageName: node
   linkType: hard
 
-"@mui/utils@npm:^7.3.5":
-  version: 7.3.5
-  resolution: "@mui/utils@npm:7.3.5"
+"@mui/utils@npm:^7.3.6":
+  version: 7.3.6
+  resolution: "@mui/utils@npm:7.3.6"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
-    "@mui/types": "npm:^7.4.8"
+    "@mui/types": "npm:^7.4.9"
     "@types/prop-types": "npm:^15.7.15"
     clsx: "npm:^2.1.1"
     prop-types: "npm:^15.8.1"
@@ -5259,7 +5259,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/3d5a764dbb92b052b7551188c6e2a72c8917c7b77e62d985306fc2a1877a19777d0fcbe5d8a94c1c5c79c0e94de2a157bb7482b3ad0a7abda58195bf45bdbcf5
+  checksum: 10/d0e41227c74bc9e6f4fde1081f1a9a5546f941ab7d9b123a53938cf3f424622f92acadb8329efe9841f53ee2cedf7a753da3398b23905d399eaf71d3c26f09ba
   languageName: node
   linkType: hard
 
@@ -5328,79 +5328,79 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oven/bun-darwin-aarch64@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-darwin-aarch64@npm:1.3.2"
+"@oven/bun-darwin-aarch64@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-darwin-aarch64@npm:1.3.5"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oven/bun-darwin-x64-baseline@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-darwin-x64-baseline@npm:1.3.2"
+"@oven/bun-darwin-x64-baseline@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-darwin-x64-baseline@npm:1.3.5"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-darwin-x64@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-darwin-x64@npm:1.3.2"
+"@oven/bun-darwin-x64@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-darwin-x64@npm:1.3.5"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-linux-aarch64-musl@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-linux-aarch64-musl@npm:1.3.2"
+"@oven/bun-linux-aarch64-musl@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-linux-aarch64-musl@npm:1.3.5"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oven/bun-linux-aarch64@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-linux-aarch64@npm:1.3.2"
+"@oven/bun-linux-aarch64@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-linux-aarch64@npm:1.3.5"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oven/bun-linux-x64-baseline@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-linux-x64-baseline@npm:1.3.2"
+"@oven/bun-linux-x64-baseline@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-linux-x64-baseline@npm:1.3.5"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-linux-x64-musl-baseline@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-linux-x64-musl-baseline@npm:1.3.2"
+"@oven/bun-linux-x64-musl-baseline@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-linux-x64-musl-baseline@npm:1.3.5"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-linux-x64-musl@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-linux-x64-musl@npm:1.3.2"
+"@oven/bun-linux-x64-musl@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-linux-x64-musl@npm:1.3.5"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-linux-x64@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-linux-x64@npm:1.3.2"
+"@oven/bun-linux-x64@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-linux-x64@npm:1.3.5"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-windows-x64-baseline@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-windows-x64-baseline@npm:1.3.2"
+"@oven/bun-windows-x64-baseline@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-windows-x64-baseline@npm:1.3.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@oven/bun-windows-x64@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@oven/bun-windows-x64@npm:1.3.2"
+"@oven/bun-windows-x64@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@oven/bun-windows-x64@npm:1.3.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -6100,12 +6100,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bun@npm:^1.3.2":
-  version: 1.3.2
-  resolution: "@types/bun@npm:1.3.2"
+"@types/bun@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "@types/bun@npm:1.3.5"
   dependencies:
-    bun-types: "npm:1.3.2"
-  checksum: 10/e685726b8afea22b9cd50de58b13b0bdd1ae911d33cd3ecbece12eabf52ce3e86e979394eeb74a49351f205571a433e1402f24a81154460581fb8ff75a51ffbd
+    bun-types: "npm:1.3.5"
+  checksum: 10/ef824a218cabe3f9a28122a0077b332430b0664b914905b7ac7072fc78dcb98169a3e47874224c94d60a8276545fcf5a6d93189021b89a1edda425a109357412
   languageName: node
   linkType: hard
 
@@ -6336,10 +6336,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.17.20":
-  version: 4.17.20
-  resolution: "@types/lodash@npm:4.17.20"
-  checksum: 10/8cd8ad3bd78d2e06a93ae8d6c9907981d5673655fec7cb274a4d9a59549aab5bb5b3017361280773b8990ddfccf363e14d1b37c97af8a9fe363de677f9a61524
+"@types/lodash@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "@types/lodash@npm:4.17.21"
+  checksum: 10/34920830a3bc82ba619cda05e606fef00c148a69b4f19f770645d2587ccdb8e42ef3ddfc174b7884c0c709fc0a1aeb48f7326da969bad12a1464a03efbbe414c
   languageName: node
   linkType: hard
 
@@ -7725,32 +7725,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bun-types@npm:1.3.2":
-  version: 1.3.2
-  resolution: "bun-types@npm:1.3.2"
+"bun-types@npm:1.3.5":
+  version: 1.3.5
+  resolution: "bun-types@npm:1.3.5"
   dependencies:
     "@types/node": "npm:*"
-  peerDependencies:
-    "@types/react": ^19
-  checksum: 10/de39253c913a24b3699b977660caec281f77882c40406ecaf5399faf40c205afef0e3da1b64230a1cc91129b2329b92dced5b4748e8ec2efe0b3c15edf1dfbe8
+  checksum: 10/a5dd31ef705749fbe5d010c88dc3d08d6014705cf1cbea89eceef307f5c2fb3db6e75135a2ef676cdb479a4234af5022e551cc216767605feb5fbcd797261ae1
   languageName: node
   linkType: hard
 
-"bun@npm:^1.3.2":
-  version: 1.3.2
-  resolution: "bun@npm:1.3.2"
+"bun@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "bun@npm:1.3.5"
   dependencies:
-    "@oven/bun-darwin-aarch64": "npm:1.3.2"
-    "@oven/bun-darwin-x64": "npm:1.3.2"
-    "@oven/bun-darwin-x64-baseline": "npm:1.3.2"
-    "@oven/bun-linux-aarch64": "npm:1.3.2"
-    "@oven/bun-linux-aarch64-musl": "npm:1.3.2"
-    "@oven/bun-linux-x64": "npm:1.3.2"
-    "@oven/bun-linux-x64-baseline": "npm:1.3.2"
-    "@oven/bun-linux-x64-musl": "npm:1.3.2"
-    "@oven/bun-linux-x64-musl-baseline": "npm:1.3.2"
-    "@oven/bun-windows-x64": "npm:1.3.2"
-    "@oven/bun-windows-x64-baseline": "npm:1.3.2"
+    "@oven/bun-darwin-aarch64": "npm:1.3.5"
+    "@oven/bun-darwin-x64": "npm:1.3.5"
+    "@oven/bun-darwin-x64-baseline": "npm:1.3.5"
+    "@oven/bun-linux-aarch64": "npm:1.3.5"
+    "@oven/bun-linux-aarch64-musl": "npm:1.3.5"
+    "@oven/bun-linux-x64": "npm:1.3.5"
+    "@oven/bun-linux-x64-baseline": "npm:1.3.5"
+    "@oven/bun-linux-x64-musl": "npm:1.3.5"
+    "@oven/bun-linux-x64-musl-baseline": "npm:1.3.5"
+    "@oven/bun-windows-x64": "npm:1.3.5"
+    "@oven/bun-windows-x64-baseline": "npm:1.3.5"
   dependenciesMeta:
     "@oven/bun-darwin-aarch64":
       optional: true
@@ -7777,7 +7775,7 @@ __metadata:
   bin:
     bun: bin/bun.exe
     bunx: bin/bunx.exe
-  checksum: 10/f9bd76bf6b76d167f296485add3566a4fece82ea877f19967cb40971b2827ca57ea38d8ff4ed3c53ff6a39ff8cdd0f257e710a978760bbe7943558aa9cedd67d
+  checksum: 10/180c592eb71cf9c398e45e5e6d95d3863feb3cc0bced3c3fa442eac1879fdf3242f47950c3dd4bb66963a8526fc801ea51709ff14fa21128f68696836648bc85
   conditions: (os=darwin | os=linux | os=win32) & (cpu=arm64 | cpu=x64)
   languageName: node
   linkType: hard
@@ -9014,7 +9012,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:2.3.4"
+    "@biomejs/biome": "npm:2.3.11"
     "@docsearch/react": "npm:3.9.0"
     "@docusaurus/core": "npm:3.9.2"
     "@docusaurus/faster": "npm:3.9.2"
@@ -9026,20 +9024,20 @@ __metadata:
     "@emotion/styled": "npm:^11.14.1"
     "@mdx-js/react": "npm:^3.1.1"
     "@mobily/ts-belt": "npm:^3.13.1"
-    "@mui/icons-material": "npm:^7.3.5"
-    "@mui/material": "npm:^7.3.5"
-    "@types/bun": "npm:^1.3.2"
-    "@types/lodash": "npm:^4.17.20"
+    "@mui/icons-material": "npm:^7.3.6"
+    "@mui/material": "npm:^7.3.6"
+    "@types/bun": "npm:^1.3.5"
+    "@types/lodash": "npm:^4.17.21"
     "@types/luxon": "npm:^3.7.1"
     add-to-calendar-button-react: "npm:^2.12.13"
-    bun: "npm:^1.3.2"
+    bun: "npm:^1.3.5"
     clsx: "npm:^2.1.1"
     ics: "npm:^3.8.1"
     lodash: "npm:^4.17.21"
     luxon: "npm:^3.7.2"
     prism-react-renderer: "npm:^2.4.1"
-    react: "npm:^19.2.0"
-    react-dom: "npm:^19.2.0"
+    react: "npm:^19.2.3"
+    react-dom: "npm:^19.2.3"
     react-icons: "npm:^5.5.0"
     typescript: "npm:^5.9.3"
   languageName: unknown
@@ -14355,14 +14353,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.2.0":
-  version: 19.2.0
-  resolution: "react-dom@npm:19.2.0"
+"react-dom@npm:^19.2.3":
+  version: 19.2.3
+  resolution: "react-dom@npm:19.2.3"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.0
-  checksum: 10/3dbba071b9b1e7a19eae55f05c100f6b44f88c0aee72397d719ae338248ca66ed5028e6964c1c14870cc3e1abcecc91b22baba6dc2072f819dea81a9fd72f2fd
+    react: ^19.2.3
+  checksum: 10/5780f6d4c8e8ece09f82c5500ba2d55e01c30b5273f9281734d7d3b65013cd1fa52ec4e4436e5248c0a9e5bc340836044051168bbad8d7eac4d33ee6c2a867a1
   languageName: node
   linkType: hard
 
@@ -14507,10 +14505,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.2.0":
-  version: 19.2.0
-  resolution: "react@npm:19.2.0"
-  checksum: 10/e13bcdb8e994c3cfa922743cb75ca8deb60531bf02f584d2d8dab940a8132ce8a2e6ef16f8ed7f372b4072e7a7eeff589b2812dabbedfa73e6e46201dac8a9d0
+"react@npm:^19.2.3":
+  version: 19.2.3
+  resolution: "react@npm:19.2.3"
+  checksum: 10/d16b7f35c0d35a56f63d9d1693819762e4abc479c57dd6310298920bed3820fcec7e17a99d44983416d8f5049143ea45b8005d3ab8324bae8973224400502b08
   languageName: node
   linkType: hard
 
