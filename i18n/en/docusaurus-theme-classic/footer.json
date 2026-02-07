@@ -15,10 +15,6 @@
     "message": "Developer",
     "description": "The label of footer link with label=Developer linking to /developer/intro"
   },
-  "link.item.label.Organization": {
-    "message": "Organization",
-    "description": "The label of footer link with label=Organization linking to /organization/intro"
-  },
   "link.item.label.User": {
     "message": "User",
     "description": "The label of footer link with label=User linking to /user/intro"

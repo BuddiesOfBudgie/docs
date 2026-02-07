@@ -278,58 +278,6 @@
     "message": "Get Budgie",
     "description": "Get Budgie"
   },
-  "get.budgie.endeavouros.summary": {
-    "message": "EndeavourOS is a terminal-centric distro built on top of Arch Linux. EndeavourOS offers through their unified installer the ability to install Budgie Desktop, with user choice on their desired experience.",
-    "description": "Summary of EndeavourOS"
-  },
-  "get.budgie.fedorabudgiespin.summary": {
-    "message": "Fedora Budgie Spin offers a near-stock Budgie Desktop experience on top of the Fedora open source platform.",
-    "description": "Summary of Fedora Budgie Spin"
-  },
-  "get.budgie.solus.summary": {
-    "message": "Solus offers a curated Budgie Desktop experience on top of its built-from-scratch operating system.",
-    "description": "Summary of Solus"
-  },
-  "get.budgie.ubuntubudgie.summary": {
-    "message": "Ubuntu Budgie offers a highly curated Budgie Desktop experience with Ubuntu at its core.",
-    "description": "Summary of Ubuntu Budgie"
-  },
-  "get.budgie.header.effortlessly": {
-    "message": "Get Budgie Effortlessly",
-    "description": "Header text for getting Budgie effortlessly through live media"
-  },
-  "get.budgie.description.effortlessly": {
-    "message": "You are able to get Budgie Desktop out-of-the-box, with no extra effort, with the operating systems shown below. These operating systems range in the experience they provide, some will be more curated with additional widgets / extensions for Budgie Desktop, others may be closer to the \"stock\" / \"vanilla\" Budgie Desktop experience.",
-    "description": "Description text for getting Budgie effortlessly through live media"
-  },
-  "get.budgie.card.imagealttext": {
-    "message": "Screenshot of {distribution}",
-    "description": "Alt text for images of various distributions"
-  },
-  "download": {
-    "message": "Download",
-    "description": "Download"
-  },
-  "get.budgie.header.bitmorework": {
-    "message": "Get Budgie with a bit more work",
-    "description": "Header text for getting Budgie with a bit more work"
-  },
-  "get.budgie.description.reference": {
-    "message": "None of these operating systems are viewed as being the \"reference\" platform for Budgie Desktop, rather we want you to be able to pick the OS that fits your needs best, and have Budgie Desktop along with you!",
-    "description": "Text describing that there is no reference platform for Budgie Desktop"
-  },
-  "latest": {
-    "message": "Latest",
-    "description": "Latest"
-  },
-  "latest_postinstall": {
-    "message": "Latest with post-install upgrade",
-    "description": "Latest with post-install upgrade"
-  },
-  "outdated": {
-    "message": "Outdated",
-    "description": "Outdated"
-  },
   "homepage.category.development": {
     "message": "Developer",
     "description": "Developer"
@@ -337,14 +285,6 @@
   "homepage.category.user": {
     "message": "User",
     "description": "User"
-  },
-  "homepage.category.organization": {
-    "message": "Organization",
-    "description": "Organization"
-  },
-  "get.budgie.ultramarinelinux.summary": {
-    "message": "Ultramarine Linux is a Fedora-based Linux distribution designed to stay out of your way and be easy to use.",
-    "description": "Summary of Ultramarine Linux"
   },
   "Open in new tab": {
     "message": "Open in new tab"
@@ -479,14 +419,6 @@
   "theme.SearchModal.placeholder": {
     "message": "Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
-  },
-  "get.budgie.geckolinux.summary": {
-    "message": "GeckoLinux is a distro comprised of spins of OpenSUSE Leap and Tumbleweed. GeckoLinux offers an official spin of Budgie Desktop with a highly curated configuration.",
-    "description": "Summary of GeckoLinux"
-  },
-  "get.budgie.nixos.summary": {
-    "message": "NixOS is a Linux distribution based on the Nix package manager and build system.",
-    "description": "Summary of NixOS"
   },
   "newBudgieRelease": {
     "message": "New Budgie Release"

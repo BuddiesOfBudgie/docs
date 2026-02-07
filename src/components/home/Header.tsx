@@ -27,7 +27,7 @@ export const Header = () => {
         </Translate>
       </Typography>
       <Stack alignItems="center" direction={AutoColumnOnSmall()} justifyContent="center">
-        <Link to="/10.10/user/getting-budgie">
+        <Link to="https://buddiesofbudgie.org/get-budgie">
           <PopButton color="success" sx={{ fontWeight: 500 }} size="large" variant="contained">
             <Translate id="get.budgie" description="Get Budgie">
               Get Budgie
