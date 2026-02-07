@@ -59,8 +59,8 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-            current: {label: 'Next (Budgie 11)', path: '/', banner: 'unreleased' },
-            '10.10': {label: 'Current (Wayland): Budgie 10.10', banner: 'none', path: '10.10' },
+            current: {label: 'Current (Budgie 11)', path: '/', banner: 'none' },
+            '10.10': {label: 'Latest Stable (Wayland): Budgie 10.10', banner: 'none', path: '10.10' },
             '10.9.x': {label: 'Legacy (X11): 10.9.x', banner: 'unmaintained', path: '10.9.x' },
           },
         },
@@ -71,6 +71,44 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/10.10/organization/intro',
+            to: 'https://buddiesofbudgie.org/about/organization',
+          },
+          {
+            from: '/10.10/organization/core-values',
+            to: 'https://buddiesofbudgie.org/about/organization',
+          },
+          {
+            from: '/10.10/organization/getting-involved',
+            to: 'https://buddiesofbudgie.org/about/organization',
+          },
+          {
+            from: '/10.10/organization/teams',
+            to: 'https://buddiesofbudgie.org/about/organization',
+          },
+          {
+            from: '/10.10/user/getting-budgie',
+            to: 'https://buddiesofbudgie.org/get-budgie',
+          },
+          {
+            from: '/10.9.x/user/getting-budgie',
+            to: 'https://buddiesofbudgie.org/get-budgie',
+          },
+          {
+            from: '/user/getting-budgie',
+            to: 'https://buddiesofbudgie.org/get-budgie',
+          },
+        ],
+      },
     ],
   ],
 
@@ -111,11 +149,6 @@ const config = {
             label: 'User',
           },
           {
-            href: '/10.10/organization/intro',
-            position: 'left',
-            label: 'Organization',
-          },
-          {
             label: 'Other',
             items: [
               {
@@ -151,7 +184,7 @@ const config = {
           },
           {
             className: 'GetBudgieButton button button--primary',
-            href: '/10.10/user/getting-budgie',
+            href: 'https://buddiesofbudgie.org/get-budgie',
             label: 'Get Budgie',
             position: 'right',
           },
@@ -174,10 +207,6 @@ const config = {
               {
                 label: 'Developer',
                 to: '/developer/intro',
-              },
-              {
-                label: 'Organization',
-                to: '/10.10/organization/intro',
               },
               {
                 label: 'User',

@@ -11,7 +11,6 @@ Buddies of Budgie documentation is intended to cover the following:
 
 - Day-to-day usage of Budgie Desktop, with useful information to new and existing users alike. This can be everything from keybinds to how to install Budgie Desktop on various operating systems. It is not intended to replace documentation for those specific operating systems or any applications those operating systems / curated experiences provide, but useful guidance on navigating around various "core" Budgie Desktop functionality and features.
 - Developing Budgie Desktop or "on top of" the desktop with our panel and Raven widget APIs.
-- Information about the organization, how it operates on a daily basis, and how one can get involved in the organization (not even necessarily coding!)
 
 ## Before Getting Started
 

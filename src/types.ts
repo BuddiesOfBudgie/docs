@@ -1,5 +1,3 @@
-import { ComponentType, SVGProps } from 'react'
-
 export enum CalendarEventCategory {
   DEBIAN = 'Debian',
   FEDORA = 'Fedora',
@@ -28,15 +26,6 @@ export enum CalendarEventType {
   TESTING_WEEK = 'Testing Week',
 }
 
-export enum WebsiteType {
-  GITHUB,
-  MASTODON,
-  PATREON,
-  TWITTER,
-  WEBSITE,
-  YOUTUBE,
-}
-
 export type CalendarEvent = {
   dates: string | [string, string]
   release: string
@@ -57,24 +46,6 @@ export type CalendarEventStrictType = {
 export type CalendarSchedule = {
   category: CalendarEventCategory
   events: CalendarEvent[]
-}
-
-export type Person = {
-  description: () => JSX.Element
-  matrix?: string
-  names: PersonName
-  websites: PersonWebsite[]
-}
-
-export type PersonName = {
-  first: string
-  last: string
-}
-
-export type PersonWebsite = {
-  icon: ComponentType<SVGProps<SVGSVGElement>>
-  to: string
-  type: WebsiteType
 }
 
 type SupportInfoShared = {
@@ -109,9 +80,3 @@ export type SupportManualInstallationInfo = {
 } & SupportInfoShared
 
 export type SupportInfo = SupportLiveMediaInfo | SupportManualInstallationInfo
-
-export type Team = {
-  description: string
-  members: [string, null | string][]
-  name: string
-}
