@@ -72,6 +72,7 @@ Budgie Desktop 10.10 requires a few supplemental tools to be installed to maximi
 - [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr): This is used as a portal backend for Screenshot and ScreenCase functionality.
 - [wdisplays](https://github.com/artizirk/wdisplays): This is a graphical application for configuring displays. Persistence of display configuration is then handled by the Budgie Desktop Services.
 - [wlopm](https://sr.ht/~leon_plickat/wlopm/): This is used for aiding in output power management during system idling.
+- eglinfo (provided by `egl-utils` on Fedora, `mesa-utils-extra` on Debian/Ubuntu, `mesa-demos` on Arch): This is used for querying EGL capabilities.
 
 
 ## Build Dependencies
@@ -120,6 +121,7 @@ Nemo Desktop is supported as well.
 budgie-desktop requires/recommends the following to be installed:
 
 - dconf-cli
+- eglinfo (provided by `egl-utils` on Fedora, `mesa-utils-extra` on Debian/Ubuntu, `mesa-demos` on Arch)
 - python3-psutil (required for labwc bridge)
 
 :::info Extras
@@ -150,6 +152,7 @@ See also above "Supplemental Tooling" section for Wayland-related dependencies.
     swaybg \
     swayidle \
     vala \
+    mesa-demos \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-wlr \
     xorg-xwayland
@@ -214,6 +217,7 @@ The manual method for dependency installation is:
     swayidle \
     upower-devel \
     vala \
+    egl-utils \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-wlr \
     xorg-x11-server-Xwayland \
