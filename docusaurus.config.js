@@ -59,9 +59,9 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-            current: {label: 'Current (Budgie 11)', path: '/', banner: 'none' },
-            '10.10': {label: 'Latest Stable (Wayland): Budgie 10.10', banner: 'none', path: '10.10' },
-            '10.9.x': {label: 'Legacy (X11): 10.9.x', banner: 'unmaintained', path: '10.9.x' },
+            current: { label: 'Current (Budgie 11)', path: '/', banner: 'none' },
+            '10.10': { label: 'Latest Stable (Wayland): Budgie 10.10', banner: 'none', path: '10.10' },
+            '10.9.x': { label: 'Legacy (X11): 10.9.x', banner: 'unmaintained', path: '10.9.x' },
           },
         },
         blog: {
@@ -135,7 +135,7 @@ const config = {
         items: [
           {
             type: 'docsVersionDropdown',
-            versions: ['10.10', 'current', '10.9.x']
+            versions: ['10.10', 'current', '10.9.x'],
           },
           {
             type: 'doc',
