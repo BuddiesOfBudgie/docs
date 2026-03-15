@@ -44,16 +44,16 @@ yarn lint
 
 ### Project Structure
 
-| Directory | Purpose |
-|-----------|---------|
-| `docs/` | Unversioned documentation (current / Budgie 11) |
-| `docs/developer/` | Developer documentation |
-| `docs/organization/` | Organization-level policies and docs |
-| `versioned_docs/version-10.10/` | Budgie 10.10 documentation |
-| `versioned_docs/version-10.9.x/` | Legacy Budgie 10.9.x documentation |
-| `src/` | Site source (components, pages, CSS) |
-| `static/` | Static assets (images, fonts) |
-| `i18n/` | Internationalization |
+| Directory                        | Purpose                                         |
+| -------------------------------- | ----------------------------------------------- |
+| `docs/`                          | Unversioned documentation (current / Budgie 11) |
+| `docs/developer/`                | Developer documentation                         |
+| `docs/organization/`             | Organization-level policies and docs            |
+| `versioned_docs/version-10.10/`  | Budgie 10.10 documentation                      |
+| `versioned_docs/version-10.9.x/` | Legacy Budgie 10.9.x documentation              |
+| `src/`                           | Site source (components, pages, CSS)            |
+| `static/`                        | Static assets (images, fonts)                   |
+| `i18n/`                          | Internationalization                            |
 
 ### Writing Documentation
 
@@ -79,41 +79,41 @@ All commits must follow the [Conventional Commits](https://www.conventionalcommi
 
 ### Types
 
-| Type | Purpose |
-|------|---------|
-| `feat` | New content, features, or capabilities |
-| `fix` | Corrections to existing content or functionality |
-| `refactor` | Restructuring without changing content |
-| `style` | Formatting, whitespace, or cosmetic changes |
-| `docs` | Documentation about the docs site itself (meta) |
-| `chore` | Maintenance tasks, dependency updates, tooling |
-| `ci` | CI/CD configuration changes |
-| `build` | Build system or external dependency changes |
+| Type       | Purpose                                          |
+| ---------- | ------------------------------------------------ |
+| `feat`     | New content, features, or capabilities           |
+| `fix`      | Corrections to existing content or functionality |
+| `refactor` | Restructuring without changing content           |
+| `style`    | Formatting, whitespace, or cosmetic changes      |
+| `docs`     | Documentation about the docs site itself (meta)  |
+| `chore`    | Maintenance tasks, dependency updates, tooling   |
+| `ci`       | CI/CD configuration changes                      |
+| `build`    | Build system or external dependency changes      |
 
 ### Scopes
 
 Use the most specific scope that fits.
 
-| Scope | Directory / Area |
-|-------|-----------------|
-| `site` | Docusaurus site configuration, theme |
-| `developer` | Unversioned developer documentation |
-| `user` | Unversioned user documentation |
-| `organization` | Organization-level documentation |
-| `developer/<topic>` | Specific developer doc |
-| `user/<topic>` | Specific user doc |
-| `10.10` | Budgie 10.10 versioned documentation |
-| `10.10/developer` | 10.10 developer docs |
-| `10.10/developer/<topic>` | Specific 10.10 developer doc |
-| `10.10/user` | 10.10 user docs |
-| `10.10/user/<topic>` | Specific 10.10 user doc |
-| `10.9.x` | Legacy 10.9.x versioned documentation |
-| `components` | React components (`src/components/`) |
-| `pages` | Site pages (`src/pages/`) |
-| `css` | Styling (`src/css/`) |
-| `i18n` | Internationalization |
-| `deps` | Dependency updates |
-| `ci` | CI/CD workflows (`.github/`) |
+| Scope                     | Directory / Area                      |
+| ------------------------- | ------------------------------------- |
+| `site`                    | Docusaurus site configuration, theme  |
+| `developer`               | Unversioned developer documentation   |
+| `user`                    | Unversioned user documentation        |
+| `organization`            | Organization-level documentation      |
+| `developer/<topic>`       | Specific developer doc                |
+| `user/<topic>`            | Specific user doc                     |
+| `10.10`                   | Budgie 10.10 versioned documentation  |
+| `10.10/developer`         | 10.10 developer docs                  |
+| `10.10/developer/<topic>` | Specific 10.10 developer doc          |
+| `10.10/user`              | 10.10 user docs                       |
+| `10.10/user/<topic>`      | Specific 10.10 user doc               |
+| `10.9.x`                  | Legacy 10.9.x versioned documentation |
+| `components`              | React components (`src/components/`)  |
+| `pages`                   | Site pages (`src/pages/`)             |
+| `css`                     | Styling (`src/css/`)                  |
+| `i18n`                    | Internationalization                  |
+| `deps`                    | Dependency updates                    |
+| `ci`                      | CI/CD workflows (`.github/`)          |
 
 ### Rules
 
