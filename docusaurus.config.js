@@ -144,6 +144,12 @@ const config = {
             label: 'Developer',
           },
           {
+            type: 'doc',
+            docId: 'organization/ai-policy',
+            position: 'left',
+            label: 'Organization',
+          },
+          {
             to: '/10.10/user/intro',
             position: 'left',
             label: 'User',
