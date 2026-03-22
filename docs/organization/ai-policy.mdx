@@ -11,12 +11,12 @@ keywords:
 
 # AI Policy
 
-AI tooling is increasingly part of the software development landscape, and Buddies of Budgie is no exception - we use these tools ourselves. This document outlines our expectations for transparency, accountability, and quality when AI is involved in contributions.
+AI tooling is increasingly part of the software development landscape, and Buddies of Budgie is no exception; we use these tools ourselves. This document outlines our expectations for transparency, accountability, and quality when AI is involved in contributions.
 
 :::info Why this matters
-Budgie Desktop is used by people around the world as their daily computing environment. Every change has the potential to affect the experience of countless users. We take that responsibility seriously, and contributors - whether using AI tools or not - must do the same.
+Budgie Desktop is used by people around the world as their daily computing environment. Every change has the potential to affect the experience of countless users. We take that responsibility seriously, and contributors (whether using AI tools or not) must do the same.
 
-We take great pride in our work. Writing software is pragmatic by nature - it has to work, it has to be maintainable, and it has to be easy to reason about (at least, as easy as one can reason about an entire desktop environment). But we also treat writing code as a craft. We would rather move deliberately than move fast and break things. That care and intentionality is something we want to preserve in every contribution.
+We take great pride in our work. Writing software is pragmatic by nature. It has to work, be maintainable, and be easy to reason about (at least, as easy as one can reason about an entire desktop environment). But we also treat writing code as a craft. We would rather move deliberately than move fast and break things. That care and intentionality is something we want to preserve in every contribution.
 :::
 
 ## Our Stance
@@ -31,7 +31,7 @@ This policy does not endorse or discourage any particular model or provider. Con
 
 The use of AI tooling and large language models for Budgie 11 contributions remains **extremely limited and scoped** for the foreseeable future.
 
-Budgie 11 is a ground-up rewrite in C++ with a new architecture. The team needs the opportunity to properly learn how to write Qt and modern C++, as well as design our architecture through hands-on experience. Without that foundation, it is not trivial - even for the core team - to distinguish AI-generated code that looks reasonable from code that introduces bad practices or architectural problems.
+Budgie 11 is a ground-up rewrite in C++ with a new architecture. The team needs the opportunity to properly learn how to write Qt and modern C++, as well as design our architecture through hands-on experience. Without that foundation, it is not trivial, even for the core team, to distinguish AI-generated code that looks reasonable from code that introduces bad practices or architectural problems.
 
 We kindly request that contributions to Budgie 11 minimize the use of large language models and AI tooling for code generation. Research and learning assistance is fine, but the code itself should be crafted by a human.
 
@@ -41,14 +41,14 @@ This restriction will be revisited as the project matures and the team builds co
 
 ### Testing Requirements
 
-All contributions must be tested before submission. When AI tools are involved, this is especially important - AI-generated code can be subtly wrong in ways that look correct at first glance.
+All contributions must be tested before submission. When AI tools are involved, this is especially important as AI-generated code can be subtly wrong in ways that look correct at first glance.
 
 - **Non-trivial AI-assisted code** must be built, installed, and tested by the contributor
 - **Substantial changes** (refactors, new features, behavioral changes) require rigorous, thorough testing
 - The contributor must verify the changes work as intended in a running Budgie Desktop session where applicable
 
 :::tip What counts as "trivial"?
-"Trivial" is intentionally loosely defined. Typo fixes, documentation corrections, comment updates - these are trivial. If you're unsure whether your change qualifies, err on the side of testing it. When in doubt, build and install.
+"Trivial" is intentionally loosely defined. Typo fixes, documentation corrections, comment updates are considered trivial. If you're unsure whether your change qualifies, err on the side of testing it. When in doubt, build and install.
 :::
 
 ### Attribution
@@ -114,20 +114,20 @@ When submitting a pull request that includes AI-assisted code:
 - Supplemental comments on the PR with AI prompt/planning information are welcome and encouraged for research and learnings, but not mandatory
 
 :::info Sharing AI context
-If you used an AI agent for planning or implementation, sharing that context as a **PR comment** can be valuable for reviewers and for the project's collective learning. However, AI planning documents should **not** be committed to the source repository - share them as PR comments instead.
+If you used an AI agent for planning or implementation, sharing that context as a **PR comment** can be valuable for reviewers and for the project's collective learning. However, AI planning documents should **not** be committed to the source repository. Sshare them as PR comments instead.
 :::
 
 ## Blog Posts and Written Content
 
-The attribution requirements in this policy are specific to source code contributions. Blog posts and other written content are a different matter - writing is inherently a process of drafting, editing, and refining, and AI tools can be a natural part of that workflow.
+The attribution requirements in this policy are specific to source code contributions. Blog posts and other written content are a different matter. Writing is inherently a process of drafting, editing, and refining, and AI tools can be a natural part of that workflow.
 
-AI tools may be used to assist with writing blog posts, release announcements, and other project communications. No `Assisted-by` attribution is required for written content. The author is still expected to review, refine, and stand behind what is published - the final voice should be theirs.
+AI tools may be used to assist with writing blog posts, release announcements, and other project communications. No `Assisted-by` attribution is required for written content. The author is still expected to review, refine, and stand behind what is published; the final voice should be theirs.
 
-Content that is wholly generated by AI tooling without meaningful human involvement is never acceptable. Readers should never expect that a blog post or any form of written content by Buddies of Budgie was produced entirely by AI. There is always a human involved in the process - shaping the narrative, ensuring accuracy, and making it our own.
+Content that is wholly generated by AI tooling without meaningful human involvement is never acceptable. Readers should never expect that a blog post or any form of written content by Buddies of Budgie was produced entirely by AI. There is always a human involved in the process of shaping the narrative, ensuring accuracy, and making it our own.
 
 ## This Policy Applies Equally
 
-This policy is tool-agnostic. It applies to Claude, Gemini, Copilot, ChatGPT, locally-hosted models, and any other AI tool - current or future. The expectations are the same regardless of which tool you use.
+This policy is tool-agnostic. It applies to Claude, Gemini, Copilot, ChatGPT, locally-hosted models, and any other current or future models. The expectations are the same regardless of which tool you use.
 
 ## Living Document
 
