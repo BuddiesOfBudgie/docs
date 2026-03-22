@@ -22,13 +22,13 @@ Create a git commit for the current changes following the Conventional Commits s
 
 3. Stage the relevant files by name (do NOT use `git add -A` or `git add .`)
 
-4. Determine attribution — analyze the conversation context:
+4. Determine attribution - analyze the conversation context:
    - **Did Claude write or modify code/content** (generate implementations, write documentation, create components)? → Add `Assisted-by: Claude:<model-id>` trailer
    - **Did Claude only perform mechanical tasks** (committing, formatting, running commands) or did the human make all changes? → NO trailer
    - Never use `Co-Authored-By`
 
 5. Craft the commit message using the types, scopes, and rules defined in [CONTRIBUTING.md](CONTRIBUTING.md#conventional-commits). Additional skill-specific rules:
-   - Scope is optional but encouraged — use the most relevant area
+   - Scope is optional but encouraged - use the most relevant area
    - If changes span multiple concerns, prefer a single commit with a clear summary over being overly granular
    - Always pass the commit message via a HEREDOC:
 

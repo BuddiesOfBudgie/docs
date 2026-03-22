@@ -27,11 +27,11 @@ If there are uncommitted changes, run the `/commit` skill first before proceedin
 
 Based on the changes, choose the conventional commit prefix:
 
-- **`feat:`** — New feature or functionality
-- **`fix:`** — Bug fix
-- **`chore:`** — Maintenance, dependency updates, refactoring
-- **`docs:`** — Documentation content changes
-- **`refactor:`** — Code restructuring without behavior change
+- **`feat:`** - New feature or functionality
+- **`fix:`** - Bug fix
+- **`chore:`** - Maintenance, dependency updates, refactoring
+- **`docs:`** - Documentation content changes
+- **`refactor:`** - Code restructuring without behavior change
 
 ## Step 3: Generate PR Content
 
@@ -55,7 +55,7 @@ Based on the changes, choose the conventional commit prefix:
 - [ ] <additional specific test steps>
 ```
 
-If any commits include `Assisted-by` trailers, note that in the PR description (e.g., "AI-assisted — see commit trailers for details").
+If any commits include `Assisted-by` trailers, note that in the PR description (e.g., "AI-assisted - see commit trailers for details").
 
 ## Step 4: Create the PR
 

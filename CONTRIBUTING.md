@@ -4,11 +4,11 @@
 
 ## Philosophy
 
-This documentation site serves as the primary resource for users and developers of Budgie Desktop. Clear, accurate, and well-maintained documentation is essential — it shapes how people understand and interact with the project.
+This documentation site serves as the primary resource for users and developers of Budgie Desktop. Clear, accurate, and well-maintained documentation is essential - it shapes how people understand and interact with the project.
 
 We hold ourselves to a high standard. Documentation that lands on this site should be well-understood by the person proposing it, reviewed for accuracy, and written with care. We would rather move deliberately than move fast and publish something misleading.
 
-We follow a **human-centric development** model. AI tools are welcome as part of a contributor's workflow — they can help draft content, improve clarity, and accelerate writing. But humans are the authors. Humans are accountable. A contributor must understand and stand behind what they are proposing. AI is a tool in service of that goal, not a substitute for it.
+We follow a **human-centric development** model. AI tools are welcome as part of a contributor's workflow - they can help draft content, improve clarity, and accelerate writing. But humans are the authors. Humans are accountable. A contributor must understand and stand behind what they are proposing. AI is a tool in service of that goal, not a substitute for it.
 
 ### Contributor Responsibility
 
@@ -119,7 +119,7 @@ Use the most specific scope that fits.
 
 - Description: lowercase, imperative mood (write as a command, e.g., "add guide" not "added guide" or "adds guide"), no trailing period
 - Keep the first line under 72 characters
-- The body should explain **why**, not what — the diff shows what changed
+- The body should explain **why**, not what - the diff shows what changed
 
 ## AI Policy
 
