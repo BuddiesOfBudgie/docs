@@ -53,7 +53,7 @@ All contributions must be tested before submission. When AI tools are involved, 
 
 ### Attribution
 
-When AI tools assisted with **code changes** (writing, modifying, or generating code), add an `Assisted-by` trailer to the commit message with the tool and model identifier:
+When AI tools assisted with **code changes** (writing, modifying, or generating code), add an `Assisted-by` trailer to the commit message with the tool and model identifier. This is in addition to the requirements outlined in our [Contributing](/developer/contributing) documentation:
 
 ```
 feat(panel): add workspace indicator tooltip
@@ -62,6 +62,7 @@ Implement hover tooltips showing workspace names in the workspace
 indicator applet.
 
 Assisted-by: Claude:claude-opus-4-6
+Signed-off-by: Your Name <your.email@example.com>
 ```
 
 #### Format
@@ -109,12 +110,12 @@ We are not interested in policing every keystroke. The goal is honest, transpare
 
 When submitting a pull request that includes AI-assisted code:
 
-- Ensure all relevant commits include the `Assisted-by` trailer
+- Ensure all relevant commits include the `Assisted-by` trailer and align with our [Contributing](/developer/contributing) documentation
 - Your test plan should reflect that you actually built, installed, and verified the changes
 - Supplemental comments on the PR with AI prompt/planning information are welcome and encouraged for research and learnings, but not mandatory
 
 :::info Sharing AI context
-If you used an AI agent for planning or implementation, sharing that context as a **PR comment** can be valuable for reviewers and for the project's collective learning. However, AI planning documents should **not** be committed to the source repository. Sshare them as PR comments instead.
+If you used an AI agent for planning or implementation, sharing that context as a **PR comment** can be valuable for reviewers and for the project's collective learning. However, AI planning documents should **not** be committed to the source repository. Share them as PR comments instead.
 :::
 
 ## Blog Posts and Written Content

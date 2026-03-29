@@ -33,7 +33,7 @@ Create a git commit for the current changes following the Conventional Commits s
    - Always pass the commit message via a HEREDOC:
 
 ```bash
-git commit -m "$(cat <<'EOF'
+git commit -s -m "$(cat <<'EOF'
 type(scope): description
 
 Optional body.
