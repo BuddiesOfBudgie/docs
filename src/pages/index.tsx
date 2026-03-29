@@ -1,5 +1,6 @@
 import Translate from '@docusaurus/Translate'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import CorporateFareIcon from '@mui/icons-material/CorporateFare'
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard'
 import { Container, Grid, ThemeProvider } from '@mui/material'
 import Layout from '@theme/Layout'
@@ -30,6 +31,15 @@ const Home = (): JSX.Element => {
               text={
                 <Translate id="homepage.category.development" description="Developer">
                   Developer
+                </Translate>
+              }
+            />
+            <Category
+              icon={<CorporateFareIcon sx={{ fontSize: '128px' }} />}
+              to="/organization/intro"
+              text={
+                <Translate id="homepage.category.organization" description="Organization">
+                  Organization
                 </Translate>
               }
             />

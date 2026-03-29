@@ -145,7 +145,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'organization/ai-policy',
+            docId: 'organization/intro',
             position: 'left',
             label: 'Organization',
           },
