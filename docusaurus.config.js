@@ -103,10 +103,6 @@ const config = {
             from: '/10.9.x/user/getting-budgie',
             to: 'https://buddiesofbudgie.org/get-budgie',
           },
-          {
-            from: '/user/getting-budgie',
-            to: 'https://buddiesofbudgie.org/get-budgie',
-          },
         ],
       },
     ],
