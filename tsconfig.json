@@ -2,12 +2,10 @@
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
-  },
-  "ts-node": {
-    "esm": true,
-    "compilerOptions": {
-      "module": "nodenext"
+    // @docusaurus/tsconfig sets baseUrl, which TypeScript 6 rejects as deprecated and 7 removes.
+    "baseUrl": null,
+    "paths": {
+      "@site/*": ["./*"]
     }
   }
 }

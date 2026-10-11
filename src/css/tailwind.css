@@ -1,0 +1,57 @@
+/* Preflight is omitted so Infima keeps styling docs content. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) important source(none);
+
+/* Docs content is excluded so words like "container" or "table" don't emit utilities that override Infima. */
+@source "../components";
+@source "../pages";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1536px;
+  --breakpoint-subfullhd: 1800px;
+  --breakpoint-fullhd: 1920px;
+
+  --font-sans: var(--ifm-font-family-base);
+  --font-mono: var(--ifm-font-family-monospace);
+  --font-heading: "Poppins", sans-serif;
+}
+
+@theme static {
+  --color-budgie-green: #6bca81;
+  --color-marble: #f5f5f5;
+  --color-lightgrey: #eeeeee;
+  --color-greyish: #666666;
+  --color-grey-md: #424242;
+  --color-greydark: #333333;
+  --color-dark: #1f1f1f;
+}
+
+:root {
+  --site-background: var(--ifm-background-color);
+  --site-foreground: var(--ifm-font-color-base);
+  --site-surface: var(--ifm-card-background-color);
+  --site-muted: var(--color-lightgrey);
+  --site-muted-foreground: var(--color-grey-md);
+  --site-border: var(--ifm-color-emphasis-300);
+}
+
+[data-theme="dark"] {
+  --site-muted: var(--color-greydark);
+  --site-muted-foreground: var(--color-lightgrey);
+}
+
+@theme inline {
+  --color-background: var(--site-background);
+  --color-foreground: var(--site-foreground);
+  --color-surface: var(--site-surface);
+  --color-muted: var(--site-muted);
+  --color-muted-foreground: var(--site-muted-foreground);
+  --color-border: var(--site-border);
+  --color-primary: var(--color-budgie-green);
+  --color-primary-foreground: #ffffff;
+}

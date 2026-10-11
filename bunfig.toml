@@ -1,0 +1,3 @@
+[run]
+# Run package scripts and bin shebangs under Bun even when they target node.
+bun = true

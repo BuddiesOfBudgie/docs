@@ -15,7 +15,7 @@ keywords:
 
 This document outlines the guidelines and requirements for contributing to Buddies of Budgie projects. All contributors, whether core team members or first-time contributors, are expected to follow these practices.
 
-:::info AI Policy
+:::info[AI Policy]
 Contributors should also review our [AI Policy](/organization/ai-policy) for guidelines on the use of AI tools in contributions.
 :::
 
@@ -41,7 +41,7 @@ git commit -s -m "fix(panel): correct tooltip alignment"
 
 This automatically appends the `Signed-off-by` trailer using your configured `user.name` and `user.email` from git.
 
-:::tip Make sure your git identity is set
+:::tip[Make sure your git identity is set]
 If you haven't already, configure your name and email:
 
 ```bash
@@ -82,6 +82,6 @@ Signed-off-by: Your Name <your.email@example.com>
 
 The format is `Assisted-by: <Tool>:<model-id>`. Mechanical tasks (committing, formatting, running commands) do not constitute code assistance and do not require the trailer, nor does research-only use where you wrote all the code yourself.
 
-:::info Full attribution guidance
+:::info[Full attribution guidance]
 For the complete set of rules — a table of tool and model identifiers, the distinction between assisted and research-only work, and enforcement — see the [AI Policy](/organization/ai-policy).
 :::

@@ -48,10 +48,10 @@ Based on the changes, choose the conventional commit prefix:
 
 ## Test plan
 
-- [ ] `yarn build` completes successfully
-- [ ] `yarn typecheck` passes
-- [ ] `yarn lint` passes
-- [ ] Verified locally with `yarn start`
+- [ ] `bun run build` completes successfully
+- [ ] `bun run typecheck` passes
+- [ ] `bun run check` passes
+- [ ] Verified locally with `bun run start`
 - [ ] <additional specific test steps>
 ```
 
@@ -75,4 +75,4 @@ EOF
 
 - Review all commits since divergence from main, not just the latest one
 - Ensure the title accurately reflects the overall change
-- Test plan should include `yarn build`, `yarn typecheck`, and `yarn lint`
+- Test plan should include `bun run build`, `bun run typecheck`, and `bun run check`

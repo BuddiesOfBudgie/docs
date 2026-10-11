@@ -16,13 +16,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --budgie-green: #6bca81;
-  --marble: #f5f5f5;
-  --lightgrey: #eeeeee;
-  --greyish: #666666;
-  --grey-md: #424242;
-  --greydark: #333333;
-  --dark: #1f1f1f;
+  --budgie-green: var(--color-budgie-green);
+  --marble: var(--color-marble);
+  --lightgrey: var(--color-lightgrey);
+  --greyish: var(--color-greyish);
+  --grey-md: var(--color-grey-md);
+  --greydark: var(--color-greydark);
+  --dark: var(--color-dark);
 
   --ifm-card-background-color: var(--marble);
   --ifm-color-primary: var(--budgie-green);
@@ -64,7 +64,6 @@
   --docsearch-hit-background: var(--greydark);
 }
 
-.Poppins,
 h1,
 h2,
 h3 {
@@ -72,7 +71,7 @@ h3 {
 }
 
 .DocSearch-Button {
-  --docsearch-searchbox-background: white;
+  --docsearch-search-button-background: white;
 }
 
 .DocSearch-Hit-title mark {
@@ -89,7 +88,8 @@ h3 {
 }
 
 [data-theme="dark"] .DocSearch-Button {
-  --docsearch-searchbox-background: var(--dark);
+  --docsearch-search-button-background: var(--dark);
+  --docsearch-subtle-color: var(--greydark);
 }
 
 [data-theme="dark"] .DocSearch-Commands-Key,
@@ -99,22 +99,8 @@ h3 {
   color: white;
 }
 
-[data-theme="light"] .Category svg * {
-  fill: var(--grey-md);
-}
-
-.GetBudgieButton {
-  border-radius: 20px;
-  color: white;
-}
-
-.NormalWeight {
-  font-weight: normal;
-}
-
-.card--bg {
-  background-color: var(--ifm-card-background-color);
-  border-radius: var(--ifm-card-border-radius);
+[data-theme="light"] .Category svg {
+  color: var(--grey-md);
 }
 
 .footer {
@@ -122,49 +108,4 @@ h3 {
   --ifm-footer-link-color: var(--ifm-navbar-link-color);
   --ifm-footer-color: var(--ifm-font-color-base);
   --ifm-footer-title-color: var(--ifm-navbar-link-color);
-}
-
-[data-theme="light"] .PersonLinkHeaderAvatar {
-  box-shadow: 0 0 10px var(--greydark);
-}
-
-[data-theme="light"] .PersonWebsiteIcon {
-  fill: var(--greydark);
-}
-
-[data-theme="light"] .HomepageHeader {
-  background-color: var(--lightgrey);
-  color: var(--grey-md);
-}
-
-[data-theme="light"] .OSCard {
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-[data-theme="dark"] .HomepageHeader {
-  background-color: var(--greydark);
-  color: var(--lightgrey);
-}
-
-[data-theme="dark"] .PersonWebsiteIcon {
-  fill: white;
-}
-
-[data-theme="dark"] .OSCard {
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-.atcb-button-wrapper,
-.atcb-text,
-.atcb-button {
-  box-shadow: none !important;
-  font-family: "Poppins" !important;
-}
-
-.upcomingEventRow {
-  background-color: var(--ifm-navbar-background-color);
-}
-
-.upcomingEventRow .MuiTableCell-root {
-  border-bottom: 0;
 }

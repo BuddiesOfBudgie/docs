@@ -1,60 +1,44 @@
 import Translate from '@docusaurus/Translate'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import CorporateFareIcon from '@mui/icons-material/CorporateFare'
-import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard'
-import { Container, Grid, ThemeProvider } from '@mui/material'
 import Layout from '@theme/Layout'
+import { Building2, CircleUser, CircuitBoard } from 'lucide-react'
 import { Category } from '../components/home/Category'
 import { Header } from '../components/home/Header'
-import { SiteTheme } from '../theme'
 
-const Home = (): JSX.Element => {
+const Home = () => {
   return (
     <Layout description="Buddies of Budgie Documentation">
-      <ThemeProvider theme={SiteTheme}>
-        <Header />
-        <Container sx={{ marginBlock: '4vh', maxWidth: 1920 }}>
-          <Grid
-            columns={{
-              xs: 4,
-              sm: 4,
-              md: 12,
-            }}
-            container
-            margin={0}
-            spacing={4}
-            width={1}
-          >
-            <Category
-              icon={<DeveloperBoardIcon sx={{ fontSize: '128px' }} />}
-              to="/developer/intro"
-              text={
-                <Translate id="homepage.category.development" description="Developer">
-                  Developer
-                </Translate>
-              }
-            />
-            <Category
-              icon={<CorporateFareIcon sx={{ fontSize: '128px' }} />}
-              to="/organization/intro"
-              text={
-                <Translate id="homepage.category.organization" description="Organization">
-                  Organization
-                </Translate>
-              }
-            />
-            <Category
-              icon={<AccountCircleIcon sx={{ fontSize: '128px' }} />}
-              to="/10.10/user/intro"
-              text={
-                <Translate id="homepage.category.user" description="User">
-                  User
-                </Translate>
-              }
-            />
-          </Grid>
-        </Container>
-      </ThemeProvider>
+      <Header />
+      <div className="mx-auto my-[4vh] w-full max-w-(--breakpoint-lg) px-4 sm:px-6">
+        <div className="m-0 grid w-full grid-cols-1 gap-8 md:grid-cols-3">
+          <Category
+            icon={<CircuitBoard size={128} />}
+            to="/developer/intro"
+            text={
+              <Translate id="homepage.category.development" description="Developer">
+                Developer
+              </Translate>
+            }
+          />
+          <Category
+            icon={<Building2 size={128} />}
+            to="/organization/intro"
+            text={
+              <Translate id="homepage.category.organization" description="Organization">
+                Organization
+              </Translate>
+            }
+          />
+          <Category
+            icon={<CircleUser size={128} />}
+            to="/10.10/user/intro"
+            text={
+              <Translate id="homepage.category.user" description="User">
+                User
+              </Translate>
+            }
+          />
+        </div>
+      </div>
     </Layout>
   )
 }

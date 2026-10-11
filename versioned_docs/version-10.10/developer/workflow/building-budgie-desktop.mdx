@@ -10,7 +10,7 @@ import Tabs from "@theme/Tabs";
 
 # Building Budgie Desktop
 
-:::danger Important Information
+:::danger[Important Information]
 Budgie 10.10 is Wayland-only and does not support X11. Budgie 10.10 is the last "10 series" release of Budgie Desktop, with Budgie 10 entering maintenance mode as of this release. Support for Budgie 10.10 will be minimal as we work on Budgie 11.
 :::
 
@@ -36,7 +36,7 @@ In practice, this will mean you will likely end up using a wlroots-based composi
 
 However, for now the **recommendation** is to use labwc  (>= 0.9.2) and this is what Budgie Desktop 10.10 defaults to.
 
-:::info labwc bridge
+:::info[labwc bridge]
 Budgie Desktop offers a "labwc bridge" out-of-the-box (and is ran automatically at login), which copies over our own labwc configuration into `~/.config/budgie-desktop/labwc` (technically supporting `XDG_CONFIG_HOME` as well). This means it won't conflict with any existing configurations. This configuration enables a range of features, such as:
 
 - Default keyboard shortcuts for common actions (opening Budgie Menu, Raven, Budgie Run Dialog, workspace switching, screenshotting, etc)
@@ -124,7 +124,7 @@ budgie-desktop requires/recommends the following to be installed:
 - eglinfo (provided by `egl-utils` on Fedora, `mesa-utils-extra` on Debian/Ubuntu, `mesa-demos` on Arch)
 - python3-psutil (required for labwc bridge)
 
-:::info Extras
+:::info[Extras]
 See also above "Supplemental Tooling" section for Wayland-related dependencies.
 :::
 
