@@ -72,39 +72,58 @@ Budgie Desktop 10.10 requires a few supplemental tools to be installed to maximi
 - [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr): This is used as a portal backend for Screenshot and ScreenCase functionality.
 - [wdisplays](https://github.com/artizirk/wdisplays): This is a graphical application for configuring displays. Persistence of display configuration is then handled by the Budgie Desktop Services.
 - [wlopm](https://sr.ht/~leon_plickat/wlopm/): This is used for aiding in output power management during system idling.
-- eglinfo (provided by `egl-utils` on Fedora, `mesa-utils-extra` on Debian/Ubuntu, `mesa-demos` on Arch): This is used for querying EGL capabilities.
+- eglinfo (provided by `egl-utils` on Fedora, `mesa-utils` on Arch and Debian/Ubuntu, `mesa-demos` on Solus): This is used for querying EGL capabilities.
 
 
 ## Build Dependencies
 
 budgie-desktop has a number of build dependencies that must be present before attempting configuration. The names are different depending on distribution. The following is a list of `pkg-config` dependencies currently required to build Budgie from source.
 
-- accountsservice >= 23.13.9
-- alsa-lib >= 1.2.14
-- budgie-session >= 1.0.0
+- accountsservice >= 0.6.55
+- alsa
+- cairo >= 1.15.10
 - gee-0.8 >= 0.20.0
-- gio-2.0 >= 2.86.0
-- gio-unix-2.0 >= 2.86.0
-- gnome-desktop-3.0 >= 44.0
-- gnome-settings-daemon >= 44.0
-- gobject-2.0 >= 2.86.0
+- gio-unix-2.0 >= 2.64.0
+- girepository-2.0
+- glib-2.0 >= 2.64.0
+- gnome-desktop-3.0 >= 40.0
+- gnome-settings-daemon >= 40.0
+- gobject-introspection-1.0
+- gsettings-desktop-schemas >= 40.0
 - gstreamer-1.0
-- gtk-doc (For documentation building from git only)
-- gtk-layer-shell >= 0.8.0
 - gtk+-3.0 >= 3.24.0
-- ibus-1.0 >= 1.5.10
-- libcanberra-devel
-- libnotify >= 0.8
-- libpeas2 >= 2.2.0
-- libpulse >= 2
-- libxfce4windowing
-- meson
-- polkit-agent-1 >= 0.110
-- polkit-gobject-1 >= 0.110
-- sassc (to build theming)
-- upower-glib >= 0.99.0
+- gtk-layer-shell-0 >= 0.8.0
+- libcanberra
+- libcanberra-gtk3
+- libgtop-2.0
+- libnotify >= 0.7
+- libpeas-2
+- libpulse >= 12.99.3
+- libpulse-mainloop-glib
+- libxfce4windowing-0 >= 4.20.4
+- polkit-agent-1 >= 0.105
+- polkit-gobject-1 >= 0.105
+- upower-glib >= 0.99.14
 - uuid
-- vala >= 0.56.0
+- vapigen >= 0.52.5
+
+The following tools are also required:
+
+- A C compiler
+- gettext
+- git
+- gtk-doc (pass `-Dwith-gtk-doc=false` to skip building the API documentation)
+- meson and ninja
+- sassc (to build theming)
+- vala
+
+By default, configuring also checks for the tools Budgie Desktop needs at run-time, and fails if any are missing:
+
+- eglinfo, gammastep, grim, slurp, swaybg, swayidle, and wlopm
+- gtklock or swaylock
+- Python 3 with the `dbus`, `gi`, and `psutil` modules, and the GLib, Gio, and Pango GObject introspection data (for the labwc bridge)
+
+The labwc bridge also uses Python's `systemd` module to log to the journal when it is installed. Pass `-Dwith-runtime-dependencies=false` to skip these checks, such as when building a distribution package.
 
 ### Control Center
 
@@ -118,141 +137,227 @@ Nemo Desktop is supported as well.
 
 ## Run-time dependencies
 
-budgie-desktop requires/recommends the following to be installed:
+In addition to the tools listed under "Supplemental Tooling" above, budgie-desktop requires the following to be installed:
 
-- dconf-cli
-- eglinfo (provided by `egl-utils` on Fedora, `mesa-utils-extra` on Debian/Ubuntu, `mesa-demos` on Arch)
-- python3-psutil (required for labwc bridge)
+- [budgie-session](https://github.com/BuddiesOfBudgie/budgie-session)
+- dconf (provided by `dconf-cli` on Debian/Ubuntu)
+- glycin loaders, used by gdk-pixbuf to load images (provided by `glycin` on Arch and Solus, `glycin-loaders` on Debian/Ubuntu and Fedora)
+- gnome-settings-daemon, whose components are started with the Budgie session
+- gsettings-desktop-schemas
+- labwc (>= 0.9.2)
+- mutter's GSettings schemas (provided by `mutter-common` on Debian/Ubuntu and Fedora), which budgie-daemon and the labwc bridge read
+- network-manager-applet, which is autostarted in the Budgie session for network management
+- Python 3 with the `dbus`, `gi`, `psutil`, and (optionally) `systemd` modules, for the labwc bridge
 
-:::info[Extras]
-See also above "Supplemental Tooling" section for Wayland-related dependencies.
-:::
+The following are recommended:
+
+- power-profiles-daemon, for switching power profiles from the power indicator
+- switcheroo-control, for launching applications on the discrete GPU on dual-GPU systems
+- [oo7](https://github.com/linux-credentials/oo7) (`oo7-daemon` and `oo7-portal`) as the Secret Service provider, when building with `-Dwith-oo7=true`
 
 ## Installing Build Dependencies
 
 <Tabs groupId="operating-systems">
   <TabItem value="arch" label="Arch">
 ```bash
-  sudo pacman -S --needed base-devel git
-  sudo pacman -S --needed \
-    accountsservice \
-    budgie-session \
-    gammastep \
-    gnome-settings-daemon \
-    grim \
-    gtk-layer-shell \
-    ibus \
-    intltool \
-    libgee \
-    libpeas-2 \
-    libxfce4windowing \
-    meson \
-    sassc \
-    slurp \
-    swaybg \
-    swayidle \
-    vala \
-    mesa-demos \
-    xdg-desktop-portal-gtk \
-    xdg-desktop-portal-wlr \
-    xorg-xwayland
+sudo pacman -S --needed \
+  accountsservice \
+  alsa-lib \
+  base-devel \
+  cairo \
+  gammastep \
+  git \
+  glib2-devel \
+  gnome-desktop \
+  gnome-settings-daemon \
+  gobject-introspection \
+  grim \
+  gsettings-desktop-schemas \
+  gstreamer \
+  gtk-doc \
+  gtk-layer-shell \
+  gtk3 \
+  gtklock \
+  libcanberra \
+  libgee \
+  libgtop \
+  libnotify \
+  libpeas-2 \
+  libpulse \
+  libxfce4windowing \
+  mesa-utils \
+  meson \
+  polkit \
+  python-dbus \
+  python-gobject \
+  python-psutil \
+  python-systemd \
+  sassc \
+  slurp \
+  swaybg \
+  swayidle \
+  upower \
+  util-linux-libs \
+  vala \
+  wlopm \
+  xdg-desktop-portal-gtk \
+  xdg-desktop-portal-wlr \
+  xorg-xwayland
 ```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
-```bash
-  sudo apt install build-essential git
-```
-
-Enable software sources in your apt sources list then install the dependencies
+These packages are available in Debian testing and Ubuntu 26.04 or later.
 
 ```bash
-sudo apt build-dep budgie-desktop
-```
-
-The manual method for dependency installation is:
-
-```bash
-  sudo apt install build-essential git
-  sudo apt install gnome-settings-daemon-dev gtk-doc-tools intltool libaccountsservice-dev libasound2-dev
-  libgnome-desktop-3-dev libcanberra-dev libgee-0.8-dev libgstreamer1.0-dev
-  libgtk-3-dev libibus-1.0-dev libpeas-dev libpolkit-agent-1-dev libpulse-dev libupower-glib-dev
-  libxfce4windowing-dev meson ninja-build sassc uuid-dev valac
+sudo apt install \
+  build-essential \
+  curl \
+  gammastep \
+  gettext \
+  git \
+  gnome-settings-daemon-dev \
+  gobject-introspection \
+  grim \
+  gsettings-desktop-schemas-dev \
+  gtk-doc-tools \
+  gtklock \
+  libaccountsservice-dev \
+  libasound2-dev \
+  libcairo2-dev \
+  libcanberra-dev \
+  libcanberra-gtk3-dev \
+  libgee-0.8-dev \
+  libgio-2.0-dev \
+  libgirepository-2.0-dev \
+  libgirepository1.0-dev \
+  libgnome-desktop-3-dev \
+  libgstreamer1.0-dev \
+  libgtk-3-dev \
+  libgtk-layer-shell-dev \
+  libgtop2-dev \
+  libnotify-dev \
+  libpeas-2-dev \
+  libpolkit-agent-1-dev \
+  libpolkit-gobject-1-dev \
+  libpulse-dev \
+  libupower-glib-dev \
+  libxfce4windowing-0-dev \
+  mesa-utils \
+  meson \
+  ninja-build \
+  python3-dbus \
+  python3-gi \
+  python3-psutil \
+  python3-systemd \
+  sassc \
+  slurp \
+  swaybg \
+  swayidle \
+  uuid-dev \
+  valac \
+  wlopm
 ```
   </TabItem>
   <TabItem value="fedora" label="Fedora non-Atomic">
 ```bash
-  sudo dnf install \
-    accountsservice-devel \
-    alsa-lib-devel \
-    budgie-session \
-    desktop-file-utils \
-    gammastep \
-    grim \
-    gettext \
-    git \
-    glib2-devel \
-    gnome-desktop3-devel \
-    gnome-settings-daemon-devel \
-    gsettings-desktop-schemas-devel \
-    gstreamer1-devel \
-    gtk-doc \
-    gtk3-devel \
-    ibus-devel \
-    intltool \
-    json-glib-devel \
-    libcanberra-devel \
-    libpeas2-devel \
-    libgee-devel \
-    libgudev-devel \
-    libnotify-devel \
-    libuuid-devel \
-    libwacom-devel \
-    libxfce4windowing-devel \
-    meson \
-    polkit-devel \
-    pulseaudio-libs-devel \
-    sassc \
-    slurp \
-    swaybg \
-    swayidle \
-    upower-devel \
-    vala \
-    egl-utils \
-    xdg-desktop-portal-gtk \
-    xdg-desktop-portal-wlr \
-    xorg-x11-server-Xwayland \
-    wlopm
-```
-  </TabItem>
-  <TabItem value="solus" label="Solus">
-```bash
-sudo eopkg it \
+sudo dnf install \
   accountsservice-devel \
   alsa-lib-devel \
+  cairo-devel \
+  egl-utils \
   gammastep \
+  gcc \
+  gettext \
+  git-core \
+  glib2-devel \
+  gnome-desktop3-devel \
   gnome-settings-daemon-devel \
+  gobject-introspection-devel \
   grim \
-  gstreamer-1.0-devel \
+  gsettings-desktop-schemas-devel \
+  gstreamer1-devel \
   gtk-doc \
-  ibus-devel \
+  gtk-layer-shell-devel \
+  gtk3-devel \
+  gtklock \
   libcanberra-devel \
   libgee-devel \
-  libgnome-desktop-devel \
+  libgtop2-devel \
   libnotify-devel \
-  libpeas-2-devel \
+  libpeas-devel \
+  libuuid-devel \
   libxfce4windowing-devel \
-  pulseaudio-devel \
+  meson \
+  ninja-build \
+  oo7-daemon \
+  oo7-portal \
+  polkit-devel \
+  pulseaudio-libs-devel \
+  python3-dbus \
+  python3-gobject-base \
+  python3-psutil \
+  python3-systemd \
   sassc \
   slurp \
   swaybg \
   swayidle \
   upower-devel \
   vala \
+  wlopm \
   xdg-desktop-portal-gtk \
   xdg-desktop-portal-wlr \
-  wlopm \
-  ccache -c system.devel
+  xorg-x11-server-Xwayland
 ```
+  </TabItem>
+  <TabItem value="solus" label="Solus">
+```bash
+sudo eopkg it -c system.devel
+sudo eopkg it \
+  accountsservice-devel \
+  alsa-lib-devel \
+  ccache \
+  gammastep \
+  git \
+  glib2-devel \
+  gnome-settings-daemon-devel \
+  gobject-introspection-devel \
+  grim \
+  gsettings-desktop-schemas-devel \
+  gstreamer-1.0-devel \
+  gtk-doc \
+  gtklock \
+  libcairo-devel \
+  libcanberra-devel \
+  libgee-devel \
+  libgnome-desktop-devel \
+  libgtk-3-devel \
+  libgtk-layer-shell-devel \
+  libgtop-devel \
+  libnotify-devel \
+  libpeas-2-devel \
+  libvala-devel \
+  libxfce4windowing-devel \
+  mesa-demos \
+  polkit-devel \
+  pulseaudio-devel \
+  python-dbus \
+  python-gobject \
+  python-psutil \
+  python-systemd \
+  sassc \
+  slurp \
+  swaybg \
+  swayidle \
+  upower-devel \
+  util-linux-devel \
+  vala \
+  wlopm \
+  xdg-desktop-portal-gtk \
+  xdg-desktop-portal-wlr
+```
+  </TabItem>
+  <TabItem value="all-other-distributions" label="All Other Distributions">
+Install your distribution's packages for the `pkg-config` dependencies and tools listed under "Build Dependencies" above.
   </TabItem>
 </Tabs>
 
@@ -266,37 +371,35 @@ git submodule update --init
 
 ## Configuring
 
-<Tabs>
+<Tabs groupId="operating-systems">
   <TabItem value="arch" label="Arch">
 ```bash
-  cd budgie-desktop
-  meson setup build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib
+meson setup build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib
 ```
   </TabItem>
   <TabItem value="debian-or-ubuntu" label="Debian / Ubuntu">
+Debian and Ubuntu do not ship Vala bindings for libxfce4windowing, so add the ones from Debian's Budgie Desktop packaging first:
+
 ```bash
-  cd budgie-desktop
-  meson build --prefix=/usr --libdir=/usr/lib -Dwith-gnome-screensaver=true
+curl -fsSL https://raw.githubusercontent.com/ubuntubudgie/budgie-desktop-debian/debian/latest/debian/patches/lfwvapi.patch | patch -p1
+meson setup build --prefix=/usr --libdir=/usr/lib
 ```
   </TabItem>
   <TabItem value="fedora" label="Fedora non-Atomic">
 ```bash
-  cd budgie-desktop
-  meson build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/libexec
+meson setup build --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/libexec -Dwith-oo7=true
 ```
   </TabItem>
   <TabItem value="solus" label="Solus">
 Solus has special requirements and mandates the use of stateless XDG paths, as well as using the OS default CFLAGS:
 
 ```bash
-  cd budgie-desktop
-  meson --prefix /usr --libdir /usr/lib64 --sysconfdir /etc -Dwith-stateless=true build --buildtype plain
+meson setup build --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc -Dwith-stateless=true --buildtype=plain
 ```
   </TabItem>
   <TabItem value="all-other-distributions" label="All Other Distributions">
 ```bash
-  cd budgie-desktop
-  meson build --prefix=/usr --sysconfdir=/etc
+meson setup build --prefix=/usr --sysconfdir=/etc
 ```
   </TabItem>
 </Tabs>
@@ -307,16 +410,24 @@ Solus has special requirements and mandates the use of stateless XDG paths, as w
 ninja -j$(($(getconf _NPROCESSORS_ONLN)+1)) -C build
 ```
 
-**Note**: When building a distro package, please ensure you use:
+**Note**: When building a distro package, add `--buildtype=plain` to your `meson setup` options. Meson's default build type adds its own debug and optimization flags; with `plain`, it adds none, so the compiler only receives the flags your packaging sets, such as `CFLAGS` and `LDFLAGS`. Use your distribution's paths for options like `--prefix`, `--sysconfdir`, and `--libexecdir`, or your distribution's meson macro if it has one (such as `%meson` on Fedora, which already sets `--buildtype=plain`).
 
-```
-meson build --prefix=/usr --sysconfdir=/etc --buildtype plain
-```
+## Installing / Validating
 
-This ensures your distro flags are respected.
-
-## Installing
+To install your build:
 
 ```bash
 sudo ninja install -C build
 ```
+
+To test changes without installing them, run components from the build directory with `meson devenv`. This points Budgie Desktop at the applets and Raven widgets in your build directory, so your installed Budgie Desktop is left untouched. For example, to replace the running panel:
+
+```bash
+meson devenv -C build budgie-panel --replace &
+```
+
+The same works for other components, such as `budgie-daemon --replace`. Changes to GSettings schemas still need to be installed before they take effect.
+
+:::info
+`meson devenv` support is available on the `main` branch and in releases after 10.10.3.
+:::
