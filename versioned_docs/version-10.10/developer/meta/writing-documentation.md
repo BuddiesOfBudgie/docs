@@ -36,7 +36,7 @@ You will need to now "clone" your fork to your computer. There is a bunch of dif
 
 Of course, testing out your changes will require some technical knowledge, but our [README](https://github.com/BuddiesOfBudgie/docs#readme) should help walk you through that. You can read it in your fork too!
 
-:::danger Need help?
+:::danger[Need help?]
 You can reach out to us on our [Matrix Space](https://matrix.to/#/#buddies-of-budgie:matrix.org) for guidance if you run into issues.
 :::
 
@@ -64,7 +64,7 @@ Submitting a pull request can be done through our [GitHub repository](https://gi
 
 Docusaurus supports [adding assets](https://docusaurus.io/docs/markdown-features/assets), such as images, to a document. Please keep assets in an `assets/document-name-here` folder relative to the Markdown file.
 
-:::tip Example
+:::tip[Example]
 We would expect assets for this document, located at `docs/developer/documentation/writing-documentation.md` to reside in `docs/developer/documentation/assets/writing-documentation`. We have an example below for reference (and testing!)
 :::
 

@@ -14,10 +14,15 @@ const config = {
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   future: {
-    experimental_faster: true,
+    faster: true,
     v4: true,
   },
 
@@ -64,11 +69,9 @@ const config = {
             '10.9.x': { label: 'Legacy (X11): 10.9.x', banner: 'unmaintained', path: '10.9.x' },
           },
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve('./src/css/tailwind.css'), require.resolve('./src/css/custom.css')],
         },
       }),
     ],
@@ -110,6 +113,13 @@ const config = {
         ],
       },
     ],
+    () => ({
+      name: 'tailwindcss',
+      configurePostCss(postcssOptions) {
+        postcssOptions.plugins.push(require('@tailwindcss/postcss'))
+        return postcssOptions
+      },
+    }),
   ],
 
   themeConfig:

@@ -7,27 +7,29 @@ This document provides technical context for AI coding assistants working on the
 - **Project**: Buddies of Budgie Documentation
 - **Type**: Docusaurus documentation site
 - **Languages**: TypeScript, React, MDX
-- **Build system**: Yarn + Docusaurus
-- **Package manager**: Yarn 4.x
-- **Node requirement**: >= 24.0
+- **Build system**: Bun + Docusaurus
+- **Runtime and package manager**: Bun >= 1.4.2 (`bunfig.toml` runs scripts under Bun, not Node)
 
 ## Build Quick Reference
 
 ```bash
 # Install dependencies
-yarn install
+bun install
 
 # Start dev server
-yarn start
+bun run start
 
 # Build
-yarn build
+bun run build
 
 # Typecheck
-yarn typecheck
+bun run typecheck
 
-# Lint / format
-yarn lint
+# Format
+bun run lint
+
+# Lint and format checks (as run in CI)
+bun run check
 ```
 
 ## Repository Structure

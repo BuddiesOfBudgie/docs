@@ -419,32 +419,5 @@
   "theme.SearchModal.placeholder": {
     "message": "Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
-  },
-  "newBudgieRelease": {
-    "message": "New Budgie Release"
-  },
-  "showPastEvents": {
-    "message": "Show past events"
-  },
-  "projects": {
-    "message": "Projects"
-  },
-  "event": {
-    "message": "Event"
-  },
-  "project": {
-    "message": "Project"
-  },
-  "start": {
-    "message": "Start"
-  },
-  "end": {
-    "message": "End"
-  },
-  "duration": {
-    "message": "Duration"
-  },
-  "evenTableCellescription": {
-    "message": "{type} for {rel}"
   }
 }

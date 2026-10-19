@@ -27,19 +27,22 @@ These expectations apply to all contributions, with or without AI assistance:
 git clone https://github.com/BuddiesOfBudgie/docs.git && cd docs
 
 # Install dependencies
-yarn install
+bun install
 
 # Start dev server
-yarn start
+bun run start
 
 # Build
-yarn build
+bun run build
 
 # Typecheck
-yarn typecheck
+bun run typecheck
 
-# Lint / format
-yarn lint
+# Format
+bun run lint
+
+# Lint and format checks (as run in CI)
+bun run check
 ```
 
 ### Project Structure
@@ -134,6 +137,6 @@ For detailed attribution guidance and examples, see the full [AI Policy](https:/
 ## Pull Requests
 
 - Provide a clear description explaining **what** changed and **why**
-- Verify your changes locally with `yarn start` before submitting
-- Run `yarn build`, `yarn typecheck`, and `yarn lint` to catch issues
+- Verify your changes locally with `bun run start` before submitting
+- Run `bun run build`, `bun run typecheck`, and `bun run check` to catch issues
 - If AI tools were used, ensure commits include the appropriate `Assisted-by` trailer
