@@ -26,29 +26,6 @@ const config = {
     v4: true,
   },
 
-  headTags: [
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/Poppins-Regular.ttf',
-        as: 'font',
-        type: 'font/ttf',
-        crossorigin: 'anonymous',
-      },
-    },
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/Poppins-Bold.ttf',
-        as: 'font',
-        type: 'font/ttf',
-        crossorigin: 'anonymous',
-      },
-    },
-  ],
-
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -66,12 +43,20 @@ const config = {
           versions: {
             current: { label: 'Current (Budgie 11)', path: '/', banner: 'none' },
             '10.10': { label: 'Latest Stable (Wayland): Budgie 10.10', banner: 'none', path: '10.10' },
-            '10.9.x': { label: 'Legacy (X11): 10.9.x', banner: 'unmaintained', path: '10.9.x' },
           },
         },
         blog: false,
         theme: {
-          customCss: [require.resolve('./src/css/tailwind.css'), require.resolve('./src/css/custom.css')],
+          customCss: [
+            require.resolve('@fontsource-variable/inter/index.css'),
+            require.resolve('@fontsource-variable/lora/wght.css'),
+            require.resolve('@fontsource-variable/lora/wght-italic.css'),
+            require.resolve('@fontsource/poppins/400.css'),
+            require.resolve('@fontsource/poppins/600.css'),
+            require.resolve('@fontsource/poppins/700.css'),
+            require.resolve('./src/css/tailwind.css'),
+            require.resolve('./src/css/custom.css'),
+          ],
         },
       }),
     ],
@@ -145,7 +130,7 @@ const config = {
         items: [
           {
             type: 'docsVersionDropdown',
-            versions: ['10.10', 'current', '10.9.x'],
+            versions: ['10.10', 'current'],
           },
           {
             type: 'doc',

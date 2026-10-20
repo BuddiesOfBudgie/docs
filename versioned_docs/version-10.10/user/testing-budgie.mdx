@@ -10,7 +10,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 This document provides high-level documentation on testing the latest changes to Budgie Desktop. Whenever possible, we recommend that when
-[reporting an issue](https://github.com/BuddiesOfBudgie/budgie-desktop/issues) with Budgie Desktop that you first test with the latest available version of Budgie Desktop, if not the latest in-development changes,
+[reporting an issue](./reporting-issues.md) with Budgie Desktop that you first test with the latest available version of Budgie Desktop, if not the latest in-development changes,
 to see if the issue is already resolved.
 
 Please look at our [GitHub releases](https://github.com/BuddiesOfBudgie/budgie-desktop/releases) to confirm the latest version. You can compare this against the version you have installed by running:
@@ -25,60 +25,70 @@ Some distros provide up-to-date "git" versions of each component. If possible pl
 
 <Tabs>
   <TabItem label="Arch" value="Arch">
-    Arch Linux typically has the latest stable version in the Community repository. You can test with the latest git
-    master of Budgie by installing the [budgie-desktop-git](https://aur.archlinux.org/packages/budgie-desktop-git) 
-    AUR package using an AUR helper like [yay](https://github.com/Jguer/yay) or [paru](https://github.com/Morganamilo/paru). Make sure to update your system before installing budgie-desktop-git, and reinstall the official budgie-desktop package
-    once you have finished testing.
+    Arch Linux typically has the latest stable version in the Extra repository, with new releases landing in Extra Testing first. To test the latest
+    in-development changes, build Budgie Desktop from source as described below.
   </TabItem>
   <TabItem label="Ubuntu" value="ubuntu">
-    Ubuntu provides a [daily built PPA](https://launchpad.net/~ubuntubudgie-dev/+archive/ubuntu/budgie-desktop-test)
-    based on the latest available stable release - LTS releases are not necessarily the latest stable.
+    Ubuntu Budgie provides a [testing PPA](https://launchpad.net/~ubuntubudgie-dev/+archive/ubuntu/budgie-desktop-test). Budgie Desktop 10.10 is currently published there for Ubuntu 24.04 LTS.
 
 ```bash
 sudo add-apt-repository ppa:ubuntubudgie-dev/budgie-desktop-test
 sudo apt-get update
-reboot --
+sudo apt-get upgrade
+reboot
 ```
 
-    To remove the PPA and return to the distro provided package, run:
+    To remove the PPA and return to the distro provided package, install `ppa-purge` and run:
 
 ```bash
+sudo apt-get install ppa-purge
 sudo ppa-purge ppa:ubuntubudgie-dev/budgie-desktop-test
-reboot --
+reboot
 ```
   </TabItem>
 </Tabs>
 
 ---
 
-For other distributions than those listed above, you will need to follow the steps at [Building Budgie Desktop](/10.10/developer/workflow/building-budgie-desktop).
+For other distributions, or to test the latest in-development changes, you will need to follow the steps at [Building Budgie Desktop](/10.10/developer/workflow/building-budgie-desktop). To test your build without replacing your installed Budgie Desktop, use `meson devenv` as described in [Installing / Validating](/10.10/developer/workflow/building-budgie-desktop#installing--validating).
 
 ## Testing
 
 There are several components that you may encounter throughout usage or testing of Budgie Desktop.
 
-| Name                    | Description                                                                                                                                                                   | Supports `--replace` |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| budgie-daemon           | Budgie Daemon is a background process responsible for many activities such as notification handling, XDG Directory monitorying, screenshot invoking, tab switching, and more. | ✅                   |
-| budgie-desktop-settings | Budgie Desktop Settings is the graphical application for configuration of our desktop environment.                                                                            | ❌                   |
-| budgie-panel            | This component handles one of more visual panels, which includes Raven and panel applets.                                                                                     | ✅                   |
-| budgie-wm               | Budgie WM is our window manager that sits as a Meta "plugin" on top of [Mutter](https://gitlab.gnome.org/GNOME/mutter).                                                       | ✅                   |
+| Name                    | Description                                                                                                                                                                                                                                              | Restart Component                                       |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| budgie-daemon           | Budgie Daemon is a background process responsible for many activities such as notifications, on-screen displays, screenshots, screen locking and idle handling, night light, the desktop background, keyboard layouts, media controls, and brightness. | `budgie-daemon --replace`                               |
+| budgie-desktop-settings | Budgie Desktop Settings is the graphical application for configuration of our desktop environment.                                                                                                                                                       | Not supported, close and reopen it                      |
+| budgie-panel            | This component handles one or more visual panels, which includes Raven and panel applets.                                                                                                                                                                | `budgie-panel --replace`                                |
+| Dialogs                 | `budgie-power-dialog`, `budgie-run-dialog`, `budgie-screenshot-dialog`, and `budgie-polkit-dialog` provide the power, run, screenshot, and authentication dialogs. They are installed in Budgie Desktop's libexec directory.                              | Not supported                                           |
+| labwc                   | [labwc](https://github.com/labwc/labwc) is the Wayland compositor and window manager Budgie Desktop runs on.                                                                                                                                             | `labwc -r` reloads its configuration                    |
+| labwc bridge            | The labwc bridge keeps labwc's configuration, such as keyboard shortcuts, in sync with Budgie Desktop's settings. It is started automatically at login.                                                                                                  | Not supported, see [below](#restarting-the-labwc-bridge) |
 
 ### Restarting components
 
-It is common when testing Budgie Desktop to restart various components. When doing so, the `--replace` flag is passed alongside `&!` at the end of the command. This allows you to detach from the process
-without it stopping, so you can for example close the Terminal.
+It is common when testing Budgie Desktop to restart various components. When doing so, pass the `--replace` flag, then run the process in the background and detach it from your terminal with `disown`,
+so you can for example close the Terminal without it stopping. How you do this depends on your shell:
 
-Full example:
+<Tabs groupId="shell">
+  <TabItem label="bash / zsh" value="bash-zsh">
+```bash
+budgie-panel --replace & disown
+```
+  </TabItem>
+  <TabItem label="fish" value="fish">
+fish needs `disown` as a separate command:
 
+```fish
+budgie-panel --replace &; disown
 ```
-budgie-panel --replace &!
-```
+  </TabItem>
+</Tabs>
 
 Some may opt to use the `nohup` (no hangup) command to log the output as well. If you do not need to do any long-term logging, it is not necessary to run it with nohup. Below is an example of how you would use it with budgie-panel:
 
-```
-nohup budgie-panel --replace > budgie-panel.out
+```bash
+nohup budgie-panel --replace > budgie-panel.out 2>&1 &
 ```
 
 This will output to the file named `budgie-panel.out` in whichever directory you run the command. You can change the filename should you desire.
@@ -89,6 +99,21 @@ Some components may be more sensitive to replacing and may either need to be don
 When in doubt, you should:
 
 1. Do a double replace of budgie-daemon
-2. If you are replacing both budgie-daemon and budgie-panel, first replace then daemon, then replace panel.
+2. If you are replacing both budgie-daemon and budgie-panel, first replace the daemon, then replace the panel.
 
 :::
+
+### Restarting the labwc bridge
+
+The labwc bridge does not support `--replace`. To restart it, stop the running bridge and start it again. Its location depends on how your distribution packages Budgie Desktop, so find the command it is started with first:
+
+```bash
+grep '^Exec=' /etc/xdg/autostart/org.buddiesofbudgie.labwc-bridge.desktop
+```
+
+Then stop the running bridge and run that command, adding `--debug` for more detailed output. For example, on Fedora:
+
+```bash
+pkill -f labwc-bridge
+/usr/libexec/budgie-desktop/labwc-bridge --debug
+```

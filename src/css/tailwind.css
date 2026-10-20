@@ -19,6 +19,8 @@
   --font-sans: var(--ifm-font-family-base);
   --font-mono: var(--ifm-font-family-monospace);
   --font-heading: "Poppins", sans-serif;
+  --font-inter: "Inter Variable", var(--ifm-font-family-base);
+  --font-lora: "Lora Variable", Georgia, serif;
 }
 
 @theme static {
@@ -38,11 +40,25 @@
   --site-muted: var(--color-lightgrey);
   --site-muted-foreground: var(--color-grey-md);
   --site-border: var(--ifm-color-emphasis-300);
+
+  /* Matches the buddiesofbudgie.org palette */
+  --site-strong: rgb(37 37 37);
+  --site-subtle: rgb(142 142 142);
+  --site-background-alt: rgb(253 249 240);
+  --site-border-subtle: rgb(240 232 218);
+  --site-accent-soft: rgb(74 154 110 / 0.1);
+  --site-on-accent: rgb(52 52 52);
 }
 
 [data-theme="dark"] {
   --site-muted: var(--color-greydark);
   --site-muted-foreground: var(--color-lightgrey);
+
+  --site-strong: rgb(251 251 251);
+  --site-subtle: rgb(181 181 181);
+  --site-background-alt: rgb(23 23 23);
+  --site-border-subtle: rgb(42 42 42);
+  --site-accent-soft: rgb(106 179 140 / 0.15);
 }
 
 @theme inline {
@@ -54,4 +70,10 @@
   --color-border: var(--site-border);
   --color-primary: var(--color-budgie-green);
   --color-primary-foreground: #ffffff;
+  --color-strong: var(--site-strong);
+  --color-subtle: var(--site-subtle);
+  --color-background-alt: var(--site-background-alt);
+  --color-border-subtle: var(--site-border-subtle);
+  --color-accent-soft: var(--site-accent-soft);
+  --color-on-accent: var(--site-on-accent);
 }

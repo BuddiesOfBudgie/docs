@@ -1,0 +1,26 @@
+---
+breadcrumbs: false
+description: Building, debugging, and documenting Budgie Desktop 10.10.
+hide_table_of_contents: true
+sidebar_label: Developer Documentation
+sidebar_position: -1
+title: Developer Documentation
+---
+
+import { useCurrentSidebarSiblings, useDoc } from "@docusaurus/plugin-content-docs/client";
+import DocCardList from "@theme/DocCardList";
+
+{/* This intro sits alongside the pages it lists, so it would otherwise show up as its own card */}
+export function DeveloperDocCards() {
+  const { metadata } = useDoc();
+  const items = useCurrentSidebarSiblings().filter((item) => item.docId !== metadata.id);
+  return <DocCardList items={items} />;
+}
+
+This section contains documentation intended for developers and those interested in either contributing to Budgie Desktop or developing "widgets" for it. It covers Budgie Desktop 10.10.x, the currently supported release. Budgie Desktop 10.9.x and earlier are no longer supported, and Budgie 11 is still in development.
+
+Before contributing, read our [Contributing](/developer/contributing) guidelines.
+
+<DeveloperDocCards />
+
+To learn more about Buddies of Budgie and how to get involved, see our [Organization](/organization/intro) documentation.
