@@ -1,0 +1,26 @@
+---
+breadcrumbs: false
+description: Using, testing, and reporting issues with Budgie Desktop 10.10.
+hide_table_of_contents: true
+sidebar_label: User Documentation
+sidebar_position: -1
+title: User Documentation
+---
+
+import { useCurrentSidebarSiblings, useDoc } from "@docusaurus/plugin-content-docs/client";
+import DocCardList from "@theme/DocCardList";
+
+{/* This intro sits alongside the pages it lists, so it would otherwise show up as its own card */}
+export function UserDocCards() {
+  const { metadata } = useDoc();
+  const items = useCurrentSidebarSiblings().filter((item) => item.docId !== metadata.id);
+  return <DocCardList items={items} />;
+}
+
+This section contains documentation intended for end users of Budgie Desktop 10.10.x, the currently supported release. Budgie Desktop 10.9.x and earlier are no longer supported, and Budgie 11 is still in development. You can check which version you have installed by running `budgie-desktop --version`.
+
+New to Budgie? See [Get Budgie](https://buddiesofbudgie.org/get-budgie) to find a distribution that ships it.
+
+<UserDocCards />
+
+To learn more about Buddies of Budgie and how to get involved, see our [Organization](/organization/intro) documentation.
