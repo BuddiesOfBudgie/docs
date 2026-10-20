@@ -99,10 +99,6 @@ h3 {
   color: white;
 }
 
-[data-theme="light"] .Category svg {
-  color: var(--grey-md);
-}
-
 .footer {
   --ifm-footer-background-color: var(--ifm-navbar-background-color);
   --ifm-footer-link-color: var(--ifm-navbar-link-color);

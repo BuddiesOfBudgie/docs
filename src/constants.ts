@@ -1,0 +1,5 @@
+export const LATEST_BUDGIE_VERSION = '10.10.3'
+export const LATEST_RELEASE_URL = 'https://buddiesofbudgie.org/blog/budgie-10-10-3-released'
+export const BUDGIE_11_BLOG_URL = 'https://buddiesofbudgie.org/blog/budgie-11/1'
+export const FORGE_URL = 'https://forge.moderndesktop.dev/BuddiesOfBudgie'
+export const GET_BUDGIE_URL = 'https://buddiesofbudgie.org/get-budgie'

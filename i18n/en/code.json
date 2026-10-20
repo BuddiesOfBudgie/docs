@@ -278,14 +278,6 @@
     "message": "Get Budgie",
     "description": "Get Budgie"
   },
-  "homepage.category.development": {
-    "message": "Developer",
-    "description": "Developer"
-  },
-  "homepage.category.user": {
-    "message": "User",
-    "description": "User"
-  },
   "Open in new tab": {
     "message": "Open in new tab"
   },
