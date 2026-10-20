@@ -1,6 +1,7 @@
 {
   "position": 2,
   "label": "Meta (Documentation)",
+  "description": "Writing documentation for Buddies of Budgie.",
   "collapsible": true,
   "collapsed": false
 }
