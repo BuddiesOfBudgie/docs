@@ -1,6 +1,3 @@
-import '@fontsource-variable/inter'
-import '@fontsource-variable/lora/wght-italic.css'
-import '@fontsource/poppins/600.css'
 import Link from '@docusaurus/Link'
 import Translate, { translate } from '@docusaurus/Translate'
 import Layout from '@theme/Layout'

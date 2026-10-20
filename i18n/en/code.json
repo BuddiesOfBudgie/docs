@@ -20,24 +20,28 @@
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.admonition.note": {
-    "message": "note",
+    "message": "Note",
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "tip",
+    "message": "Tip",
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.danger": {
-    "message": "danger",
+    "message": "Danger",
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "info",
+    "message": "Info",
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.caution": {
-    "message": "caution",
+    "message": "Caution",
     "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.warning": {
+    "message": "Warning",
+    "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Scroll back to top",

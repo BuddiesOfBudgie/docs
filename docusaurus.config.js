@@ -26,29 +26,6 @@ const config = {
     v4: true,
   },
 
-  headTags: [
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/Poppins-Regular.ttf',
-        as: 'font',
-        type: 'font/ttf',
-        crossorigin: 'anonymous',
-      },
-    },
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/fonts/Poppins-Bold.ttf',
-        as: 'font',
-        type: 'font/ttf',
-        crossorigin: 'anonymous',
-      },
-    },
-  ],
-
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -70,7 +47,16 @@ const config = {
         },
         blog: false,
         theme: {
-          customCss: [require.resolve('./src/css/tailwind.css'), require.resolve('./src/css/custom.css')],
+          customCss: [
+            require.resolve('@fontsource-variable/inter/index.css'),
+            require.resolve('@fontsource-variable/lora/wght.css'),
+            require.resolve('@fontsource-variable/lora/wght-italic.css'),
+            require.resolve('@fontsource/poppins/400.css'),
+            require.resolve('@fontsource/poppins/600.css'),
+            require.resolve('@fontsource/poppins/700.css'),
+            require.resolve('./src/css/tailwind.css'),
+            require.resolve('./src/css/custom.css'),
+          ],
         },
       }),
     ],

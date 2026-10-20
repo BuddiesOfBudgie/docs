@@ -1,21 +1,19 @@
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Poppins-Regular.ttf");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/Poppins-Bold.ttf");
-}
-
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base:
+    "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  --ifm-heading-font-family: "Poppins", sans-serif;
+  --ifm-heading-font-weight: 600;
+
+  /* Text and surface colors match buddiesofbudgie.org */
+  --ifm-font-color-base: rgb(37 37 37);
+  --ifm-heading-color: rgb(37 37 37);
+  --ifm-color-content-secondary: rgb(90 90 90);
+  --ifm-code-background: rgb(247 247 247);
+  --ifm-toc-border-color: rgb(235 235 235);
+  --ifm-hr-border-color: rgb(235 235 235);
+  --docs-link-color: rgb(61 138 95);
+
   --budgie-green: var(--color-budgie-green);
   --marble: var(--color-marble);
   --lightgrey: var(--color-lightgrey);
@@ -24,7 +22,7 @@
   --greydark: var(--color-greydark);
   --dark: var(--color-dark);
 
-  --ifm-card-background-color: var(--marble);
+  --ifm-card-background-color: white;
   --ifm-color-primary: var(--budgie-green);
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -34,7 +32,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --ifm-footer-background-color: var(--budgie-green);
-  --ifm-navbar-background-color: var(--lightgrey);
+  --ifm-navbar-background-color: white;
   --ifm-tabs-padding-vertical: 0.5rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -54,6 +52,14 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-navbar-background-color: var(--greydark);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-font-color-base: rgb(235 235 235);
+  --ifm-heading-color: rgb(251 251 251);
+  --ifm-color-content-secondary: rgb(181 181 181);
+  --ifm-code-background: rgb(52 52 52);
+  --ifm-toc-border-color: rgb(255 255 255 / 0.1);
+  --ifm-hr-border-color: rgb(255 255 255 / 0.1);
+  --docs-link-color: var(--budgie-green);
 }
 
 [data-theme="dark"] .DocSearch-Modal {
@@ -64,10 +70,204 @@
   --docsearch-hit-background: var(--greydark);
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Poppins";
+.navbar {
+  --ifm-navbar-height: 4.5rem;
+  --ifm-navbar-padding-horizontal: 1.5rem;
+  --ifm-navbar-item-padding-horizontal: 0.875rem;
+  box-shadow: none;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.navbar__logo {
+  height: 2.5rem;
+  margin-right: 0.75rem;
+}
+
+.navbar__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.navbar__link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+/* Same cream as the blog posts on buddiesofbudgie.org */
+html.plugin-docs[data-theme="light"] {
+  --ifm-background-color: rgb(255 253 245);
+}
+
+.markdown {
+  --ifm-list-item-margin: 0.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.markdown h1 {
+  font-family: "Lora Variable", Georgia, serif;
+  font-weight: 700;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-family: var(--ifm-font-family-base);
+  font-weight: 700;
+}
+
+.markdown ul ul {
+  list-style-type: circle;
+}
+
+.markdown ul ul ul {
+  list-style-type: square;
+}
+
+.markdown img {
+  border-radius: 0.5rem;
+}
+
+/* Same as the tag pills on blog posts */
+.theme-doc-version-badge {
+  background: transparent;
+  border: 1px solid var(--docs-link-color);
+  border-radius: 9999px;
+  color: var(--docs-link-color);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Admonition colors match the Admonition component on buddiesofbudgie.org */
+.theme-admonition.alert {
+  --ifm-alert-shadow: none;
+  --ifm-alert-border-left-width: 4px;
+  --ifm-alert-border-radius: 0.5rem;
+  --ifm-alert-foreground-color: var(--ifm-font-color-base);
+  --ifm-alert-border-width: 1px;
+  border-color: var(--admonition-edge);
+  border-left-color: var(--ifm-alert-border-color);
+}
+
+[data-theme="dark"] .theme-admonition.alert {
+  --admonition-edge: rgb(255 255 255 / 0.1);
+}
+
+.theme-admonition [class*="admonitionHeading"] {
+  color: var(--admonition-accent);
+  font-family: var(--ifm-font-family-base);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.theme-admonition [class*="admonitionIcon"] svg {
+  fill: var(--admonition-accent);
+}
+
+.theme-admonition.alert--secondary {
+  --ifm-alert-background-color: white;
+  --ifm-alert-border-color: rgb(107 114 128);
+  --admonition-accent: rgb(75 85 99);
+  --admonition-edge: rgb(229 231 235);
+}
+
+.theme-admonition.alert--success {
+  --ifm-alert-background-color: rgb(240 253 244);
+  --ifm-alert-border-color: rgb(34 197 94);
+  --admonition-accent: rgb(21 128 61);
+  --admonition-edge: rgb(187 247 208);
+}
+
+.theme-admonition.alert--info {
+  --ifm-alert-background-color: rgb(239 246 255);
+  --ifm-alert-border-color: rgb(59 130 246);
+  --admonition-accent: rgb(37 99 235);
+  --admonition-edge: rgb(191 219 254);
+}
+
+.theme-admonition.alert--warning {
+  --ifm-alert-background-color: rgb(255 247 237);
+  --ifm-alert-border-color: rgb(249 115 22);
+  --admonition-accent: rgb(234 88 12);
+  --admonition-edge: rgb(254 215 170);
+}
+
+.theme-admonition.alert--danger {
+  --ifm-alert-background-color: rgb(254 242 242);
+  --ifm-alert-border-color: rgb(239 68 68);
+  --admonition-accent: rgb(220 38 38);
+  --admonition-edge: rgb(254 202 202);
+}
+
+[data-theme="dark"] .theme-admonition.alert--secondary {
+  --ifm-alert-background-color: rgb(31 41 55 / 0.3);
+  --admonition-accent: rgb(156 163 175);
+}
+
+[data-theme="dark"] .theme-admonition.alert--success {
+  --ifm-alert-background-color: rgb(5 46 22 / 0.3);
+  --admonition-accent: rgb(74 222 128);
+}
+
+[data-theme="dark"] .theme-admonition.alert--info {
+  --ifm-alert-background-color: rgb(23 37 84 / 0.3);
+  --admonition-accent: rgb(96 165 250);
+}
+
+[data-theme="dark"] .theme-admonition.alert--warning {
+  --ifm-alert-background-color: rgb(67 20 7 / 0.3);
+  --admonition-accent: rgb(251 146 60);
+}
+
+[data-theme="dark"] .theme-admonition.alert--danger {
+  --ifm-alert-background-color: rgb(69 10 10 / 0.3);
+  --admonition-accent: rgb(248 113 113);
+}
+
+.menu__link--active:not(.menu__link--sublist),
+.menu__link--sublist.menu__link--active,
+.table-of-contents__link--active,
+.breadcrumbs__item--active .breadcrumbs__link,
+.navbar__link--active,
+.pagination-nav__label {
+  color: var(--docs-link-color);
+}
+
+/* Matches the dark-on-green Get Budgie button on buddiesofbudgie.org */
+.navbar .GetBudgieButton,
+.navbar .GetBudgieButton:hover {
+  color: rgb(52 52 52);
+  border-radius: 9999px;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.navbar .GetBudgieButton svg {
+  display: none;
+}
+
+.markdown a:not(.card, .hash-link) {
+  color: var(--docs-link-color);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.theme-code-block {
+  border: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
+}
+
+.markdown :not(pre) > code {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
 }
 
 .DocSearch-Button {
@@ -104,4 +304,5 @@ h3 {
   --ifm-footer-link-color: var(--ifm-navbar-link-color);
   --ifm-footer-color: var(--ifm-font-color-base);
   --ifm-footer-title-color: var(--ifm-navbar-link-color);
+  border-top: 1px solid var(--ifm-toc-border-color);
 }
