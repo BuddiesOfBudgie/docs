@@ -53,7 +53,6 @@ bun run check
 | `docs/developer/`                | Developer documentation                         |
 | `docs/organization/`             | Organization-level policies and docs            |
 | `versioned_docs/version-10.10/`  | Budgie 10.10 documentation                      |
-| `versioned_docs/version-10.9.x/` | Legacy Budgie 10.9.x documentation              |
 | `src/`                           | Site source (components, pages, CSS)            |
 | `static/`                        | Static assets (images, fonts)                   |
 | `i18n/`                          | Internationalization                            |
@@ -110,7 +109,6 @@ Use the most specific scope that fits.
 | `10.10/developer/<topic>` | Specific 10.10 developer doc          |
 | `10.10/user`              | 10.10 user docs                       |
 | `10.10/user/<topic>`      | Specific 10.10 user doc               |
-| `10.9.x`                  | Legacy 10.9.x versioned documentation |
 | `components`              | React components (`src/components/`)  |
 | `pages`                   | Site pages (`src/pages/`)             |
 | `css`                     | Styling (`src/css/`)                  |
