@@ -1,10 +1,17 @@
 import Link from '@docusaurus/Link'
 import Translate, { translate } from '@docusaurus/Translate'
 import Layout from '@theme/Layout'
-import { ChevronRight, Heart, MessageCircle } from 'lucide-react'
+import { ChevronRight, GitBranch, Hammer, Heart, Lock, MessageCircle, MessagesSquare } from 'lucide-react'
 import { Header } from '../components/home/Header'
 import { LinkList, type LinkListItem } from '../components/home/LinkList'
-import { BUDGIE_11_BLOG_URL, FORGE_URL, LATEST_BUDGIE_VERSION } from '../constants'
+import {
+  BUDGIE_11_BLOG_URL,
+  FORGE_URL,
+  FORUM_DEVELOPMENT_URL,
+  FORUM_SUPPORT_URL,
+  FORUM_URL,
+  LATEST_BUDGIE_VERSION,
+} from '../constants'
 
 const usingLinks: LinkListItem[] = [
   {
@@ -41,6 +48,7 @@ const reportingLinks: LinkListItem[] = [
       message: 'Budgie Desktop 10.10 and its components, such as Budgie Control Center.',
     }),
     to: '/10.10/user/reporting-issues#github-budgie-desktop-1010x',
+    icon: GitBranch,
   },
   {
     title: translate({ id: 'homepage.reporting.forge.title', message: 'Forge' }),
@@ -49,6 +57,7 @@ const reportingLinks: LinkListItem[] = [
       message: 'Budgie 11, and components shared with 10.10 such as budgie-desktop-services.',
     }),
     to: '/10.10/user/reporting-issues#forge-budgie-11-and-shared-components',
+    icon: Hammer,
   },
   {
     title: translate({ id: 'homepage.reporting.upstream.title', message: 'Upstream' }),
@@ -57,6 +66,16 @@ const reportingLinks: LinkListItem[] = [
       message: 'Screen lockers such as gtklock and swaylock. How Budgie integrates with them comes to us.',
     }),
     to: '/10.10/user/reporting-issues#screen-lockers',
+    icon: Lock,
+  },
+  {
+    title: translate({ id: 'homepage.reporting.forum.title', message: 'Forum' }),
+    description: translate({
+      id: 'homepage.reporting.forum.description',
+      message: 'Not sure whether it is a bug, or where to report it? Ask in Support on our forum.',
+    }),
+    to: FORUM_SUPPORT_URL,
+    icon: MessagesSquare,
   },
 ]
 
@@ -223,6 +242,15 @@ const Home = () => {
                 </Link>
                 <Link
                   className="inline-flex items-center gap-1 font-medium text-strong no-underline hover:text-primary hover:no-underline"
+                  to={FORUM_DEVELOPMENT_URL}
+                >
+                  <Translate id="homepage.next.forum" description="Link to the Development category on the forum">
+                    Development forum
+                  </Translate>
+                  <ChevronRight aria-hidden size={16} />
+                </Link>
+                <Link
+                  className="inline-flex items-center gap-1 font-medium text-strong no-underline hover:text-primary hover:no-underline"
                   to="/developer/intro"
                 >
                   <Translate id="homepage.next.developer" description="Link to Budgie 11 developer documentation">
@@ -246,7 +274,7 @@ const Home = () => {
               <p className="m-0 max-w-3xl text-base leading-relaxed md:text-lg">
                 <Translate id="homepage.community.description" description="Description of the community banner">
                   Budgie is built by volunteers from around the world, and so are these docs. Read our contributing
-                  guidelines and AI policy before you start, and come say hi on Matrix.
+                  guidelines and AI policy before you start, and come say hi on our forum or Matrix.
                 </Translate>
               </p>
               <div className="flex flex-wrap gap-3">
@@ -263,6 +291,12 @@ const Home = () => {
                 <Link className={bannerButtonClassName} to="/organization/intro">
                   <Translate id="homepage.community.organization" description="Link to the organization documentation">
                     Organization
+                  </Translate>
+                </Link>
+                <Link className={bannerButtonClassName} to={FORUM_URL}>
+                  <MessagesSquare aria-hidden size={18} />
+                  <Translate id="homepage.community.forum" description="Link to the forum">
+                    Join the Forum
                   </Translate>
                 </Link>
                 <Link className={bannerButtonClassName} to="https://matrix.to/#/#buddies-of-budgie:matrix.org">

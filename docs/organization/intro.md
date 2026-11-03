@@ -8,3 +8,9 @@ title: Organization
 ---
 
 This section contains documentation related to the Buddies of Budgie organization and policies which apply organization-wide.
+
+## Community
+
+- [Forum](https://forum.buddiesofbudgie.org)
+- [Matrix](https://matrix.to/#/#buddies-of-budgie:matrix.org)
+- [Mastodon](https://floss.social/@BuddiesOfBudgie)

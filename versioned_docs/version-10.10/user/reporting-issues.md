@@ -10,6 +10,10 @@ title: Reporting Issues
 
 Buddies of Budgie tracks issues in two places, depending on which component you are reporting against. Reporting to the right place, with the information listed below, helps us look into it sooner.
 
+:::tip[Need help?]
+Issue trackers are for bugs and feature requests. If you need help using Budgie Desktop, or are not sure whether something is a bug, ask in [Support](https://forum.buddiesofbudgie.org/t/support) on our forum, or join our [Buddies of Budgie space](https://matrix.to/#/#buddies-of-budgie:matrix.org) on Matrix!
+:::
+
 ## Where to Report
 
 ### GitHub: Budgie Desktop 10.10.x

@@ -31,6 +31,10 @@
     "message": "Mastodon",
     "description": "Navbar item with label Mastodon"
   },
+  "item.label.Forum": {
+    "message": "Forum",
+    "description": "Navbar item with label Forum"
+  },
   "item.label.Matrix": {
     "message": "Matrix",
     "description": "Navbar item with label Matrix"

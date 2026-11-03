@@ -3,3 +3,6 @@ export const LATEST_RELEASE_URL = 'https://buddiesofbudgie.org/blog/budgie-10-10
 export const BUDGIE_11_BLOG_URL = 'https://buddiesofbudgie.org/blog/budgie-11/1'
 export const FORGE_URL = 'https://forge.moderndesktop.dev/BuddiesOfBudgie'
 export const GET_BUDGIE_URL = 'https://buddiesofbudgie.org/get-budgie'
+export const FORUM_URL = 'https://forum.buddiesofbudgie.org'
+export const FORUM_DEVELOPMENT_URL = 'https://forum.buddiesofbudgie.org/t/development'
+export const FORUM_SUPPORT_URL = 'https://forum.buddiesofbudgie.org/t/support'
