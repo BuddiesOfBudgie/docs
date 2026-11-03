@@ -1,7 +1,8 @@
 import Link from '@docusaurus/Link'
 import Translate, { translate } from '@docusaurus/Translate'
 import Layout from '@theme/Layout'
-import { ChevronRight, GitBranch, Hammer, Heart, Lock, MessageCircle, MessagesSquare } from 'lucide-react'
+import { ChevronRight, GitBranch, Hammer, Lock, MessagesSquare } from 'lucide-react'
+import { Community } from '../components/home/Community'
 import { Header } from '../components/home/Header'
 import { LinkList, type LinkListItem } from '../components/home/LinkList'
 import {
@@ -9,7 +10,6 @@ import {
   FORGE_URL,
   FORUM_DEVELOPMENT_URL,
   FORUM_SUPPORT_URL,
-  FORUM_URL,
   LATEST_BUDGIE_VERSION,
 } from '../constants'
 
@@ -105,9 +105,6 @@ const developingLinks: LinkListItem[] = [
     to: '/10.10/developer/intro',
   },
 ]
-
-const bannerButtonClassName =
-  'inline-flex items-center gap-2 rounded-lg bg-white/20 px-4 py-2.5 font-inter font-medium text-white no-underline transition-colors hover:bg-white/30 hover:text-white hover:no-underline'
 
 const Home = () => {
   return (
@@ -265,54 +262,7 @@ const Home = () => {
 
         <section className="w-full py-16 md:py-20 lg:py-24">
           <div className="mx-auto w-full max-w-6xl px-6 md:px-8 lg:px-12">
-            <div className="flex flex-col gap-6 rounded-2xl bg-linear-to-r from-[#6bca81] to-[#5ab573] p-8 text-white md:p-10">
-              <h2 className="m-0 font-heading font-semibold text-3xl text-white leading-tight md:text-4xl">
-                <Translate id="homepage.community.title" description="Title of the community banner">
-                  Built by the community
-                </Translate>
-              </h2>
-              <p className="m-0 max-w-3xl text-base leading-relaxed md:text-lg">
-                <Translate id="homepage.community.description" description="Description of the community banner">
-                  Budgie is built by volunteers from around the world, and so are these docs. Read our contributing
-                  guidelines and AI policy before you start, and come say hi on our forum or Matrix.
-                </Translate>
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link className={bannerButtonClassName} to="/developer/contributing">
-                  <Translate id="homepage.community.contributing" description="Link to the contributing guidelines">
-                    Contributing
-                  </Translate>
-                </Link>
-                <Link className={bannerButtonClassName} to="/organization/ai-policy">
-                  <Translate id="homepage.community.aiPolicy" description="Link to the AI policy">
-                    AI Policy
-                  </Translate>
-                </Link>
-                <Link className={bannerButtonClassName} to="/organization/intro">
-                  <Translate id="homepage.community.organization" description="Link to the organization documentation">
-                    Organization
-                  </Translate>
-                </Link>
-                <Link className={bannerButtonClassName} to={FORUM_URL}>
-                  <MessagesSquare aria-hidden size={18} />
-                  <Translate id="homepage.community.forum" description="Link to the forum">
-                    Join the Forum
-                  </Translate>
-                </Link>
-                <Link className={bannerButtonClassName} to="https://matrix.to/#/#buddies-of-budgie:matrix.org">
-                  <MessageCircle aria-hidden size={18} />
-                  <Translate id="homepage.community.matrix" description="Link to the Matrix space">
-                    Join Matrix
-                  </Translate>
-                </Link>
-                <Link className={bannerButtonClassName} to="https://opencollective.com/buddies-of-budgie">
-                  <Heart aria-hidden size={18} />
-                  <Translate id="homepage.community.support" description="Link to donate">
-                    Support Us
-                  </Translate>
-                </Link>
-              </div>
-            </div>
+            <Community />
           </div>
         </section>
       </main>
