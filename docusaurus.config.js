@@ -171,6 +171,10 @@ const config = {
                 rel: 'me',
               },
               {
+                label: 'Forum',
+                href: 'https://forum.buddiesofbudgie.org',
+              },
+              {
                 label: 'Matrix',
                 href: 'https://matrix.to/#/#buddies-of-budgie:matrix.org',
               },
@@ -218,6 +222,10 @@ const config = {
           {
             title: 'Community',
             items: [
+              {
+                label: 'Forum',
+                href: 'https://forum.buddiesofbudgie.org',
+              },
               {
                 label: 'Mastodon',
                 href: 'https://floss.social/@BuddiesOfBudgie',

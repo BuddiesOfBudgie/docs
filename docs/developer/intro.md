@@ -17,6 +17,8 @@ To keep up with Budgie 11:
 
 - Read the [Budgie 11 posts](https://buddiesofbudgie.org/blog/budgie-11/1) on our blog.
 - Follow development on [our Forge](https://forge.moderndesktop.dev/BuddiesOfBudgie), where Budgie 11 and its components are developed and tracked.
+- Follow and join Development [topics](https://forum.buddiesofbudgie.org/t/development) on our forum.
+- Follow [Announcements](https://forum.buddiesofbudgie.org/t/announcements) on our forum.
 
 Before contributing, read our [Contributing](./contributing.md) guidelines.
 

@@ -23,6 +23,10 @@
     "message": "Mastodon",
     "description": "The label of footer link with label=Mastodon linking to https://floss.social/@BuddiesOfBudgie"
   },
+  "link.item.label.Forum": {
+    "message": "Forum",
+    "description": "The label of footer link with label=Forum linking to https://forum.buddiesofbudgie.org"
+  },
   "link.item.label.Matrix": {
     "message": "Matrix",
     "description": "The label of footer link with label=Matrix linking to https://matrix.to/#/#buddies-of-budgie:matrix.org"

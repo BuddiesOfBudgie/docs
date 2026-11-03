@@ -39,7 +39,7 @@ Have an account? Great! Now it's time to [fork the docs repository](https://gith
 You will need to now "clone" your fork to your computer. There is a bunch of different ways to do that, from the command-line to various graphical programs. Given that fact, we would just recommend you check out [GitHub's documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 :::tip[Need help?]
-You can reach out to us on our [Matrix Space](https://matrix.to/#/#buddies-of-budgie:matrix.org) for guidance if you run into issues.
+You can reach out to us in Development [topics](https://forum.buddiesofbudgie.org/t/development) on our forum or on our [Matrix Space](https://matrix.to/#/#buddies-of-budgie:matrix.org) for guidance if you run into issues.
 :::
 
 ## Where Documentation Lives
